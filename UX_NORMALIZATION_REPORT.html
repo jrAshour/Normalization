@@ -363,14 +363,14 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
 <!-- UX STANDARDS -->
 <section class="section section-alt" id="matrix">
   <div class="sec-kicker">Overview · 01</div>
-  <div class="sec-title">UX Standards</div>
-  <div class="sec-desc">These are the interaction patterns that must apply across the entire app — all 7 products. Each standard is anchored to the best existing example inside Direct. Where no good example exists, the Figma spec or industry best practice is the reference.</div>
+  <div class="sec-title">UX Normalization</div>
+  <div class="sec-desc">These are the normalized interaction patterns that all 7 products must follow. Each rule is anchored to the best existing example inside Direct. The "Apply to" scope for each rule will be defined and filled in below.</div>
 
   <style>
   .std-list{display:flex;flex-direction:column;gap:0;margin-top:24px;}
   .std-row{
     display:grid;
-    grid-template-columns:28px 1fr 160px;
+    grid-template-columns:28px 1fr;
     gap:0 20px;
     align-items:start;
     padding:20px 0;
@@ -420,13 +420,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-rule">Every destination/location input must open a full bottom sheet with a live-filter search bar, results list with flag or icon, and row highlight on selection. Minimum 44px row height.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Flights airport picker</strong> — IATA code + city name + country, instant filter, orange row on tap</div>
       </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Hotels destination</span>
-        <span class="apply-tag">Visa country</span>
-        <span class="apply-tag">Study city</span>
-        <span class="apply-tag">eSIM country</span>
-      </div>
     </div>
 
     <div class="std-row">
@@ -435,15 +428,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-title">Primary CTA — Verb + Object</div>
         <div class="std-rule">Every main action button must follow the formula [فعل أمر] + [الموضوع], max 3 words. Full-width (padding 16px), 56px height, anchored to the bottom safe area. Background: var(--gold).</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Visa Requirements — "ابدأ طلب التأشيرة"</strong></div>
-      </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Flights → ابحث عن رحلات</span>
-        <span class="apply-tag">Hotels → ابحث عن فنادق</span>
-        <span class="apply-tag">Packages → اختر هذه الباقة</span>
-        <span class="apply-tag">Study → ابدأ طلب القبول</span>
-        <span class="apply-tag">eSIM → احصل على الشريحة</span>
-        <span class="apply-tag">License → استخرج رخصتي</span>
       </div>
     </div>
 
@@ -454,14 +438,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-rule">Every bottom sheet must have a visible × close button (top-right, 44×44px hit area) in addition to the drag handle. Drag-only dismiss fails WCAG 2.5.3 for motor-impaired users.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec</strong> — × in top-left (RTL), drag handle retained</div>
       </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">All bottom sheets</span>
-        <span class="apply-tag">Airport picker</span>
-        <span class="apply-tag">Country picker</span>
-        <span class="apply-tag">Date picker</span>
-        <span class="apply-tag">Passenger picker</span>
-      </div>
     </div>
 
     <div class="std-row">
@@ -470,13 +446,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-title">Header Title — Page Context, Not Brand</div>
         <div class="std-rule">The header title must reflect the current page or destination name, not the app brand "Direct". Brand is already conveyed by icon, splash screen, and app store presence.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Visa Requirements — "متطلبات التأشيرة"</strong> as header title</div>
-      </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Flights header</span>
-        <span class="apply-tag">Hotels header</span>
-        <span class="apply-tag">Packages header</span>
-        <span class="apply-tag">All drill-downs</span>
       </div>
     </div>
 
@@ -487,12 +456,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-rule">For any round-trip or multi-day booking, departure and return dates must be selectable in a single calendar interaction. A two-step date flow adds unnecessary friction.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma date range picker</strong> — الذهاب + العودة in one sheet, Arabic month grid</div>
       </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Flights round-trip</span>
-        <span class="apply-tag">Hotels check-in/out</span>
-        <span class="apply-tag">Packages dates</span>
-      </div>
     </div>
 
     <div class="std-row">
@@ -501,12 +464,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-title">Passenger &amp; Class Selector</div>
         <div class="std-rule">Passenger count uses stepper (+/−) with type labels (بالغ, طفل, رضيع) and age ranges. Class uses a radio list. Both live in a single bottom sheet with "تأكيد" CTA.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec</strong> — grouped sections, × close, clean white surface</div>
-      </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Flights</span>
-        <span class="apply-tag">Hotels (guests + rooms)</span>
-        <span class="apply-tag">Packages</span>
       </div>
     </div>
 
@@ -517,12 +474,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-rule">Screens with multiple trip variants must use a pill segment control at the top of the form. Active pill: white on var(--gold). Height: 40px. Font: Cairo 14px medium.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Flights — ذهاب / ذهاب وعودة / رحلات متعددة</strong></div>
       </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Hotels (1 night / multi)</span>
-        <span class="apply-tag">Packages (type)</span>
-        <span class="apply-tag">Visa (single / multiple)</span>
-      </div>
     </div>
 
     <div class="std-row">
@@ -531,12 +482,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-title">Empty State — Contextual, Not Generic</div>
         <div class="std-rule">Empty states must detect context: unauthenticated users see a login prompt; no-results states show an illustration + retry CTA; post-search empty shows "no flights found" + suggest alternatives.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>My Orders — illustration + Arabic label</strong>. Gap: no login CTA when unauthenticated.</div>
-      </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">My Orders (auth gate)</span>
-        <span class="apply-tag">Search results (no match)</span>
-        <span class="apply-tag">Visa tab (after select)</span>
       </div>
     </div>
 
@@ -547,12 +492,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-rule">In Arabic RTL layout, forward navigation chevrons must point › (right-pointing). A ‹ chevron means "go back" in RTL reading direction. All card and list row chevrons must be direction-aware.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Correct in app: <strong>Flights, Hotels, Visa form fields</strong>. Failure: Packages browse cards use ‹</div>
       </div>
-      <div class="std-apply">
-        <div class="apply-label">Fix in</div>
-        <span class="apply-tag">Packages cards</span>
-        <span class="apply-tag">More tab cards</span>
-        <span class="apply-tag">Any new card component</span>
-      </div>
     </div>
 
     <div class="std-row">
@@ -561,13 +500,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
         <div class="std-title">Loading State — Skeleton Screen</div>
         <div class="std-rule">Search result loading must show a skeleton screen (grey placeholder cards matching the result card shape), not a spinner. The Figma spec shows the correct skeleton pattern for flights.</div>
         <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma flights loading screen</strong> — "جاري البحث عن رحلات" + skeleton cards</div>
-      </div>
-      <div class="std-apply">
-        <div class="apply-label">Apply to</div>
-        <span class="apply-tag">Flights results</span>
-        <span class="apply-tag">Hotels results</span>
-        <span class="apply-tag">Study Abroad results</span>
-        <span class="apply-tag">All search flows</span>
       </div>
     </div>
 
