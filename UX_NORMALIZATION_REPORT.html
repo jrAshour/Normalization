@@ -325,6 +325,11 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <a class="sb-link" href="#filters" onclick="setActive(this)"><div class="sb-dot"></div>Filters<span class="sb-pending">📸</span></a>
   <a class="sb-link" href="#sort" onclick="setActive(this)"><div class="sb-dot"></div>Sort<span class="sb-pending">📸</span></a>
 
+  <div class="sb-chapter">Figma vs. Built</div>
+  <a class="sb-link" href="#figma-pickers" onclick="setActive(this)"><div class="sb-dot"></div>Redesigned Pickers</a>
+  <a class="sb-link" href="#figma-dates" onclick="setActive(this)"><div class="sb-dot"></div>Date Range Picker</a>
+  <a class="sb-link" href="#figma-unbuilt" onclick="setActive(this)"><div class="sb-dot"></div>Unbuilt Screens</a>
+
   <div class="sb-chapter">RTL / Arabic</div>
   <a class="sb-link" href="#rtl" onclick="setActive(this)"><div class="sb-dot"></div>Layout Mirroring</a>
 </nav>
@@ -1660,6 +1665,252 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
     <div class="pending-ico">📸</div>
     <div>Screens pending — navigate to results page after search</div>
     <span class="phone-tag tag-note">Cover: sort button · options · direction indicator</span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FIGMA vs BUILT
+═════════════════════════════════════ -->
+
+<!-- FIGMA: COMPONENTS -->
+<section class="section" id="figma-pickers">
+  <div class="sec-kicker">Figma vs. Built · 01</div>
+  <div class="sec-title">Redesigned Pickers</div>
+  <div class="sec-desc">The Figma file contains cleaner versions of the airport picker and passenger selector — white cards, proper status bars, refined class labels. These have not been shipped.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Airport picker — Figma spec vs. live app</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_airport_picker.png" alt="Figma airport picker">
+          <div class="hl hl-green" style="top:0%;left:0%;width:100%;height:100%;"></div>
+        </div>
+        <div class="phone-label">Figma — Airport Picker</div>
+        <div class="phone-sub">محطة الوصول</div>
+        <span class="phone-tag tag-ok">White · clean ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02b_flights_swap.png" alt="Live airport picker">
+        </div>
+        <div class="phone-label">Live — Airport Picker</div>
+        <div class="phone-sub">اختيار المطار الحالي</div>
+        <span class="phone-tag tag-warn">Brown header ⚠️</span>
+      </div>
+
+    </div>
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>Figma spec:</strong> Pure white sheet, clean status bar (9:41), no app chrome visible. Search input at top, results list with IATA code + name. <strong>Live app:</strong> Sheet opens inside the brown header chrome — inconsistent with the full-screen modal pattern in the spec.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Passenger picker — Figma spec vs. live app</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_passenger_picker.png" alt="Figma passenger picker">
+          <div class="hl hl-green" style="top:0%;left:0%;width:100%;height:100%;"></div>
+        </div>
+        <div class="phone-label">Figma — Passenger Picker</div>
+        <div class="phone-sub">المسافرون والدرجة السياحية</div>
+        <span class="phone-tag tag-ok">× close · 3 classes ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/v2_flights_details.png" alt="Live passenger picker">
+        </div>
+        <div class="phone-label">Live — Passenger Picker</div>
+        <div class="phone-sub">درجة الرحلة وعدد المسافرين</div>
+        <span class="phone-tag tag-warn">No × · inside chrome ⚠️</span>
+      </div>
+
+    </div>
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>3 gaps vs. spec:</strong> (1) Figma has an × close button (top-left) — live app has only drag handle. (2) Class labels differ: Figma uses "السياحية المميزة" (Premium Economy) vs. live "أعمال" (Business). (3) Figma shows clean white full-screen modal; live app shows sheet inside brownish app chrome.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FIGMA: DATE RANGE PICKER -->
+<section class="section section-alt" id="figma-dates">
+  <div class="sec-kicker">Figma vs. Built · 02</div>
+  <div class="sec-title">Date Range Picker</div>
+  <div class="sec-desc">The Figma spec shows a dual-date range picker (departure + return in one view). The live app only has a single departure date calendar.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Date selection — Figma spec vs. live</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_date_range_picker.png" alt="Figma date range picker">
+          <div class="hl hl-green" style="top:0%;left:0%;width:100%;height:100%;"></div>
+        </div>
+        <div class="phone-label">Figma — Date Range</div>
+        <div class="phone-sub">الذهاب + العودة معاً</div>
+        <span class="phone-tag tag-ok">Range picker ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02c_flights_cta_view.png" alt="Live date picker">
+        </div>
+        <div class="phone-label">Live — Single Date</div>
+        <div class="phone-sub">تاريخ الذهاب فقط</div>
+        <span class="phone-tag tag-warn">One date only ❌</span>
+      </div>
+
+    </div>
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Missing return date:</strong> The Figma spec has a "الذهاب / العودة" toggle at the top of the calendar with both dates selectable in one interaction. The live app opens a separate picker for the return date — or the return date is missing entirely. This is a critical booking flow gap for round-trip searches.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FIGMA: UNBUILT SCREENS -->
+<section class="section" id="figma-unbuilt">
+  <div class="sec-kicker">Figma vs. Built · 03</div>
+  <div class="sec-title">Unbuilt Screens</div>
+  <div class="sec-desc">These screens exist in the Figma file but have no equivalent in the live app. They represent either planned features or designs that were scoped out.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Flight search results page</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_flight_results.png" alt="Figma flight results">
+          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:35%;"></div>
+          <div class="hl hl-blue" style="top:46%;left:3%;width:94%;height:35%;"></div>
+        </div>
+        <div class="phone-label">Figma — Flight Results</div>
+        <div class="phone-sub">IST → DXB · نتائج البحث</div>
+        <span class="phone-tag tag-ok">Designed ✓ · Not built ❌</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_flights_loading.png" alt="Figma loading state">
+          <div class="hl hl-gold" style="top:28%;left:20%;width:60%;height:18%;"></div>
+        </div>
+        <div class="phone-label">Figma — Search Loading</div>
+        <div class="phone-sub">جاري البحث عن رحلات</div>
+        <span class="phone-tag tag-ok">Skeleton designed ✓</span>
+      </div>
+
+    </div>
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">🔴</span>
+      <div><strong>Results page not found in live app.</strong> The Figma spec shows flight result cards with: airline logo, departure/arrival times, stops, duration, and price (SAR 1,500.66). Each card has an "عرض التفاصيل" (Show Details) CTA. The skeleton loading state is also designed. Neither screen was observed in the current app build.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Hotels detail page</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_hotel_detail_2.png" alt="Figma hotel detail Saudi">
+          <div class="hl hl-gold" style="top:0%;left:0%;width:100%;height:40%;"></div>
+          <div class="hl hl-blue" style="top:42%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Al Faisaliah Hotel, Riyadh</div>
+        <div class="phone-sub">فندق الفيصلية · الرياض</div>
+        <span class="phone-tag tag-ok">Designed ✓ · Not built ❌</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_hotel_detail_1.png" alt="Figma hotel detail intl">
+          <div class="hl hl-gold" style="top:0%;left:0%;width:100%;height:40%;"></div>
+          <div class="hl hl-blue" style="top:55%;left:3%;width:94%;height:8%;"></div>
+        </div>
+        <div class="phone-label">The Old Nickel Hotel, Amsterdam</div>
+        <div class="phone-sub">فندق دولي · أمستردام</div>
+        <span class="phone-tag tag-note">SAR 12,136 pricing</span>
+      </div>
+
+    </div>
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>Hotel detail spec includes:</strong> Hero photo gallery, hotel name + rating score + location, check-in/out dates, room type selector (Available Rooms / Hotel Details tabs), room cards with bed config, amenities icons (WiFi, TV, area m²), cancellation policy badge, and price in SAR with "Select" CTA. This is a complete, production-quality design that needs to be built.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Study Abroad — browse &amp; results</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_study_abroad_browse.png" alt="Figma study abroad browse">
+          <div class="hl hl-gold" style="top:5%;left:3%;width:94%;height:6%;"></div>
+          <div class="hl hl-blue" style="top:14%;left:3%;width:94%;height:36%;"></div>
+        </div>
+        <div class="phone-label">Study Abroad — Browse</div>
+        <div class="phone-sub">Direct · Schools tab</div>
+        <span class="phone-tag tag-ok">Designed ✓ · Not built ❌</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_study_abroad_results.png" alt="Figma study abroad results">
+          <div class="hl hl-gold" style="top:5%;left:3%;width:94%;height:6%;"></div>
+          <div class="hl hl-blue" style="top:18%;left:3%;width:94%;height:35%;"></div>
+        </div>
+        <div class="phone-label">Study Abroad — Results</div>
+        <div class="phone-sub">ETC Bournemouth · SR 938</div>
+        <span class="phone-tag tag-note">SAR pricing ✓</span>
+      </div>
+
+    </div>
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Study Abroad fully designed but not reachable in the app.</strong> Browse shows program cards with destination photos, SAR prices (27,800–34,350 SAR), and amenities (WiFi, Location, Activities, Airport). Results page shows institute cards with ratings, dates, and SAR weekly pricing. The app currently only shows this vertical as an icon in the home grid with no accessible flow.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Conversational flight search — AI pattern</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/figma_conversational_search.png" alt="Figma conversational search">
+          <div class="hl hl-gold" style="top:0%;left:0%;width:100%;height:5%;"></div>
+          <div class="hl hl-blue" style="top:10%;left:3%;width:94%;height:70%;"></div>
+          <div class="hl hl-green" style="bottom:2%;left:3%;width:94%;height:8%;"></div>
+        </div>
+        <div class="phone-label">Conversational Search</div>
+        <div class="phone-sub">نموذج الحجز بالمحادثة</div>
+        <span class="phone-tag tag-ok">Novel pattern 🔥</span>
+      </div>
+
+      <div class="phone-wrap" style="max-width:260px;justify-content:flex-start;padding-top:4px;">
+        <div style="background:rgba(248,109,10,.06);border:1px solid rgba(248,109,10,.25);border-radius:12px;padding:20px;font-size:12px;line-height:1.9;width:100%;">
+          <div style="font-weight:800;font-size:13px;color:var(--gold);margin-bottom:12px;">Chat search pattern</div>
+          <div style="margin-bottom:8px;">Route shown as pill: IST → DXB</div>
+          <div style="margin-bottom:8px;">Bot asks: what time suits you? → صباح / مساء chips</div>
+          <div style="margin-bottom:8px;">Bot asks: flexible on dates? → نعم / لا chips</div>
+          <div style="margin-bottom:8px;">Collects email + phone inline</div>
+          <div style="margin-bottom:14px;">CTA: "ابدأ البحث" (Start search)</div>
+          <div style="padding-top:12px;border-top:1px solid rgba(248,109,10,.2);color:var(--muted);font-size:11px;">This pattern reduces cognitive load vs. a full form — users answer one question at a time (progressive disclosure). Could be the differentiator vs. Almosafer.</div>
+        </div>
+        <div class="phone-label" style="margin-top:12px;">Pattern analysis</div>
+        <span class="phone-tag tag-ok">Progressive disclosure ✓</span>
+      </div>
+
+    </div>
   </div>
 </section>
 
