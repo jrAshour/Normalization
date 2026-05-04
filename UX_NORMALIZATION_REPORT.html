@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direct — UX Unification · Visual Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#F86D0A; --navy:#050E1E; --blue:#2196F3; --teal:#0EA5E9;
+  --green:#22C55E; --red:#EF4444; --orange:#F97316;
+  --bd:rgba(255,255,255,.07); --txt:rgba(255,255,255,.75);
+  --muted:rgba(255,255,255,.35); --bg:#07101C; --bg2:#0A1524;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);display:flex;}
+
+/* ── SIDEBAR ── */
+#sidebar{
+  width:220px;flex-shrink:0;
+  position:fixed;top:0;left:0;bottom:0;
+  background:var(--bg2);
+  border-right:1px solid var(--bd);
+  overflow-y:auto;
+  padding:24px 0 40px;
+  z-index:100;
+}
+.sb-logo{
+  padding:0 20px 20px;
+  border-bottom:1px solid var(--bd);
+  margin-bottom:16px;
+}
+.sb-logo-inner{
+  background:#fff;
+  border-radius:10px;
+  padding:6px 14px;
+  display:inline-flex;
+  align-items:center;
+}
+.sb-logo-inner img{height:24px;width:auto;display:block;}
+.sb-logo-inner .fallback{font-size:18px;font-weight:900;color:#050E1E;font-family:'Cairo',sans-serif;}
+.sb-chapter{
+  font-size:9px;font-weight:800;color:var(--muted);
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:16px 20px 6px;
+}
+.sb-link{
+  display:flex;align-items:center;gap:8px;
+  padding:7px 20px;
+  font-size:12px;font-weight:600;color:var(--muted);
+  text-decoration:none;
+  border-left:2px solid transparent;
+  transition:color .15s,border-color .15s,background .15s;
+  cursor:pointer;
+}
+.sb-link:hover,.sb-link.active{
+  color:#fff;background:rgba(255,255,255,.04);
+  border-left-color:var(--gold);
+}
+.sb-dot{
+  width:6px;height:6px;border-radius:50%;flex-shrink:0;
+  background:var(--bd);
+}
+.sb-link:hover .sb-dot,.sb-link.active .sb-dot{background:var(--gold);}
+.sb-pending{
+  font-size:9px;font-weight:700;color:var(--muted);
+  padding:4px 8px;border-radius:100px;
+  background:rgba(255,255,255,.05);
+  margin-left:auto;
+}
+
+/* ── MAIN ── */
+#main{
+  margin-left:220px;
+  flex:1;
+  min-height:100vh;
+}
+
+/* ── COVER ── */
+#cover{
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:linear-gradient(155deg,#060C18 0%,#0B1928 60%,#071628 100%);
+  position:relative;overflow:hidden;
+  padding:80px 60px;text-align:center;
+}
+#cover::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 65% 55% at 15% 55%,rgba(248,109,10,.06) 0%,transparent 100%),
+    radial-gradient(ellipse 55% 65% at 82% 22%,rgba(33,150,243,.07) 0%,transparent 100%);
+}
+#cover::after{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+.cover-inner{position:relative;z-index:1;max-width:720px;}
+.cover-logo-wrap{
+  background:#fff;border-radius:14px;
+  padding:10px 24px;
+  display:inline-flex;align-items:center;
+  margin-bottom:32px;
+  box-shadow:0 8px 32px rgba(0,0,0,.35);
+}
+.cover-logo-wrap img{height:54px;width:auto;display:block;}
+.cover-eyebrow{
+  font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+.cover-title{font-size:clamp(28px,4vw,48px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:8px;}
+.cover-sub{font-size:16px;font-weight:600;color:var(--muted);margin-bottom:6px;}
+.cover-sub-ar{font-size:14px;color:rgba(255,255,255,.2);direction:rtl;margin-bottom:40px;}
+.cover-rule{width:48px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 36px;}
+.cover-pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.cpill{
+  display:flex;align-items:center;gap:6px;
+  padding:8px 16px;border-radius:100px;
+  font-size:12px;font-weight:700;
+  background:rgba(255,255,255,.05);border:1px solid var(--bd);
+  color:var(--txt);
+}
+.cpill-ico{font-size:14px;}
+
+/* ── SECTION ── */
+.section{
+  padding:64px 60px;
+  border-top:1px solid var(--bd);
+  scroll-margin-top:0;
+}
+.section:first-child{border-top:none;}
+.section-alt{background:var(--bg2);}
+.sec-kicker{
+  font-size:9px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;
+  display:flex;align-items:center;gap:8px;
+}
+.sec-kicker::after{content:'';flex:0 0 24px;height:1px;background:var(--gold);opacity:.3;}
+.sec-title{font-size:clamp(20px,2.4vw,30px);font-weight:900;color:#fff;margin-bottom:4px;}
+.sec-desc{font-size:13px;color:var(--muted);margin-bottom:36px;max-width:600px;line-height:1.6;}
+
+/* ── SUBSECTION ── */
+.subsec{margin-bottom:48px;}
+.subsec:last-child{margin-bottom:0;}
+.subsec-title{
+  font-size:14px;font-weight:800;color:#fff;
+  margin-bottom:4px;
+  display:flex;align-items:center;gap:10px;
+}
+.subsec-title::after{content:'';flex:1;height:1px;background:var(--bd);}
+.subsec-desc{font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.5;}
+
+/* ── PHONE FRAMES ── */
+.phone-row{
+  display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;
+}
+.phone-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.phone{
+  width:160px;height:302px;
+  border-radius:22px;
+  border:2px solid rgba(255,255,255,.12);
+  overflow:hidden;
+  background:#111;
+  position:relative;
+  box-shadow:0 16px 48px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.04);
+  flex-shrink:0;
+}
+.phone.lg{width:200px;height:376px;border-radius:28px;}
+.phone img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:top center;
+  display:block;
+}
+/* highlight overlay */
+.hl{
+  position:absolute;
+  border:2px solid;
+  border-radius:4px;
+  pointer-events:none;
+}
+.hl-gold{border-color:var(--gold);background:rgba(248,109,10,.08);}
+.hl-red{border-color:var(--red);background:rgba(239,68,68,.08);}
+.hl-green{border-color:var(--green);background:rgba(34,197,94,.08);}
+.hl-blue{border-color:var(--blue);background:rgba(33,150,243,.08);}
+/* callout pin */
+.pin{
+  position:absolute;
+  width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:800;color:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+.pin-gold{background:var(--gold);}
+.pin-red{background:var(--red);}
+.pin-blue{background:var(--blue);}
+.pin-green{background:var(--green);}
+.pin-teal{background:var(--teal);}
+
+.phone-label{
+  font-size:11px;font-weight:800;color:#fff;text-align:center;
+}
+.phone-sub{
+  font-size:10px;color:var(--muted);text-align:center;direction:rtl;margin-top:-6px;
+}
+.phone-tag{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:9px;font-weight:700;
+  padding:2px 8px;border-radius:100px;
+}
+.tag-ok{background:rgba(34,197,94,.12);color:var(--green);}
+.tag-warn{background:rgba(239,68,68,.12);color:var(--red);}
+.tag-note{background:rgba(248,109,10,.12);color:var(--gold);}
+.tag-info{background:rgba(33,150,243,.12);color:var(--blue);}
+
+/* ── ANNOTATION BLOCK ── */
+.annotation{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:12px;color:var(--txt);line-height:1.5;
+  margin-top:20px;
+}
+.annotation.an-warn{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.14);}
+.annotation.an-ok{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.14);}
+.annotation.an-note{background:rgba(248,109,10,.05);border:1px solid rgba(248,109,10,.14);}
+.annotation strong{color:#fff;}
+.an-ico{font-size:16px;flex-shrink:0;margin-top:1px;}
+
+/* ── COMPARISON TABLE ── */
+.comp-table{
+  width:100%;border-collapse:collapse;margin-top:16px;
+}
+.comp-table th{
+  font-size:9px;font-weight:800;color:var(--muted);
+  letter-spacing:2px;text-transform:uppercase;
+  padding:8px 12px;border-bottom:1px solid var(--bd);text-align:left;
+}
+.comp-table td{
+  font-size:12px;color:var(--txt);
+  padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.03);
+  vertical-align:middle;
+}
+.comp-table tr:last-child td{border-bottom:none;}
+.comp-table td:first-child{color:#fff;font-weight:700;}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;}
+.bg{background:rgba(248,109,10,.12);color:var(--gold);}
+.bgr{background:rgba(34,197,94,.12);color:var(--green);}
+.br{background:rgba(239,68,68,.12);color:var(--red);}
+.bb{background:rgba(33,150,243,.12);color:var(--blue);}
+.bgy{background:rgba(255,255,255,.06);color:var(--muted);}
+.bo{background:rgba(249,115,22,.12);color:var(--orange);}
+
+/* ── PENDING SECTION ── */
+.pending-block{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:160px;
+  border:1px dashed rgba(255,255,255,.1);
+  border-radius:14px;
+  gap:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.pending-ico{font-size:32px;opacity:.4;}
+
+/* ── UTILS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.mt8{margin-top:8px;} .mt12{margin-top:12px;} .mt16{margin-top:16px;} .mt24{margin-top:24px;} .mt32{margin-top:32px;}
+.fw8{font-weight:800;} .fw7{font-weight:700;}
+.gold{color:var(--gold);} .muted{color:var(--muted);}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ SIDEBAR ══════════════ -->
+<nav id="sidebar">
+  <div class="sb-logo">
+    <div class="sb-logo-inner">
+      <img src="../Downloads/logo%20direct%201.png" alt="Direct" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="fallback" style="display:none">Direct</span>
+    </div>
+  </div>
+
+  <div class="sb-chapter">Overview</div>
+  <a class="sb-link active" href="#cover" onclick="setActive(this)"><div class="sb-dot"></div>Cover</a>
+  <a class="sb-link" href="#matrix" onclick="setActive(this)"><div class="sb-dot"></div>Consistency Matrix</a>
+
+  <div class="sb-chapter">Navigation</div>
+  <a class="sb-link" href="#tab-bar" onclick="setActive(this)"><div class="sb-dot"></div>Tab Bar</a>
+  <a class="sb-link" href="#bottom-nav" onclick="setActive(this)"><div class="sb-dot"></div>Bottom Navigation</a>
+  <a class="sb-link" href="#back-close" onclick="setActive(this)"><div class="sb-dot"></div>Back / Close Button</a>
+  <a class="sb-link" href="#bottom-sheet" onclick="setActive(this)"><div class="sb-dot"></div>Bottom Sheet</a>
+
+  <div class="sb-chapter">Header</div>
+  <a class="sb-link" href="#header-bar" onclick="setActive(this)"><div class="sb-dot"></div>Header Bar &amp; Title</a>
+  <a class="sb-link" href="#header-icons" onclick="setActive(this)"><div class="sb-dot"></div>Header Icons</a>
+
+  <div class="sb-chapter">Search</div>
+  <a class="sb-link" href="#search-bar" onclick="setActive(this)"><div class="sb-dot"></div>Search Bar</a>
+  <a class="sb-link" href="#search-results" onclick="setActive(this)"><div class="sb-dot"></div>Results &amp; Selection</a>
+
+  <div class="sb-chapter">Forms</div>
+  <a class="sb-link" href="#form-fields" onclick="setActive(this)"><div class="sb-dot"></div>Text Input Fields</a>
+  <a class="sb-link" href="#trip-type" onclick="setActive(this)"><div class="sb-dot"></div>Trip Type Selector</a>
+  <a class="sb-link" href="#date-picker" onclick="setActive(this)"><div class="sb-dot"></div>Date Picker</a>
+  <a class="sb-link" href="#form-pickers" onclick="setActive(this)"><div class="sb-dot"></div>Pickers &amp; Steppers</a>
+  <a class="sb-link" href="#form-states" onclick="setActive(this)"><div class="sb-dot"></div>Field States</a>
+
+  <div class="sb-chapter">Buttons</div>
+  <a class="sb-link" href="#cta-primary" onclick="setActive(this)"><div class="sb-dot"></div>Primary CTA</a>
+  <a class="sb-link" href="#btn-states" onclick="setActive(this)"><div class="sb-dot"></div>Button States</a>
+
+  <div class="sb-chapter">Content</div>
+  <a class="sb-link" href="#cards" onclick="setActive(this)"><div class="sb-dot"></div>Cards</a>
+  <a class="sb-link" href="#lists" onclick="setActive(this)"><div class="sb-dot"></div>List Rows</a>
+
+  <div class="sb-chapter">States</div>
+  <a class="sb-link" href="#auth-gate" onclick="setActive(this)"><div class="sb-dot"></div>Auth Gate</a>
+  <a class="sb-link" href="#empty-states" onclick="setActive(this)"><div class="sb-dot"></div>Empty States</a>
+  <a class="sb-link" href="#filters" onclick="setActive(this)"><div class="sb-dot"></div>Filters<span class="sb-pending">📸</span></a>
+  <a class="sb-link" href="#sort" onclick="setActive(this)"><div class="sb-dot"></div>Sort<span class="sb-pending">📸</span></a>
+
+  <div class="sb-chapter">RTL / Arabic</div>
+  <a class="sb-link" href="#rtl" onclick="setActive(this)"><div class="sb-dot"></div>Layout Mirroring</a>
+</nav>
+
+<!-- ══════════════ MAIN ══════════════ -->
+<main id="main">
+
+<!-- ══ COVER ══ -->
+<section id="cover">
+  <div class="cover-inner">
+    <div class="cover-logo-wrap">
+      <img src="../Downloads/logo%20direct%201.png" alt="Direct" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:32px;font-weight:900;color:#050E1E;\'>Direct</span>'">
+    </div>
+    <div class="cover-eyebrow">UX Unification · Visual Review</div>
+    <div class="cover-title">How each pattern behaves<br>across all 7 products</div>
+    <div class="cover-sub">For Designer Meeting · May 2026</div>
+    <div class="cover-sub-ar">مراجعة توحيد تجربة المستخدم عبر المنتجات</div>
+    <div class="cover-rule"></div>
+    <div class="cover-pills">
+      <div class="cpill"><span class="cpill-ico">✈️</span> Flights</div>
+      <div class="cpill"><span class="cpill-ico">🏨</span> Hotels</div>
+      <div class="cpill"><span class="cpill-ico">🛂</span> Visas</div>
+      <div class="cpill"><span class="cpill-ico">📦</span> Packages</div>
+      <div class="cpill"><span class="cpill-ico">🎓</span> Study Abroad</div>
+      <div class="cpill"><span class="cpill-ico">📡</span> eSIM</div>
+      <div class="cpill"><span class="cpill-ico">🪪</span> Int'l License</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSISTENCY MATRIX -->
+<section class="section section-alt" id="matrix">
+  <div class="sec-kicker">Overview · 01</div>
+  <div class="sec-title">Consistency Matrix</div>
+  <div class="sec-desc">Quick visual scan of which patterns are consistent, missing, or broken across the 4 main booking products. ✓ consistent · ⚠️ inconsistent · ❌ missing or broken.</div>
+
+  <div style="overflow-x:auto;margin-top:24px;">
+    <table class="comp-table" style="min-width:680px;">
+      <tr>
+        <th style="width:200px;">Pattern</th>
+        <th>Flights ✈️</th>
+        <th>Hotels 🏨</th>
+        <th>Visas 🛂</th>
+        <th>Packages 📦</th>
+      </tr>
+      <tr>
+        <td><strong>Tab order</strong></td>
+        <td><span class="badge bgy">2nd ⚠️</span></td>
+        <td><span class="badge bgy">3rd ⚠️</span></td>
+        <td><span class="badge br">1st ❌</span></td>
+        <td><span class="badge bgy">4th ⚠️</span></td>
+      </tr>
+      <tr>
+        <td><strong>Sheet × close button</strong></td>
+        <td><span class="badge br">Missing ❌</span></td>
+        <td><span class="badge br">Missing ❌</span></td>
+        <td><span class="badge br">Missing ❌</span></td>
+        <td><span class="badge br">Missing ❌</span></td>
+      </tr>
+      <tr>
+        <td><strong>Header — page title</strong></td>
+        <td><span class="badge br">Brand name ❌</span></td>
+        <td><span class="badge br">Brand name ❌</span></td>
+        <td><span class="badge br">Brand name ❌</span></td>
+        <td><span class="badge br">Brand name ❌</span></td>
+      </tr>
+      <tr>
+        <td><strong>Search in sheet</strong></td>
+        <td><span class="badge bgr">Present ✓</span></td>
+        <td><span class="badge br">Missing ❌</span></td>
+        <td><span class="badge bgr">Present ✓</span></td>
+        <td><span class="badge bgy">N/A</span></td>
+      </tr>
+      <tr>
+        <td><strong>Trip type selector</strong></td>
+        <td><span class="badge bgr">Present ✓</span></td>
+        <td><span class="badge br">Missing ❌</span></td>
+        <td><span class="badge bgy">N/A</span></td>
+        <td><span class="badge bgy">N/A</span></td>
+      </tr>
+      <tr>
+        <td><strong>CTA — verb + object</strong></td>
+        <td><span class="badge bgy">"بحث" only ⚠️</span></td>
+        <td><span class="badge bgy">"ابحث" only ⚠️</span></td>
+        <td><span class="badge br">No CTA ❌</span></td>
+        <td><span class="badge bgy">Unclear ⚠️</span></td>
+      </tr>
+      <tr>
+        <td><strong>CTA position (bottom)</strong></td>
+        <td><span class="badge bgr">Bottom ✓</span></td>
+        <td><span class="badge bgr">Bottom ✓</span></td>
+        <td><span class="badge br">None ❌</span></td>
+        <td><span class="badge bgy">Auto-modal ⚠️</span></td>
+      </tr>
+      <tr>
+        <td><strong>Row selection highlight</strong></td>
+        <td><span class="badge bgr">Orange row ✓</span></td>
+        <td><span class="badge br">None ❌</span></td>
+        <td><span class="badge br">None ❌</span></td>
+        <td><span class="badge bgy">N/A</span></td>
+      </tr>
+      <tr>
+        <td><strong>RTL chevron direction</strong></td>
+        <td><span class="badge bgr">Correct ✓</span></td>
+        <td><span class="badge bgr">Correct ✓</span></td>
+        <td><span class="badge bgr">Correct ✓</span></td>
+        <td><span class="badge br">Wrong ‹ ❌</span></td>
+      </tr>
+      <tr>
+        <td><strong>Date picker</strong></td>
+        <td><span class="badge bgr">Calendar ✓</span></td>
+        <td><span class="badge br">Undefined ❌</span></td>
+        <td><span class="badge bgy">N/A</span></td>
+        <td><span class="badge bgy">Month only</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="annotation an-warn mt16">
+    <span class="an-ico">🔴</span>
+    <div><strong>3 universal failures — every product:</strong> (1) No × close on bottom sheets — WCAG 2.5.3 failure. (2) Header always shows brand name, never page context. (3) CTA copy never uses verb + object formula. Fix these 3 first — they require no visual redesign, just copy + one component change.</div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     NAVIGATION
+═════════════════════════════════════ -->
+
+<!-- TAB BAR -->
+<section class="section" id="tab-bar">
+  <div class="sec-kicker">Navigation · 01</div>
+  <div class="sec-title">Tab Bar</div>
+  <div class="sec-desc">The top tab bar is the primary navigation across all search products. Currently the order and scroll behavior is inconsistent.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Top Tab Bar — All Products</div>
+    <div class="subsec-desc">Tab bar visible at the top of the main search screens</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S01_home.png" alt="Flights home">
+          <!-- highlight the top tab bar area -->
+          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
+          <div class="pin pin-gold" style="top:5%;left:2%;">1</div>
+        </div>
+        <div class="phone-label">Flights Tab</div>
+        <div class="phone-sub">طيران</div>
+        <span class="phone-tag tag-note">تأشيرات first ⚠️</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02_flights_search.png" alt="Flights search">
+          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
+        </div>
+        <div class="phone-label">Flights Search</div>
+        <div class="phone-sub">بحث الرحلات</div>
+        <span class="phone-tag tag-note">5 tabs visible</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S03_hotels_search.png" alt="Hotels search">
+          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
+        </div>
+        <div class="phone-label">Hotels Tab</div>
+        <div class="phone-sub">فنادق</div>
+        <span class="phone-tag tag-ok">Consistent ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S04_visa_search.png" alt="Visa search">
+          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
+        </div>
+        <div class="phone-label">Visas Tab</div>
+        <div class="phone-sub">تأشيرات</div>
+        <span class="phone-tag tag-ok">Consistent ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Issue:</strong> Tab order starts with تأشيرات when طيران (most-used) should lead. The 5th tab clips with no visual scroll cue — users don't know more tabs exist.</div>
+    </div>
+
+    <table class="comp-table mt16">
+      <tr><th>Product</th><th>Tab Order</th><th>Scroll Cue</th><th>Label Length</th></tr>
+      <tr><td>Flights</td><td><span class="badge bgy">2nd position</span></td><td><span class="badge br">None</span></td><td><span class="badge bgr">OK</span></td></tr>
+      <tr><td>Visas</td><td><span class="badge bg">1st (should be last)</span></td><td><span class="badge br">None</span></td><td><span class="badge br">Too long</span></td></tr>
+      <tr><td>Hotels</td><td><span class="badge bgy">3rd</span></td><td><span class="badge br">None</span></td><td><span class="badge bgr">OK</span></td></tr>
+      <tr><td>Packages</td><td><span class="badge bgy">4th</span></td><td><span class="badge br">None</span></td><td><span class="badge bgr">OK</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- BOTTOM NAV -->
+<section class="section section-alt" id="bottom-nav">
+  <div class="sec-kicker">Navigation · 02</div>
+  <div class="sec-title">Bottom Navigation</div>
+  <div class="sec-desc">The bottom bar provides access to the five main areas. Label length and icon clarity varies across tabs.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Bottom Nav across screens</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S01_home.png" alt="Home bottom nav">
+          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
+          <div class="pin pin-gold" style="bottom:10%;left:2%;">↓</div>
+        </div>
+        <div class="phone-label">Home Screen</div>
+        <div class="phone-sub">الصفحة الرئيسية</div>
+        <span class="phone-tag tag-info">5 items</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S07_my_orders.png" alt="My orders">
+          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
+        </div>
+        <div class="phone-label">My Orders</div>
+        <div class="phone-sub">طلباتي</div>
+        <span class="phone-tag tag-ok">Active state ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v5_more_tab.png" alt="More tab">
+          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
+        </div>
+        <div class="phone-label">More Tab</div>
+        <div class="phone-sub">المزيد</div>
+        <span class="phone-tag tag-note">متطلبات التأشيرة overflow</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements">
+          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">متطلبات التأشيرة</div>
+        <span class="phone-tag tag-warn">Label overflows</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Issue:</strong> "متطلبات التأشيرة" is too long for the bottom nav tab — it overflows on narrow screens. Fix: shorten to <strong>"متطلبات"</strong> (8 chars). Study Abroad, eSIM, and Int'l License have no bottom nav entry at all.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK / CLOSE -->
+<section class="section" id="back-close">
+  <div class="sec-kicker">Navigation · 03</div>
+  <div class="sec-title">Back Button &amp; Close (×)</div>
+  <div class="sec-desc">Back navigation and modal dismiss controls. Currently only drag gesture exists — no visible close button on any sheet.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Bottom sheets — no × close button on any product</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02b_flights_swap.png" alt="Airport picker">
+          <!-- drag handle area, no × -->
+          <div class="hl hl-red" style="top:1%;left:30%;width:40%;height:3%;"></div>
+        </div>
+        <div class="phone-label">Airport Picker</div>
+        <div class="phone-sub">اختيار المطار</div>
+        <span class="phone-tag tag-warn">No × close</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S04b_visa_dropdown.png" alt="Country picker">
+          <div class="hl hl-red" style="top:1%;left:30%;width:40%;height:3%;"></div>
+        </div>
+        <div class="phone-label">Country Picker</div>
+        <div class="phone-sub">اختيار الدولة</div>
+        <span class="phone-tag tag-warn">No × close</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v3_hotels_destination_open.png" alt="Hotels destination">
+          <div class="hl hl-red" style="top:1%;left:30%;width:40%;height:3%;"></div>
+        </div>
+        <div class="phone-label">Hotels Destination</div>
+        <div class="phone-sub">وجهة الفندق</div>
+        <span class="phone-tag tag-warn">No × close</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">🔴</span>
+      <div><strong>WCAG 2.5.3 Failure:</strong> Drag-to-dismiss only. Motor-impaired users cannot close any bottom sheet. Fix: add a <strong>44×44px × button</strong> to the top-right of every sheet. The drag handle already exists — this is a one-line addition per component.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Back button on drill-down screens</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements back">
+          <div class="hl hl-gold" style="top:3.5%;left:2%;width:20%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">متطلبات التأشيرة</div>
+        <span class="phone-tag tag-ok">Back button ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S11_raisiyya.png" alt="Raisiyya detail">
+          <div class="hl hl-gold" style="top:3.5%;left:2%;width:20%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Package Detail</div>
+        <div class="phone-sub">تفاصيل الباقة</div>
+        <span class="phone-tag tag-ok">Back present ✓</span>
+      </div>
+
+    </div>
+    <div class="annotation an-ok mt16">
+      <span class="an-ico">✅</span>
+      <div><strong>Back button exists on drill-down screens</strong> — this is consistent. The issue is sheets (modals), not full pages.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM SHEET -->
+<section class="section section-alt" id="bottom-sheet">
+  <div class="sec-kicker">Navigation · 04</div>
+  <div class="sec-title">Bottom Sheet</div>
+  <div class="sec-desc">Bottom sheets are used for pickers across all products. Structure and header treatment are inconsistent.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Sheet header treatment — across products</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02b_flights_swap.png" alt="Flights airport sheet">
+          <!-- tabs area -->
+          <div class="hl hl-gold" style="top:5%;left:2%;width:96%;height:7%;"></div>
+          <!-- search field -->
+          <div class="hl hl-blue" style="top:13%;left:2%;width:96%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Flights — Airport Picker</div>
+        <div class="phone-sub">اختيار المطار · من / إلى</div>
+        <span class="phone-tag tag-ok">Best in app 🏆</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04b_visa_dropdown.png" alt="Visa country sheet">
+          <!-- no tabs, just title + search -->
+          <div class="hl hl-gold" style="top:4%;left:2%;width:96%;height:6%;"></div>
+          <div class="hl hl-blue" style="top:11%;left:2%;width:96%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Visas — Country Picker</div>
+        <div class="phone-sub">اختيار الدولة · إلى أين تسافر؟</div>
+        <span class="phone-tag tag-note">Missing: row highlight</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/v3_hotels_destination_open.png" alt="Hotels destination sheet">
+          <div class="hl hl-red" style="top:4%;left:2%;width:96%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Hotels — Destination</div>
+        <div class="phone-sub">وجهة الفندق</div>
+        <span class="phone-tag tag-warn">No search field</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>Normalize to Flights pattern:</strong> Tabbed header (when bidirectional) + search field + orange row highlight on selection. The Flights airport picker has the richest anatomy — copy it to all list pickers.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     HEADER
+═════════════════════════════════════ -->
+
+<!-- HEADER BAR -->
+<section class="section" id="header-bar">
+  <div class="sec-kicker">Header · 01</div>
+  <div class="sec-title">Header Bar &amp; Page Title</div>
+  <div class="sec-desc">The header should describe the current screen, not the brand. Most products show "Direct" — only Visa Requirements and Packages use a contextual title.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Page title — current vs. best in class</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02_flights_search.png" alt="Flights header">
+          <div class="hl hl-red" style="top:3%;left:15%;width:70%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Flights</div>
+        <div class="phone-sub">طيران</div>
+        <span class="phone-tag tag-warn">Shows "Direct"</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S03_hotels_search.png" alt="Hotels header">
+          <div class="hl hl-red" style="top:3%;left:15%;width:70%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Hotels</div>
+        <div class="phone-sub">فنادق</div>
+        <span class="phone-tag tag-warn">Shows "Direct"</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S04_visa_search.png" alt="Visa header">
+          <div class="hl hl-red" style="top:3%;left:15%;width:70%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Visas</div>
+        <div class="phone-sub">تأشيرات</div>
+        <span class="phone-tag tag-warn">Shows "Direct"</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements header">
+          <div class="hl hl-green" style="top:3%;left:5%;width:75%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">متطلبات التأشيرة</div>
+        <span class="phone-tag tag-ok">Contextual title ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>3 products show brand name in header:</strong> "Direct" tells the user nothing about where they are. <strong>Fix (copy change only):</strong> Flights → "البحث عن رحلات" · Hotels → "البحث عن فنادق" · Visas → "طلب تأشيرة"</div>
+    </div>
+  </div>
+</section>
+
+<!-- HEADER ICONS -->
+<section class="section section-alt" id="header-icons">
+  <div class="sec-kicker">Header · 02</div>
+  <div class="sec-title">Header Icons (Right Side)</div>
+  <div class="sec-desc">The right-side header icon action is unclear. A [›] chevron appears on most screens — its function is ambiguous.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Right header icon — what does [›] do?</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02_flights_search.png" alt="Flights right icon">
+          <div class="hl hl-red" style="top:3%;right:4%;width:10%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Flights</div>
+        <div class="phone-sub">طيران</div>
+        <span class="phone-tag tag-warn">[›] — unknown</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S03_hotels_search.png" alt="Hotels right icon">
+          <div class="hl hl-red" style="top:3%;right:4%;width:10%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Hotels</div>
+        <div class="phone-sub">فنادق</div>
+        <span class="phone-tag tag-warn">[›] — unknown</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements search icon">
+          <div class="hl hl-green" style="top:3%;right:4%;width:10%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">متطلبات التأشيرة</div>
+        <span class="phone-tag tag-ok">🔍 Search icon ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Issue:</strong> The [›] icon has no label and no universally understood meaning. Visa Requirements correctly uses a 🔍 search icon. <strong>Fix:</strong> Replace [›] with a meaningful icon (🔔 notifications or 🔍 search) with an accessible label.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SEARCH
+═════════════════════════════════════ -->
+
+<!-- SEARCH BAR -->
+<section class="section" id="search-bar">
+  <div class="sec-kicker">Search · 01</div>
+  <div class="sec-title">Search Bar</div>
+  <div class="sec-desc">Search is used inside bottom sheets (pickers) rather than as a standalone bar. Placeholder copy and interaction vary by product.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">In-sheet search across products</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02b_flights_swap.png" alt="Flights airport search">
+          <!-- highlight the search input inside the sheet -->
+          <div class="hl hl-gold" style="top:13%;left:3%;width:94%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Flights — Airport Search</div>
+        <div class="phone-sub">"من أين تود أن تسافر؟"</div>
+        <span class="phone-tag tag-ok">Best placeholder copy ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04b_visa_dropdown.png" alt="Visa country search">
+          <div class="hl hl-gold" style="top:11%;left:3%;width:94%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Visas — Country Search</div>
+        <div class="phone-sub">"إلى أين تود السفر؟"</div>
+        <span class="phone-tag tag-ok">Good copy ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/v3_hotels_destination_open.png" alt="Hotels destination search">
+          <div class="hl hl-red" style="top:8%;left:3%;width:94%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Hotels — Destination</div>
+        <div class="phone-sub">Search missing</div>
+        <span class="phone-tag tag-warn">No search field</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Hotels destination picker has no search field</strong> — users must scroll a long list. Flights and Visas both have search with contextual Arabic copy. <strong>Fix:</strong> Add search field to Hotels destination sheet. Copy placeholder format from Flights: "إلى أين تود الذهاب؟"</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH RESULTS -->
+<section class="section section-alt" id="search-results">
+  <div class="sec-kicker">Search · 02</div>
+  <div class="sec-title">Search Results &amp; Selection State</div>
+  <div class="sec-desc">How rows look when a result is selected. Only Flights has an orange row highlight — other products have no selection feedback.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Row anatomy and selection highlight</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02b_flights_swap.png" alt="Flights row selection">
+          <!-- highlight the row list area -->
+          <div class="hl hl-gold" style="top:22%;left:2%;width:96%;height:18%;"></div>
+        </div>
+        <div class="phone-label">Flights Airport Row</div>
+        <div class="phone-sub">IATA · City · Country</div>
+        <span class="phone-tag tag-ok">🏆 Best anatomy</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04b_visa_dropdown.png" alt="Visa country row">
+          <div class="hl hl-red" style="top:20%;left:2%;width:96%;height:18%;"></div>
+        </div>
+        <div class="phone-label">Visa Country Row</div>
+        <div class="phone-sub">Flag · Country name</div>
+        <span class="phone-tag tag-warn">No selection state</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>Flights row:</strong> IATA code + bold city + muted country + orange background on selection. <strong>Visa row:</strong> flag emoji + name only, no selection highlight.<br><br><strong>Fix:</strong> Add <code>rgba(248,109,10,0.10)</code> background + gold icon to selected row in Visa, Hotels, and all future pickers.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FORMS
+═════════════════════════════════════ -->
+
+<!-- FORM FIELDS -->
+<section class="section" id="form-fields">
+  <div class="sec-kicker">Forms · 01</div>
+  <div class="sec-title">Text Input Fields</div>
+  <div class="sec-desc">The main search form fields across Flights, Hotels, and Visas. These three are visually consistent — the pattern can be copied to other products.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Search form field anatomy — side by side</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02_flights_search.png" alt="Flights form">
+          <!-- form fields area -->
+          <div class="hl hl-gold" style="top:18%;left:3%;width:94%;height:35%;"></div>
+        </div>
+        <div class="phone-label">Flights</div>
+        <div class="phone-sub">من → إلى · التاريخ · الراكبون</div>
+        <span class="phone-tag tag-ok">5 fields ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S03_hotels_search.png" alt="Hotels form">
+          <div class="hl hl-gold" style="top:18%;left:3%;width:94%;height:28%;"></div>
+        </div>
+        <div class="phone-label">Hotels</div>
+        <div class="phone-sub">الوجهة · تاريخ الدخول / الخروج · الغرف</div>
+        <span class="phone-tag tag-ok">3 fields ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04_visa_search.png" alt="Visa form">
+          <div class="hl hl-gold" style="top:18%;left:3%;width:94%;height:12%;"></div>
+        </div>
+        <div class="phone-label">Visas</div>
+        <div class="phone-sub">اختيار الدولة فقط</div>
+        <span class="phone-tag tag-warn">1 field only → empty state</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-ok mt16">
+      <span class="an-ico">✅</span>
+      <div><strong>Field anatomy is consistent</strong> across Flights, Hotels, and Visas: left chevron (RTL ✓) · 52px height · 8px radius · 1px border. This is the design token to use for all future products (Study Abroad, eSIM, License).</div>
+    </div>
+
+    <div class="annotation an-warn mt8">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Visa tab problem:</strong> After selecting a country, the screen is empty — no next step, no CTA, no guidance. This is a broken flow.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIP TYPE SELECTOR -->
+<section class="section section-alt" id="trip-type">
+  <div class="sec-kicker">Forms · 02</div>
+  <div class="sec-title">Trip Type Selector</div>
+  <div class="sec-desc">Segment control for trip type — one-way / round-trip / multi-city. Only Flights has this pattern. It should be standardised for Hotels (one night / multi-night) and Packages.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Segment control — Flights only</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S01b_home_header.png" alt="Flights trip type segment">
+          <div class="hl hl-gold" style="top:16%;left:3%;width:94%;height:7%;"></div>
+          <div class="pin pin-gold" style="top:14%;right:4%;">1</div>
+        </div>
+        <div class="phone-label">Flights — Trip Type</div>
+        <div class="phone-sub">ذهاب · ذهاب وعودة · رحلات متعددة</div>
+        <span class="phone-tag tag-ok">Segment control ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S03_hotels_search.png" alt="Hotels no segment">
+          <div class="hl hl-red" style="top:16%;left:3%;width:94%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Hotels</div>
+        <div class="phone-sub">لا يوجد تحديد نوع الرحلة</div>
+        <span class="phone-tag tag-warn">No trip type ❌</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S01b_home_header.png" alt="Trust signals">
+          <div class="hl hl-blue" style="top:77%;left:3%;width:94%;height:18%;"></div>
+          <div class="pin pin-blue" style="top:77%;right:4%;">2</div>
+        </div>
+        <div class="phone-label">Partner Trust Signals</div>
+        <div class="phone-sub">Booking.com · Amadeus · Sabre</div>
+        <span class="phone-tag tag-ok">Flights only ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>[1] Segment control spec:</strong> 3-pill selector, active = white pill on var(--gold) background. Height: 40px. Font: Cairo 14px medium. RTL: active underline aligns under the selected pill.<br><br>
+      <strong>[2] Trust signals:</strong> Booking.com, Amadeus, Sabre, Travelport logos appear only in Flights. These should also appear in Hotels and Packages to reinforce booking confidence across all products.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DATE PICKER -->
+<section class="section" id="date-picker">
+  <div class="sec-kicker">Forms · 03</div>
+  <div class="sec-title">Date Picker</div>
+  <div class="sec-desc">Calendar-style bottom sheet for date selection. Uses a native-feel scrollable month grid with Arabic day names in RTL order (أحد → سبت).</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Flight date picker — Arabic calendar sheet</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02c_flights_cta_view.png" alt="Date picker calendar">
+          <div class="hl hl-gold" style="top:3%;left:15%;width:70%;height:6%;"></div>
+          <div class="pin pin-gold" style="top:2%;right:4%;">1</div>
+          <div class="hl hl-blue" style="top:11%;left:3%;width:94%;height:5%;"></div>
+          <div class="pin pin-blue" style="top:11%;right:4%;">2</div>
+          <div class="hl hl-green" style="top:22%;left:3%;width:17%;height:7%;"></div>
+          <div class="pin pin-green" style="top:21%;right:4%;">3</div>
+        </div>
+        <div class="phone-label">Flights — Date Picker</div>
+        <div class="phone-sub">اختر تاريخ الذهاب</div>
+        <span class="phone-tag tag-ok">Arabic calendar ✓</span>
+      </div>
+
+      <div class="phone-wrap" style="max-width:260px;justify-content:flex-start;padding-top:8px;">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px;font-size:12px;line-height:1.9;width:100%;">
+          <div style="font-weight:800;font-size:13px;color:#fff;margin-bottom:14px;">Anatomy</div>
+          <div style="margin-bottom:12px;"><span style="color:var(--gold);font-weight:700;">[1] Sheet title</span><br>Centered Arabic heading — describes the action clearly</div>
+          <div style="margin-bottom:12px;"><span style="color:var(--blue);font-weight:700;">[2] Day headers (RTL)</span><br>أحد · إثنين · ثلاثاء · أربعاء · خميس · جمعة · سبت — correct right-to-left order ✓</div>
+          <div style="margin-bottom:14px;"><span style="color:var(--green);font-weight:700;">[3] Today highlight</span><br>Orange circle on today's date. Past dates grey (disabled).</div>
+          <div style="padding-top:12px;border-top:1px solid rgba(255,255,255,.07);color:var(--muted);font-size:11px;">⚠️ Hotels date picker behavior not yet documented — opens differently or not at all.</div>
+        </div>
+        <div class="phone-label" style="margin-top:12px;">Anatomy breakdown</div>
+        <div class="phone-sub">تفاصيل مكوّن</div>
+        <span class="phone-tag tag-info">3 elements</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DROPDOWNS / PICKERS -->
+<section class="section section-alt" id="form-pickers">
+  <div class="sec-kicker">Forms · 04</div>
+  <div class="sec-title">Pickers &amp; Steppers</div>
+  <div class="sec-desc">Passenger class selector uses radio buttons + stepper counters. The Packages month selector auto-opens — a critical UX failure.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Passenger &amp; class picker — radio + stepper pattern</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/v2_flights_details.png" alt="Passenger class picker">
+          <div class="hl hl-gold" style="top:27%;left:3%;width:94%;height:28%;"></div>
+          <div class="pin pin-gold" style="top:26%;right:4%;">1</div>
+          <div class="hl hl-blue" style="top:57%;left:3%;width:94%;height:33%;"></div>
+          <div class="pin pin-blue" style="top:57%;right:4%;">2</div>
+        </div>
+        <div class="phone-label">Flights — Passengers</div>
+        <div class="phone-sub">درجة الرحلة · عدد المسافرين</div>
+        <span class="phone-tag tag-ok">Radio + stepper ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04b_visa_dropdown.png" alt="Country picker">
+          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Visa — Country Picker</div>
+        <div class="phone-sub">اختيار دولة التأشيرة</div>
+        <span class="phone-tag tag-warn">No row highlight ⚠️</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>[1] Class selector:</strong> Radio button list — Economy / Business / First. Default = Economy. Spec: 24px circle, 2px border, fills with var(--gold) on selection. <br><br>
+      <strong>[2] Passenger stepper:</strong> + button (active, orange) / counter / − button (disabled when count=0, grey). Steppers cover Adults (min 1), Children (min 0), Infants (min 0).</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Packages month selector — auto-open issue</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S05_packages_search.png" alt="Packages auto-open">
+          <div class="hl hl-red" style="top:45%;left:3%;width:94%;height:20%;"></div>
+        </div>
+        <div class="phone-label">Packages — Browse</div>
+        <div class="phone-sub">اختيار شهر السفر</div>
+        <span class="phone-tag tag-warn">Auto-opens on load ❌</span>
+      </div>
+
+    </div>
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Packages month picker auto-opens</strong> when the screen loads — before the user has seen any content. This forces an interaction before context is given (cognitive overload). <strong>Fix:</strong> show the browse cards first; only open the month picker on explicit tap.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM STATES -->
+<section class="section" id="form-states">
+  <div class="sec-kicker">Forms · 05</div>
+  <div class="sec-title">Field States</div>
+  <div class="sec-desc">Radio button and stepper states captured from the Flights passenger &amp; class selector — the only screen in the app that shows both selected and disabled control states.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Radio button — unselected vs. selected</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v2_flights_details.png" alt="Radio unselected state">
+          <div class="hl hl-blue" style="top:31%;left:3%;width:94%;height:9%;"></div>
+          <div class="hl hl-blue" style="top:40%;left:3%;width:94%;height:9%;"></div>
+        </div>
+        <div class="phone-label">Unselected (default)</div>
+        <div class="phone-sub">إقتصادية · أعمال — غير محدد</div>
+        <span class="phone-tag tag-info">Empty circle</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v2_flights_details.png" alt="Radio selected state">
+          <div class="hl hl-green" style="top:48%;left:3%;width:94%;height:9%;"></div>
+          <div class="pin pin-gold" style="top:47%;right:4%;">✓</div>
+        </div>
+        <div class="phone-label">Selected</div>
+        <div class="phone-sub">أولى — محدد</div>
+        <span class="phone-tag tag-ok">Filled orange ✓</span>
+      </div>
+
+      <div class="phone-wrap" style="max-width:240px;justify-content:flex-start;padding-top:4px;">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px;font-size:12px;line-height:1.9;width:100%;">
+          <div style="font-weight:800;font-size:13px;color:#fff;margin-bottom:12px;">Radio spec</div>
+          <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);">
+            <strong style="color:var(--blue);">Default</strong><br>
+            24×24px circle<br>
+            Border: 2px #D1D5DB<br>
+            Background: white
+          </div>
+          <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);">
+            <strong style="color:var(--green);">Selected</strong><br>
+            Fill: var(--gold) #F86D0A<br>
+            Inner dot: white<br>
+            Border: none
+          </div>
+          <div style="color:var(--muted);font-size:11px;">⚠️ No focus ring visible — WCAG 2.4.7 risk for keyboard/switch users</div>
+        </div>
+        <div class="phone-label" style="margin-top:12px;">State spec</div>
+        <span class="phone-tag tag-note">2 states</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Stepper — active (+) vs. disabled (−) state</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v2_flights_details.png" alt="Active stepper +">
+          <div class="hl hl-green" style="top:60%;left:2%;width:15%;height:9%;"></div>
+          <div class="hl hl-green" style="top:70%;left:2%;width:15%;height:9%;"></div>
+          <div class="hl hl-green" style="top:80%;left:2%;width:15%;height:9%;"></div>
+        </div>
+        <div class="phone-label">Active (+)</div>
+        <div class="phone-sub">زر الإضافة الفعّال</div>
+        <span class="phone-tag tag-ok">Orange · 44px ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v2_flights_details.png" alt="Disabled stepper −">
+          <div class="hl hl-red" style="top:60%;left:20%;width:15%;height:9%;"></div>
+          <div class="hl hl-red" style="top:70%;left:20%;width:15%;height:9%;"></div>
+          <div class="hl hl-red" style="top:80%;left:20%;width:15%;height:9%;"></div>
+        </div>
+        <div class="phone-label">Disabled (−)</div>
+        <div class="phone-sub">زر الطرح المعطّل (عند الصفر)</div>
+        <span class="phone-tag tag-warn">No tooltip ⚠️</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>Active +:</strong> BG var(--gold), white icon, 40×40px. <strong>Disabled −:</strong> BG #E5E5E5, grey icon, same size. The disabled state is visually clear but has no accessible label or tooltip explaining <em>why</em> it is disabled. WCAG recommends adding <code>aria-label="minimum reached"</code> or similar.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     BUTTONS / CTA
+═════════════════════════════════════ -->
+
+<!-- CTA PRIMARY -->
+<section class="section section-alt" id="cta-primary">
+  <div class="sec-kicker">Buttons · 01</div>
+  <div class="sec-title">Primary CTA Button</div>
+  <div class="sec-desc">The main action button label and position differs across products. The formula should be: [verb] + [object]. Only Visa Requirements gets this right.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">CTA label — current state across products</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02_flights_search.png" alt="Flights CTA">
+          <!-- bottom CTA area -->
+          <div class="hl hl-red" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Flights</div>
+        <div class="phone-sub">زر الإجراء</div>
+        <span class="phone-tag tag-warn">"بحث" — noun form</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S03_hotels_search.png" alt="Hotels CTA">
+          <div class="hl hl-red" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Hotels</div>
+        <div class="phone-sub">زر الإجراء</div>
+        <span class="phone-tag tag-warn">"ابحث" — no object</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S04_visa_search.png" alt="Visa CTA">
+          <div class="hl hl-red" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Visas</div>
+        <div class="phone-sub">زر الإجراء</div>
+        <span class="phone-tag tag-warn">No CTA at all ❌</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/clean_state.png" alt="Visa requirements CTA">
+          <div class="hl hl-green" style="bottom:5%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">"ابدأ طلب التأشيرة"</div>
+        <span class="phone-tag tag-ok">🏆 Best copy in app</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-note mt16">
+      <span class="an-ico">💡</span>
+      <div><strong>Rule:</strong> [فعل أمر] + [الموضوع] = max 3 words.<br>
+      Flights → <strong>ابحث عن رحلات</strong> · Hotels → <strong>ابحث عن فنادق</strong> · Packages → <strong>اختر هذه الفترة</strong> · Study → <strong>ابدأ طلب القبول</strong> · License → <strong>استخرج رخصتي</strong> · eSIM → <strong>احصل على الشريحة</strong></div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">CTA position — bottom-anchored vs inline</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S06c_uk_cta.png" alt="UK visa CTA anchored">
+          <div class="hl hl-green" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">Bottom-anchored</div>
+        <span class="phone-tag tag-ok">Thumb zone ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02_flights_search.png" alt="Flights CTA position">
+          <div class="hl hl-gold" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
+        </div>
+        <div class="phone-label">Flights</div>
+        <div class="phone-sub">Bottom of form</div>
+        <span class="phone-tag tag-ok">Position correct ✓</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BUTTON STATES -->
+<section class="section" id="btn-states">
+  <div class="sec-kicker">Buttons · 02</div>
+  <div class="sec-title">Button States</div>
+  <div class="sec-desc">Active and disabled button states captured from live screens. Loading state (spinner inside CTA) and pressed state could not be captured — documented as spec gaps below.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Primary CTA — active state across screens</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/v2_flights_details.png" alt="تأكيد CTA active">
+          <div class="hl hl-green" style="bottom:2%;left:3%;width:94%;height:8%;"></div>
+        </div>
+        <div class="phone-label">"تأكيد" — Passenger Picker</div>
+        <div class="phone-sub">زر التأكيد</div>
+        <span class="phone-tag tag-ok">Full-width · Active ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S06c_uk_cta.png" alt="ابدأ طلب التأشيرة">
+          <div class="hl hl-green" style="bottom:5%;left:3%;width:94%;height:9%;"></div>
+        </div>
+        <div class="phone-label">"ابدأ طلب التأشيرة" — Visa</div>
+        <div class="phone-sub">أفضل CTA في التطبيق</div>
+        <span class="phone-tag tag-ok">Best copy in app 🏆</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S02_flights_search.png" alt="بحث CTA">
+          <div class="hl hl-gold" style="bottom:2%;left:3%;width:94%;height:9%;"></div>
+        </div>
+        <div class="phone-label">"بحث" — Flights</div>
+        <div class="phone-sub">زر البحث</div>
+        <span class="phone-tag tag-warn">Verb only — no object ⚠️</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-ok mt16">
+      <span class="an-ico">✅</span>
+      <div><strong>All CTAs use the correct spec:</strong> Full-width, bottom-anchored, 56px height, var(--gold) background, white Cairo bold text. The only deviation is label copy — see the Primary CTA section for the verb+object formula.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Missing states — documented gaps</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:8px;">
+
+      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:16px;">
+        <div style="font-size:18px;margin-bottom:8px;">⏳</div>
+        <div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:4px;">Loading state</div>
+        <div style="font-size:11px;color:var(--muted);">Spinner replaces label inside the CTA while a request is in flight. Not captured. Spec: spinner left of text, label → present continuous ("جارٍ البحث…")</div>
+      </div>
+
+      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:16px;">
+        <div style="font-size:18px;margin-bottom:8px;">🚫</div>
+        <div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:4px;">Disabled state</div>
+        <div style="font-size:11px;color:var(--muted);">CTA disabled when required fields are empty. Not captured. Spec: 40% opacity, no cursor-not-allowed on iOS, no tooltip needed if reason is visible in form.</div>
+      </div>
+
+      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:16px;">
+        <div style="font-size:18px;margin-bottom:8px;">👆</div>
+        <div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:4px;">Press / tap state</div>
+        <div style="font-size:11px;color:var(--muted);">Brief visual feedback on tap. Not captured. Spec: 10% darkening of background on touchStart, UIImpactFeedbackGenerator medium for primary CTA.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CONTENT
+═════════════════════════════════════ -->
+
+<!-- CARDS -->
+<section class="section section-alt" id="cards">
+  <div class="sec-kicker">Content · 01</div>
+  <div class="sec-title">Cards</div>
+  <div class="sec-desc">Card layouts used in browse/discovery screens. Packages uses full-bleed photo cards; the home grid uses icon tiles.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Browse cards — Packages</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S05_packages_search.png" alt="Packages cards">
+          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:35%;"></div>
+        </div>
+        <div class="phone-label">Packages</div>
+        <div class="phone-sub">باقات السفر</div>
+        <span class="phone-tag tag-ok">Photo card ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S08_more_tab.png" alt="More tab packages">
+          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:35%;"></div>
+        </div>
+        <div class="phone-label">More Tab — Packages</div>
+        <div class="phone-sub">باقات من التبويب</div>
+        <span class="phone-tag tag-warn">RTL chevron wrong ‹</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S11_raisiyya.png" alt="Package detail">
+          <div class="hl hl-blue" style="top:0%;left:0%;width:100%;height:40%;"></div>
+        </div>
+        <div class="phone-label">Package Detail</div>
+        <div class="phone-sub">تفاصيل الباقة</div>
+        <span class="phone-tag tag-ok">Hero image ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>RTL chevron issue:</strong> Browse cards show ‹ (left-pointing) on an RTL layout — it should be ›. In Arabic right-to-left context, forward navigation uses › on the left side of the card, or no chevron if the card itself is the tap target.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Home service grid — icon tiles</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S01_home.png" alt="Home grid">
+          <div class="hl hl-blue" style="top:34%;left:3%;width:94%;height:42%;"></div>
+        </div>
+        <div class="phone-label">Home Grid</div>
+        <div class="phone-sub">خدمة مساندة للسفر</div>
+        <span class="phone-tag tag-ok">Good anatomy ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/01_after_next.png" alt="Home grid scrolled">
+          <div class="hl hl-blue" style="top:10%;left:3%;width:94%;height:65%;"></div>
+        </div>
+        <div class="phone-label">Home Grid — Services</div>
+        <div class="phone-sub">الخدمات المساندة</div>
+        <span class="phone-tag tag-warn">Study/eSIM/License buried</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LISTS -->
+<section class="section" id="lists">
+  <div class="sec-kicker">Content · 02</div>
+  <div class="sec-title">List Rows</div>
+  <div class="sec-desc">Rows inside pickers and settings screens. The Flights airport row is the richest — 3-level hierarchy with IATA code, city, and country.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">List row anatomy — picker vs. settings</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02b_flights_swap.png" alt="Airport picker rows">
+          <!-- rows area -->
+          <div class="hl hl-gold" style="top:22%;left:2%;width:96%;height:60%;"></div>
+        </div>
+        <div class="phone-label">Airport Picker Rows</div>
+        <div class="phone-sub">IATA · مدينة · دولة</div>
+        <span class="phone-tag tag-ok">🏆 Best row design</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04b_visa_dropdown.png" alt="Country picker rows">
+          <div class="hl hl-gold" style="top:20%;left:2%;width:96%;height:60%;"></div>
+        </div>
+        <div class="phone-label">Country Picker Rows</div>
+        <div class="phone-sub">🏳️ + اسم الدولة</div>
+        <span class="phone-tag tag-note">Flag + name only</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S08b_more_scrolled.png" alt="More menu rows">
+          <div class="hl hl-blue" style="top:5%;left:2%;width:96%;height:80%;"></div>
+        </div>
+        <div class="phone-label">More / Settings Rows</div>
+        <div class="phone-sub">قائمة المزيد</div>
+        <span class="phone-tag tag-ok">Icon + label + › ✓</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     STATES
+═════════════════════════════════════ -->
+
+<!-- EMPTY STATES -->
+<section class="section section-alt" id="empty-states">
+  <div class="sec-kicker">States · 02</div>
+  <div class="sec-title">Empty States</div>
+  <div class="sec-desc">What the user sees when there is no content. The Visas tab has a critical broken empty state after country selection.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">Post-selection empty state — Visas tab</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S04_visa_search.png" alt="Visa empty state">
+          <div class="hl hl-red" style="top:25%;left:5%;width:90%;height:50%;"></div>
+        </div>
+        <div class="phone-label">Visas Tab — After Selection</div>
+        <div class="phone-sub">لا يوجد محتوى</div>
+        <span class="phone-tag tag-warn">Empty — no next step</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements content">
+          <div class="hl hl-green" style="top:8%;left:3%;width:94%;height:75%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements — Has Content</div>
+        <div class="phone-sub">متطلبات التأشيرة مكتملة</div>
+        <span class="phone-tag tag-ok">Content + CTA ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">🔴</span>
+      <div><strong>Critical gap:</strong> The Visa tab shows a country picker — but after the user picks a country, nothing happens. The screen stays empty. The user has no next action. <strong>Fix:</strong> After selection, show the requirements or route to Visa Requirements screen with "ابدأ طلب التأشيرة" CTA.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">No-bookings empty state — My Orders</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S07_my_orders.png" alt="My orders">
+          <div class="hl hl-blue" style="top:15%;left:5%;width:90%;height:60%;"></div>
+        </div>
+        <div class="phone-label">My Orders</div>
+        <div class="phone-sub">لا توجد طلبات</div>
+        <span class="phone-tag tag-note">Has illustration ✓</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AUTH GATE -->
+<section class="section" id="auth-gate">
+  <div class="sec-kicker">States · 01</div>
+  <div class="sec-title">Auth Gate &amp; Splash</div>
+  <div class="sec-desc">Unauthenticated state and app launch experience. The More tab gates certain features behind a login CTA, but the experience has several UX gaps.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">App launch → More tab unauthenticated</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/FRESH_launch.png" alt="App splash screen">
+          <div class="hl hl-gold" style="top:48%;left:22%;width:56%;height:12%;"></div>
+        </div>
+        <div class="phone-label">Splash Screen</div>
+        <div class="phone-sub">شاشة التحميل</div>
+        <span class="phone-tag tag-ok">Brand orange ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/01_onboarding_2.png" alt="More tab unauthenticated">
+          <div class="hl hl-gold" style="top:33%;left:12%;width:76%;height:9%;"></div>
+          <div class="pin pin-gold" style="top:32%;right:4%;">1</div>
+          <div class="hl hl-blue" style="top:48%;left:3%;width:94%;height:34%;"></div>
+          <div class="pin pin-blue" style="top:48%;right:4%;">2</div>
+        </div>
+        <div class="phone-label">More Tab — Unauthenticated</div>
+        <div class="phone-sub">المزيد · غير مسجّل دخول</div>
+        <span class="phone-tag tag-warn">Auth gate ⚠️</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone">
+          <img src="screenshots/S07_my_orders.png" alt="My orders empty">
+          <div class="hl hl-red" style="top:12%;left:5%;width:90%;height:55%;"></div>
+        </div>
+        <div class="phone-label">My Orders — Unauthenticated</div>
+        <div class="phone-sub">طلباتي · بدون دخول</div>
+        <span class="phone-tag tag-warn">No login prompt ❌</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>[1] Login CTA visibility:</strong> "تسجيل الدخول" sits on a dark full-bleed photo — low contrast against the background. The button needs a solid container or a white label override to meet WCAG 4.5:1 contrast.<br><br>
+      <strong>[2] Locked items shown before login:</strong> المحفظة, الحسابات البنكية, إهداء رصيد are visible but non-functional. This creates a broken expectation. Fix: show a locked state badge or defer rendering until authenticated.<br><br>
+      <strong>My Orders gap:</strong> Shows a generic empty state instead of detecting the unauthenticated session and showing a targeted "سجّل دخولك لمشاهدة طلباتك" CTA.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS PENDING -->
+<section class="section section-alt" id="filters">
+  <div class="sec-kicker">States · 03</div>
+  <div class="sec-title">Filters</div>
+  <div class="sec-desc">Filter sheet, chips, active indicator, and clear button. Needs screens from search results flows.</div>
+  <div class="pending-block">
+    <div class="pending-ico">📸</div>
+    <div>Screens pending — reach search results screens in Flights &amp; Hotels</div>
+    <span class="phone-tag tag-note">Cover: filter button · modal · chips · active state · clear</span>
+  </div>
+</section>
+
+<!-- SORT PENDING -->
+<section class="section section-alt" id="sort">
+  <div class="sec-kicker">States · 04</div>
+  <div class="sec-title">Sort</div>
+  <div class="sec-desc">Sort options sheet and direction indicators on results lists.</div>
+  <div class="pending-block">
+    <div class="pending-ico">📸</div>
+    <div>Screens pending — navigate to results page after search</div>
+    <span class="phone-tag tag-note">Cover: sort button · options · direction indicator</span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     RTL / ARABIC
+═════════════════════════════════════ -->
+
+<section class="section" id="rtl">
+  <div class="sec-kicker">RTL / Arabic · 01</div>
+  <div class="sec-title">Layout Mirroring</div>
+  <div class="sec-desc">All screens are in Arabic (ar-SA). RTL mirroring means forms, chevrons, and icon placement must flip. One clear failure found.</div>
+
+  <div class="subsec">
+    <div class="subsec-title">RTL compliance — correct vs. incorrect</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02_flights_search.png" alt="Flights RTL">
+          <!-- highlight the chevron on the left side of fields -->
+          <div class="hl hl-green" style="top:20%;left:2%;width:10%;height:6%;"></div>
+          <div class="hl hl-green" style="top:28%;left:2%;width:10%;height:6%;"></div>
+          <div class="hl hl-green" style="top:36%;left:2%;width:10%;height:6%;"></div>
+        </div>
+        <div class="phone-label">Flights — Form</div>
+        <div class="phone-sub">الحقول والشيفرون</div>
+        <span class="phone-tag tag-ok">Chevron right side (RTL ✓)</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S08_more_tab.png" alt="Packages browse RTL">
+          <!-- wrong chevron -->
+          <div class="hl hl-red" style="top:15%;left:2%;width:10%;height:5%;"></div>
+          <div class="hl hl-red" style="top:32%;left:2%;width:10%;height:5%;"></div>
+        </div>
+        <div class="phone-label">More Tab — Packages</div>
+        <div class="phone-sub">الباقات من التبويب</div>
+        <span class="phone-tag tag-warn">‹ points wrong direction</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S02b_flights_swap.png" alt="Flights airport sheet">
+          <!-- show من/إلى tabs in RTL order -->
+          <div class="hl hl-gold" style="top:5%;left:2%;width:96%;height:7%;"></div>
+        </div>
+        <div class="phone-label">Airport Sheet — RTL Tabs</div>
+        <div class="phone-sub">من / إلى (right-to-left order)</div>
+        <span class="phone-tag tag-ok">Tab order RTL ✓</span>
+      </div>
+
+    </div>
+
+    <div class="annotation an-warn mt16">
+      <span class="an-ico">⚠️</span>
+      <div><strong>Browse card chevron ‹ is wrong in RTL.</strong> In an Arabic layout, ‹ points backward (right-to-left reading direction means ‹ means "go back"). It should either be › or removed. Fix: flip to › or use a tap target without a directional chevron.</div>
+    </div>
+  </div>
+
+  <div class="subsec">
+    <div class="subsec-title">Home screen — Arabic layout check</div>
+    <div class="phone-row">
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S09_home_real.png" alt="Home real state">
+          <div class="hl hl-blue" style="top:2%;left:0%;width:100%;height:12%;"></div>
+        </div>
+        <div class="phone-label">Home — Real State</div>
+        <div class="phone-sub">الصفحة الرئيسية</div>
+        <span class="phone-tag tag-ok">Header mirrored ✓</span>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="phone lg">
+          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements RTL">
+          <div class="hl hl-gold" style="top:18%;left:2%;width:96%;height:28%;"></div>
+        </div>
+        <div class="phone-label">Visa Requirements</div>
+        <div class="phone-sub">متطلبات · تبويب الدول</div>
+        <span class="phone-tag tag-ok">Flag tabs RTL ✓</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// Sidebar active state
+function setActive(el) {
+  document.querySelectorAll('.sb-link').forEach(l => l.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Auto-highlight sidebar on scroll
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.sb-link[href]');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      links.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.25 });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
