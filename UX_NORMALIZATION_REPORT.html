@@ -288,50 +288,50 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
 
   <div class="sb-chapter">Overview</div>
   <a class="sb-link active" href="#cover" onclick="setActive(this)"><div class="sb-dot"></div>Cover</a>
-  <a class="sb-link" href="#matrix" onclick="setActive(this)"><div class="sb-dot"></div>Consistency Matrix</a>
+  <a class="sb-link" href="#matrix" onclick="setActive(this)"><div class="sb-dot"></div>UX Standards</a>
 
   <div class="sb-chapter">Navigation</div>
   <a class="sb-link" href="#tab-bar" onclick="setActive(this)"><div class="sb-dot"></div>Tab Bar</a>
   <a class="sb-link" href="#bottom-nav" onclick="setActive(this)"><div class="sb-dot"></div>Bottom Navigation</a>
   <a class="sb-link" href="#back-close" onclick="setActive(this)"><div class="sb-dot"></div>Back / Close Button</a>
   <a class="sb-link" href="#bottom-sheet" onclick="setActive(this)"><div class="sb-dot"></div>Bottom Sheet</a>
-
-  <div class="sb-chapter">Header</div>
   <a class="sb-link" href="#header-bar" onclick="setActive(this)"><div class="sb-dot"></div>Header Bar &amp; Title</a>
   <a class="sb-link" href="#header-icons" onclick="setActive(this)"><div class="sb-dot"></div>Header Icons</a>
-
-  <div class="sb-chapter">Search</div>
   <a class="sb-link" href="#search-bar" onclick="setActive(this)"><div class="sb-dot"></div>Search Bar</a>
-  <a class="sb-link" href="#search-results" onclick="setActive(this)"><div class="sb-dot"></div>Results &amp; Selection</a>
-
-  <div class="sb-chapter">Forms</div>
+  <a class="sb-link" href="#search-results" onclick="setActive(this)"><div class="sb-dot"></div>Search Results</a>
   <a class="sb-link" href="#form-fields" onclick="setActive(this)"><div class="sb-dot"></div>Text Input Fields</a>
   <a class="sb-link" href="#trip-type" onclick="setActive(this)"><div class="sb-dot"></div>Trip Type Selector</a>
   <a class="sb-link" href="#date-picker" onclick="setActive(this)"><div class="sb-dot"></div>Date Picker</a>
   <a class="sb-link" href="#form-pickers" onclick="setActive(this)"><div class="sb-dot"></div>Pickers &amp; Steppers</a>
   <a class="sb-link" href="#form-states" onclick="setActive(this)"><div class="sb-dot"></div>Field States</a>
+  <a class="sb-link" href="#auth-gate" onclick="setActive(this)"><div class="sb-dot"></div>Auth Gate</a>
+  <a class="sb-link" href="#empty-states" onclick="setActive(this)"><div class="sb-dot"></div>Empty States</a>
+
+  <div class="sb-chapter">Filters / Sort</div>
+  <a class="sb-link" href="#filters" onclick="setActive(this)"><div class="sb-dot"></div>Filters<span class="sb-pending">+</span></a>
+  <a class="sb-link" href="#sort" onclick="setActive(this)"><div class="sb-dot"></div>Sort<span class="sb-pending">+</span></a>
 
   <div class="sb-chapter">Buttons</div>
   <a class="sb-link" href="#cta-primary" onclick="setActive(this)"><div class="sb-dot"></div>Primary CTA</a>
   <a class="sb-link" href="#btn-states" onclick="setActive(this)"><div class="sb-dot"></div>Button States</a>
+  <a class="sb-link" href="#confirmation-popup" onclick="setActive(this)"><div class="sb-dot"></div>Confirmation Popup<span class="sb-pending">+</span></a>
 
-  <div class="sb-chapter">Content</div>
+  <div class="sb-chapter">Cards / Lists</div>
   <a class="sb-link" href="#cards" onclick="setActive(this)"><div class="sb-dot"></div>Cards</a>
   <a class="sb-link" href="#lists" onclick="setActive(this)"><div class="sb-dot"></div>List Rows</a>
+  <a class="sb-link" href="#price-display" onclick="setActive(this)"><div class="sb-dot"></div>Price Display<span class="sb-pending">+</span></a>
 
-  <div class="sb-chapter">States</div>
-  <a class="sb-link" href="#auth-gate" onclick="setActive(this)"><div class="sb-dot"></div>Auth Gate</a>
-  <a class="sb-link" href="#empty-states" onclick="setActive(this)"><div class="sb-dot"></div>Empty States</a>
-  <a class="sb-link" href="#filters" onclick="setActive(this)"><div class="sb-dot"></div>Filters<span class="sb-pending">📸</span></a>
-  <a class="sb-link" href="#sort" onclick="setActive(this)"><div class="sb-dot"></div>Sort<span class="sb-pending">📸</span></a>
+  <div class="sb-chapter">RTL / Arabic</div>
+  <a class="sb-link" href="#rtl" onclick="setActive(this)"><div class="sb-dot"></div>Layout Mirroring</a>
+  <a class="sb-link" href="#typography" onclick="setActive(this)"><div class="sb-dot"></div>Typography</a>
+
+  <div class="sb-chapter">Motion</div>
+  <a class="sb-link" href="#animation" onclick="setActive(this)"><div class="sb-dot"></div>Animation<span class="sb-pending">+</span></a>
 
   <div class="sb-chapter">Figma vs. Built</div>
   <a class="sb-link" href="#figma-pickers" onclick="setActive(this)"><div class="sb-dot"></div>Redesigned Pickers</a>
   <a class="sb-link" href="#figma-dates" onclick="setActive(this)"><div class="sb-dot"></div>Date Range Picker</a>
   <a class="sb-link" href="#figma-unbuilt" onclick="setActive(this)"><div class="sb-dot"></div>Unbuilt Screens</a>
-
-  <div class="sb-chapter">RTL / Arabic</div>
-  <a class="sb-link" href="#rtl" onclick="setActive(this)"><div class="sb-dot"></div>Layout Mirroring</a>
 </nav>
 
 <!-- ══════════════ MAIN ══════════════ -->
@@ -360,172 +360,226 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   </div>
 </section>
 
-<!-- CONSISTENCY MATRIX -->
+<!-- UX STANDARDS -->
 <section class="section section-alt" id="matrix">
   <div class="sec-kicker">Overview · 01</div>
-  <div class="sec-title">Consistency Matrix</div>
-  <div class="sec-desc">Quick visual scan of which patterns are consistent, missing, or broken across the 4 main booking products. ✓ consistent · ⚠️ inconsistent · ❌ missing or broken.</div>
+  <div class="sec-title">UX Standards</div>
+  <div class="sec-desc">These are the interaction patterns that must apply across the entire app — all 7 products. Each standard is anchored to the best existing example inside Direct. Where no good example exists, the Figma spec or industry best practice is the reference.</div>
 
-  <div style="overflow-x:auto;margin-top:24px;">
-    <table class="comp-table" style="min-width:680px;">
-      <tr>
-        <th style="width:200px;">Pattern</th>
-        <th>Flights ✈️</th>
-        <th>Hotels 🏨</th>
-        <th>Visas 🛂</th>
-        <th>Packages 📦</th>
-      </tr>
-      <tr>
-        <td><strong>Tab order</strong></td>
-        <td><span class="badge bgy">2nd ⚠️</span></td>
-        <td><span class="badge bgy">3rd ⚠️</span></td>
-        <td><span class="badge br">1st ❌</span></td>
-        <td><span class="badge bgy">4th ⚠️</span></td>
-      </tr>
-      <tr>
-        <td><strong>Sheet × close button</strong></td>
-        <td><span class="badge br">Missing ❌</span></td>
-        <td><span class="badge br">Missing ❌</span></td>
-        <td><span class="badge br">Missing ❌</span></td>
-        <td><span class="badge br">Missing ❌</span></td>
-      </tr>
-      <tr>
-        <td><strong>Header — page title</strong></td>
-        <td><span class="badge br">Brand name ❌</span></td>
-        <td><span class="badge br">Brand name ❌</span></td>
-        <td><span class="badge br">Brand name ❌</span></td>
-        <td><span class="badge br">Brand name ❌</span></td>
-      </tr>
-      <tr>
-        <td><strong>Search in sheet</strong></td>
-        <td><span class="badge bgr">Present ✓</span></td>
-        <td><span class="badge br">Missing ❌</span></td>
-        <td><span class="badge bgr">Present ✓</span></td>
-        <td><span class="badge bgy">N/A</span></td>
-      </tr>
-      <tr>
-        <td><strong>Trip type selector</strong></td>
-        <td><span class="badge bgr">Present ✓</span></td>
-        <td><span class="badge br">Missing ❌</span></td>
-        <td><span class="badge bgy">N/A</span></td>
-        <td><span class="badge bgy">N/A</span></td>
-      </tr>
-      <tr>
-        <td><strong>CTA — verb + object</strong></td>
-        <td><span class="badge bgy">"بحث" only ⚠️</span></td>
-        <td><span class="badge bgy">"ابحث" only ⚠️</span></td>
-        <td><span class="badge br">No CTA ❌</span></td>
-        <td><span class="badge bgy">Unclear ⚠️</span></td>
-      </tr>
-      <tr>
-        <td><strong>CTA position (bottom)</strong></td>
-        <td><span class="badge bgr">Bottom ✓</span></td>
-        <td><span class="badge bgr">Bottom ✓</span></td>
-        <td><span class="badge br">None ❌</span></td>
-        <td><span class="badge bgy">Auto-modal ⚠️</span></td>
-      </tr>
-      <tr>
-        <td><strong>Row selection highlight</strong></td>
-        <td><span class="badge bgr">Orange row ✓</span></td>
-        <td><span class="badge br">None ❌</span></td>
-        <td><span class="badge br">None ❌</span></td>
-        <td><span class="badge bgy">N/A</span></td>
-      </tr>
-      <tr>
-        <td><strong>RTL chevron direction</strong></td>
-        <td><span class="badge bgr">Correct ✓</span></td>
-        <td><span class="badge bgr">Correct ✓</span></td>
-        <td><span class="badge bgr">Correct ✓</span></td>
-        <td><span class="badge br">Wrong ‹ ❌</span></td>
-      </tr>
-      <tr>
-        <td><strong>Date picker</strong></td>
-        <td><span class="badge bgr">Calendar ✓</span></td>
-        <td><span class="badge br">Undefined ❌</span></td>
-        <td><span class="badge bgy">N/A</span></td>
-        <td><span class="badge bgy">Month only</span></td>
-      </tr>
-    </table>
-  </div>
+  <style>
+  .std-list{display:flex;flex-direction:column;gap:0;margin-top:24px;}
+  .std-row{
+    display:grid;
+    grid-template-columns:28px 1fr 160px;
+    gap:0 20px;
+    align-items:start;
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .std-row:last-child{border-bottom:none;}
+  .std-num{
+    font-size:11px;font-weight:900;color:var(--muted);
+    letter-spacing:1px;padding-top:2px;
+  }
+  .std-body{}
+  .std-title{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;}
+  .std-rule{font-size:12px;color:var(--txt);line-height:1.6;margin-bottom:8px;}
+  .std-ref{
+    font-size:11px;color:var(--muted);
+    display:flex;align-items:center;gap:6px;
+  }
+  .std-ref-dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--gold);flex-shrink:0;
+  }
+  .std-apply{
+    display:flex;flex-direction:column;gap:4px;
+    padding-top:2px;
+  }
+  .apply-label{
+    font-size:9px;font-weight:800;letter-spacing:1.5px;
+    color:var(--muted);text-transform:uppercase;
+    margin-bottom:2px;
+  }
+  .apply-tag{
+    font-size:10px;font-weight:700;
+    padding:3px 8px;border-radius:100px;
+    background:rgba(248,109,10,.12);
+    color:var(--gold);
+    display:inline-block;margin-bottom:3px;
+    width:fit-content;
+  }
+  </style>
 
-  <div class="annotation an-warn mt16">
-    <span class="an-ico">🔴</span>
-    <div><strong>3 universal failures — every product:</strong> (1) No × close on bottom sheets — WCAG 2.5.3 failure. (2) Header always shows brand name, never page context. (3) CTA copy never uses verb + object formula. Fix these 3 first — they require no visual redesign, just copy + one component change.</div>
+  <div class="std-list">
+
+    <div class="std-row">
+      <div class="std-num">01</div>
+      <div class="std-body">
+        <div class="std-title">Search Experience</div>
+        <div class="std-rule">Every destination/location input must open a full bottom sheet with a live-filter search bar, results list with flag or icon, and row highlight on selection. Minimum 44px row height.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Flights airport picker</strong> — IATA code + city name + country, instant filter, orange row on tap</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Hotels destination</span>
+        <span class="apply-tag">Visa country</span>
+        <span class="apply-tag">Study city</span>
+        <span class="apply-tag">eSIM country</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">02</div>
+      <div class="std-body">
+        <div class="std-title">Primary CTA — Verb + Object</div>
+        <div class="std-rule">Every main action button must follow the formula [فعل أمر] + [الموضوع], max 3 words. Full-width (padding 16px), 56px height, anchored to the bottom safe area. Background: var(--gold).</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Visa Requirements — "ابدأ طلب التأشيرة"</strong></div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Flights → ابحث عن رحلات</span>
+        <span class="apply-tag">Hotels → ابحث عن فنادق</span>
+        <span class="apply-tag">Packages → اختر هذه الباقة</span>
+        <span class="apply-tag">Study → ابدأ طلب القبول</span>
+        <span class="apply-tag">eSIM → احصل على الشريحة</span>
+        <span class="apply-tag">License → استخرج رخصتي</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">03</div>
+      <div class="std-body">
+        <div class="std-title">Bottom Sheet — Close Button</div>
+        <div class="std-rule">Every bottom sheet must have a visible × close button (top-right, 44×44px hit area) in addition to the drag handle. Drag-only dismiss fails WCAG 2.5.3 for motor-impaired users.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec</strong> — × in top-left (RTL), drag handle retained</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">All bottom sheets</span>
+        <span class="apply-tag">Airport picker</span>
+        <span class="apply-tag">Country picker</span>
+        <span class="apply-tag">Date picker</span>
+        <span class="apply-tag">Passenger picker</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">04</div>
+      <div class="std-body">
+        <div class="std-title">Header Title — Page Context, Not Brand</div>
+        <div class="std-rule">The header title must reflect the current page or destination name, not the app brand "Direct". Brand is already conveyed by icon, splash screen, and app store presence.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Visa Requirements — "متطلبات التأشيرة"</strong> as header title</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Flights header</span>
+        <span class="apply-tag">Hotels header</span>
+        <span class="apply-tag">Packages header</span>
+        <span class="apply-tag">All drill-downs</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">05</div>
+      <div class="std-body">
+        <div class="std-title">Date Selection — Range Picker</div>
+        <div class="std-rule">For any round-trip or multi-day booking, departure and return dates must be selectable in a single calendar interaction. A two-step date flow adds unnecessary friction.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma date range picker</strong> — الذهاب + العودة in one sheet, Arabic month grid</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Flights round-trip</span>
+        <span class="apply-tag">Hotels check-in/out</span>
+        <span class="apply-tag">Packages dates</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">06</div>
+      <div class="std-body">
+        <div class="std-title">Passenger &amp; Class Selector</div>
+        <div class="std-rule">Passenger count uses stepper (+/−) with type labels (بالغ, طفل, رضيع) and age ranges. Class uses a radio list. Both live in a single bottom sheet with "تأكيد" CTA.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec</strong> — grouped sections, × close, clean white surface</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Flights</span>
+        <span class="apply-tag">Hotels (guests + rooms)</span>
+        <span class="apply-tag">Packages</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">07</div>
+      <div class="std-body">
+        <div class="std-title">Trip Type Segment Control</div>
+        <div class="std-rule">Screens with multiple trip variants must use a pill segment control at the top of the form. Active pill: white on var(--gold). Height: 40px. Font: Cairo 14px medium.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Flights — ذهاب / ذهاب وعودة / رحلات متعددة</strong></div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Hotels (1 night / multi)</span>
+        <span class="apply-tag">Packages (type)</span>
+        <span class="apply-tag">Visa (single / multiple)</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">08</div>
+      <div class="std-body">
+        <div class="std-title">Empty State — Contextual, Not Generic</div>
+        <div class="std-rule">Empty states must detect context: unauthenticated users see a login prompt; no-results states show an illustration + retry CTA; post-search empty shows "no flights found" + suggest alternatives.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>My Orders — illustration + Arabic label</strong>. Gap: no login CTA when unauthenticated.</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">My Orders (auth gate)</span>
+        <span class="apply-tag">Search results (no match)</span>
+        <span class="apply-tag">Visa tab (after select)</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">09</div>
+      <div class="std-body">
+        <div class="std-title">RTL — Chevron Direction</div>
+        <div class="std-rule">In Arabic RTL layout, forward navigation chevrons must point › (right-pointing). A ‹ chevron means "go back" in RTL reading direction. All card and list row chevrons must be direction-aware.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Correct in app: <strong>Flights, Hotels, Visa form fields</strong>. Failure: Packages browse cards use ‹</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Fix in</div>
+        <span class="apply-tag">Packages cards</span>
+        <span class="apply-tag">More tab cards</span>
+        <span class="apply-tag">Any new card component</span>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">10</div>
+      <div class="std-body">
+        <div class="std-title">Loading State — Skeleton Screen</div>
+        <div class="std-rule">Search result loading must show a skeleton screen (grey placeholder cards matching the result card shape), not a spinner. The Figma spec shows the correct skeleton pattern for flights.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma flights loading screen</strong> — "جاري البحث عن رحلات" + skeleton cards</div>
+      </div>
+      <div class="std-apply">
+        <div class="apply-label">Apply to</div>
+        <span class="apply-tag">Flights results</span>
+        <span class="apply-tag">Hotels results</span>
+        <span class="apply-tag">Study Abroad results</span>
+        <span class="apply-tag">All search flows</span>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<!-- ════════════════════════════════════
-     NAVIGATION
-═════════════════════════════════════ -->
 
 <!-- TAB BAR -->
 <section class="section" id="tab-bar">
   <div class="sec-kicker">Navigation · 01</div>
   <div class="sec-title">Tab Bar</div>
   <div class="sec-desc">The top tab bar is the primary navigation across all search products. Currently the order and scroll behavior is inconsistent.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Top Tab Bar — All Products</div>
-    <div class="subsec-desc">Tab bar visible at the top of the main search screens</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S01_home.png" alt="Flights home">
-          <!-- highlight the top tab bar area -->
-          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
-          <div class="pin pin-gold" style="top:5%;left:2%;">1</div>
-        </div>
-        <div class="phone-label">Flights Tab</div>
-        <div class="phone-sub">طيران</div>
-        <span class="phone-tag tag-note">تأشيرات first ⚠️</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02_flights_search.png" alt="Flights search">
-          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
-        </div>
-        <div class="phone-label">Flights Search</div>
-        <div class="phone-sub">بحث الرحلات</div>
-        <span class="phone-tag tag-note">5 tabs visible</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S03_hotels_search.png" alt="Hotels search">
-          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
-        </div>
-        <div class="phone-label">Hotels Tab</div>
-        <div class="phone-sub">فنادق</div>
-        <span class="phone-tag tag-ok">Consistent ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S04_visa_search.png" alt="Visa search">
-          <div class="hl hl-gold" style="top:7%;left:2%;width:96%;height:8%;"></div>
-        </div>
-        <div class="phone-label">Visas Tab</div>
-        <div class="phone-sub">تأشيرات</div>
-        <span class="phone-tag tag-ok">Consistent ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Issue:</strong> Tab order starts with تأشيرات when طيران (most-used) should lead. The 5th tab clips with no visual scroll cue — users don't know more tabs exist.</div>
-    </div>
-
-    <table class="comp-table mt16">
-      <tr><th>Product</th><th>Tab Order</th><th>Scroll Cue</th><th>Label Length</th></tr>
-      <tr><td>Flights</td><td><span class="badge bgy">2nd position</span></td><td><span class="badge br">None</span></td><td><span class="badge bgr">OK</span></td></tr>
-      <tr><td>Visas</td><td><span class="badge bg">1st (should be last)</span></td><td><span class="badge br">None</span></td><td><span class="badge br">Too long</span></td></tr>
-      <tr><td>Hotels</td><td><span class="badge bgy">3rd</span></td><td><span class="badge br">None</span></td><td><span class="badge bgr">OK</span></td></tr>
-      <tr><td>Packages</td><td><span class="badge bgy">4th</span></td><td><span class="badge br">None</span></td><td><span class="badge bgr">OK</span></td></tr>
-    </table>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- BOTTOM NAV -->
@@ -533,59 +587,7 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Navigation · 02</div>
   <div class="sec-title">Bottom Navigation</div>
   <div class="sec-desc">The bottom bar provides access to the five main areas. Label length and icon clarity varies across tabs.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Bottom Nav across screens</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S01_home.png" alt="Home bottom nav">
-          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
-          <div class="pin pin-gold" style="bottom:10%;left:2%;">↓</div>
-        </div>
-        <div class="phone-label">Home Screen</div>
-        <div class="phone-sub">الصفحة الرئيسية</div>
-        <span class="phone-tag tag-info">5 items</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S07_my_orders.png" alt="My orders">
-          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
-        </div>
-        <div class="phone-label">My Orders</div>
-        <div class="phone-sub">طلباتي</div>
-        <span class="phone-tag tag-ok">Active state ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v5_more_tab.png" alt="More tab">
-          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
-        </div>
-        <div class="phone-label">More Tab</div>
-        <div class="phone-sub">المزيد</div>
-        <span class="phone-tag tag-note">متطلبات التأشيرة overflow</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements">
-          <div class="hl hl-blue" style="bottom:0%;left:0%;width:100%;height:13%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">متطلبات التأشيرة</div>
-        <span class="phone-tag tag-warn">Label overflows</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Issue:</strong> "متطلبات التأشيرة" is too long for the bottom nav tab — it overflows on narrow screens. Fix: shorten to <strong>"متطلبات"</strong> (8 chars). Study Abroad, eSIM, and Int'l License have no bottom nav entry at all.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- BACK / CLOSE -->
@@ -593,80 +595,7 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Navigation · 03</div>
   <div class="sec-title">Back Button &amp; Close (×)</div>
   <div class="sec-desc">Back navigation and modal dismiss controls. Currently only drag gesture exists — no visible close button on any sheet.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Bottom sheets — no × close button on any product</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02b_flights_swap.png" alt="Airport picker">
-          <!-- drag handle area, no × -->
-          <div class="hl hl-red" style="top:1%;left:30%;width:40%;height:3%;"></div>
-        </div>
-        <div class="phone-label">Airport Picker</div>
-        <div class="phone-sub">اختيار المطار</div>
-        <span class="phone-tag tag-warn">No × close</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S04b_visa_dropdown.png" alt="Country picker">
-          <div class="hl hl-red" style="top:1%;left:30%;width:40%;height:3%;"></div>
-        </div>
-        <div class="phone-label">Country Picker</div>
-        <div class="phone-sub">اختيار الدولة</div>
-        <span class="phone-tag tag-warn">No × close</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v3_hotels_destination_open.png" alt="Hotels destination">
-          <div class="hl hl-red" style="top:1%;left:30%;width:40%;height:3%;"></div>
-        </div>
-        <div class="phone-label">Hotels Destination</div>
-        <div class="phone-sub">وجهة الفندق</div>
-        <span class="phone-tag tag-warn">No × close</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">🔴</span>
-      <div><strong>WCAG 2.5.3 Failure:</strong> Drag-to-dismiss only. Motor-impaired users cannot close any bottom sheet. Fix: add a <strong>44×44px × button</strong> to the top-right of every sheet. The drag handle already exists — this is a one-line addition per component.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Back button on drill-down screens</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements back">
-          <div class="hl hl-gold" style="top:3.5%;left:2%;width:20%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">متطلبات التأشيرة</div>
-        <span class="phone-tag tag-ok">Back button ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S11_raisiyya.png" alt="Raisiyya detail">
-          <div class="hl hl-gold" style="top:3.5%;left:2%;width:20%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Package Detail</div>
-        <div class="phone-sub">تفاصيل الباقة</div>
-        <span class="phone-tag tag-ok">Back present ✓</span>
-      </div>
-
-    </div>
-    <div class="annotation an-ok mt16">
-      <span class="an-ico">✅</span>
-      <div><strong>Back button exists on drill-down screens</strong> — this is consistent. The issue is sheets (modals), not full pages.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- BOTTOM SHEET -->
@@ -674,116 +603,15 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Navigation · 04</div>
   <div class="sec-title">Bottom Sheet</div>
   <div class="sec-desc">Bottom sheets are used for pickers across all products. Structure and header treatment are inconsistent.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Sheet header treatment — across products</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02b_flights_swap.png" alt="Flights airport sheet">
-          <!-- tabs area -->
-          <div class="hl hl-gold" style="top:5%;left:2%;width:96%;height:7%;"></div>
-          <!-- search field -->
-          <div class="hl hl-blue" style="top:13%;left:2%;width:96%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Flights — Airport Picker</div>
-        <div class="phone-sub">اختيار المطار · من / إلى</div>
-        <span class="phone-tag tag-ok">Best in app 🏆</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04b_visa_dropdown.png" alt="Visa country sheet">
-          <!-- no tabs, just title + search -->
-          <div class="hl hl-gold" style="top:4%;left:2%;width:96%;height:6%;"></div>
-          <div class="hl hl-blue" style="top:11%;left:2%;width:96%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Visas — Country Picker</div>
-        <div class="phone-sub">اختيار الدولة · إلى أين تسافر؟</div>
-        <span class="phone-tag tag-note">Missing: row highlight</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/v3_hotels_destination_open.png" alt="Hotels destination sheet">
-          <div class="hl hl-red" style="top:4%;left:2%;width:96%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Hotels — Destination</div>
-        <div class="phone-sub">وجهة الفندق</div>
-        <span class="phone-tag tag-warn">No search field</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>Normalize to Flights pattern:</strong> Tabbed header (when bidirectional) + search field + orange row highlight on selection. The Flights airport picker has the richest anatomy — copy it to all list pickers.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
-
-<!-- ════════════════════════════════════
-     HEADER
-═════════════════════════════════════ -->
 
 <!-- HEADER BAR -->
 <section class="section" id="header-bar">
   <div class="sec-kicker">Header · 01</div>
   <div class="sec-title">Header Bar &amp; Page Title</div>
   <div class="sec-desc">The header should describe the current screen, not the brand. Most products show "Direct" — only Visa Requirements and Packages use a contextual title.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Page title — current vs. best in class</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02_flights_search.png" alt="Flights header">
-          <div class="hl hl-red" style="top:3%;left:15%;width:70%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Flights</div>
-        <div class="phone-sub">طيران</div>
-        <span class="phone-tag tag-warn">Shows "Direct"</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S03_hotels_search.png" alt="Hotels header">
-          <div class="hl hl-red" style="top:3%;left:15%;width:70%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Hotels</div>
-        <div class="phone-sub">فنادق</div>
-        <span class="phone-tag tag-warn">Shows "Direct"</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S04_visa_search.png" alt="Visa header">
-          <div class="hl hl-red" style="top:3%;left:15%;width:70%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Visas</div>
-        <div class="phone-sub">تأشيرات</div>
-        <span class="phone-tag tag-warn">Shows "Direct"</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements header">
-          <div class="hl hl-green" style="top:3%;left:5%;width:75%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">متطلبات التأشيرة</div>
-        <span class="phone-tag tag-ok">Contextual title ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>3 products show brand name in header:</strong> "Direct" tells the user nothing about where they are. <strong>Fix (copy change only):</strong> Flights → "البحث عن رحلات" · Hotels → "البحث عن فنادق" · Visas → "طلب تأشيرة"</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- HEADER ICONS -->
@@ -791,102 +619,15 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Header · 02</div>
   <div class="sec-title">Header Icons (Right Side)</div>
   <div class="sec-desc">The right-side header icon action is unclear. A [›] chevron appears on most screens — its function is ambiguous.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Right header icon — what does [›] do?</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02_flights_search.png" alt="Flights right icon">
-          <div class="hl hl-red" style="top:3%;right:4%;width:10%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Flights</div>
-        <div class="phone-sub">طيران</div>
-        <span class="phone-tag tag-warn">[›] — unknown</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S03_hotels_search.png" alt="Hotels right icon">
-          <div class="hl hl-red" style="top:3%;right:4%;width:10%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Hotels</div>
-        <div class="phone-sub">فنادق</div>
-        <span class="phone-tag tag-warn">[›] — unknown</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements search icon">
-          <div class="hl hl-green" style="top:3%;right:4%;width:10%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">متطلبات التأشيرة</div>
-        <span class="phone-tag tag-ok">🔍 Search icon ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Issue:</strong> The [›] icon has no label and no universally understood meaning. Visa Requirements correctly uses a 🔍 search icon. <strong>Fix:</strong> Replace [›] with a meaningful icon (🔔 notifications or 🔍 search) with an accessible label.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
-
-<!-- ════════════════════════════════════
-     SEARCH
-═════════════════════════════════════ -->
 
 <!-- SEARCH BAR -->
 <section class="section" id="search-bar">
   <div class="sec-kicker">Search · 01</div>
   <div class="sec-title">Search Bar</div>
   <div class="sec-desc">Search is used inside bottom sheets (pickers) rather than as a standalone bar. Placeholder copy and interaction vary by product.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">In-sheet search across products</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02b_flights_swap.png" alt="Flights airport search">
-          <!-- highlight the search input inside the sheet -->
-          <div class="hl hl-gold" style="top:13%;left:3%;width:94%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Flights — Airport Search</div>
-        <div class="phone-sub">"من أين تود أن تسافر؟"</div>
-        <span class="phone-tag tag-ok">Best placeholder copy ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04b_visa_dropdown.png" alt="Visa country search">
-          <div class="hl hl-gold" style="top:11%;left:3%;width:94%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Visas — Country Search</div>
-        <div class="phone-sub">"إلى أين تود السفر؟"</div>
-        <span class="phone-tag tag-ok">Good copy ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/v3_hotels_destination_open.png" alt="Hotels destination search">
-          <div class="hl hl-red" style="top:8%;left:3%;width:94%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Hotels — Destination</div>
-        <div class="phone-sub">Search missing</div>
-        <span class="phone-tag tag-warn">No search field</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Hotels destination picker has no search field</strong> — users must scroll a long list. Flights and Visas both have search with contextual Arabic copy. <strong>Fix:</strong> Add search field to Hotels destination sheet. Copy placeholder format from Flights: "إلى أين تود الذهاب؟"</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- SEARCH RESULTS -->
@@ -894,150 +635,23 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Search · 02</div>
   <div class="sec-title">Search Results &amp; Selection State</div>
   <div class="sec-desc">How rows look when a result is selected. Only Flights has an orange row highlight — other products have no selection feedback.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Row anatomy and selection highlight</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02b_flights_swap.png" alt="Flights row selection">
-          <!-- highlight the row list area -->
-          <div class="hl hl-gold" style="top:22%;left:2%;width:96%;height:18%;"></div>
-        </div>
-        <div class="phone-label">Flights Airport Row</div>
-        <div class="phone-sub">IATA · City · Country</div>
-        <span class="phone-tag tag-ok">🏆 Best anatomy</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04b_visa_dropdown.png" alt="Visa country row">
-          <div class="hl hl-red" style="top:20%;left:2%;width:96%;height:18%;"></div>
-        </div>
-        <div class="phone-label">Visa Country Row</div>
-        <div class="phone-sub">Flag · Country name</div>
-        <span class="phone-tag tag-warn">No selection state</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>Flights row:</strong> IATA code + bold city + muted country + orange background on selection. <strong>Visa row:</strong> flag emoji + name only, no selection highlight.<br><br><strong>Fix:</strong> Add <code>rgba(248,109,10,0.10)</code> background + gold icon to selected row in Visa, Hotels, and all future pickers.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
-
-<!-- ════════════════════════════════════
-     FORMS
-═════════════════════════════════════ -->
 
 <!-- FORM FIELDS -->
 <section class="section" id="form-fields">
   <div class="sec-kicker">Forms · 01</div>
   <div class="sec-title">Text Input Fields</div>
   <div class="sec-desc">The main search form fields across Flights, Hotels, and Visas. These three are visually consistent — the pattern can be copied to other products.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Search form field anatomy — side by side</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02_flights_search.png" alt="Flights form">
-          <!-- form fields area -->
-          <div class="hl hl-gold" style="top:18%;left:3%;width:94%;height:35%;"></div>
-        </div>
-        <div class="phone-label">Flights</div>
-        <div class="phone-sub">من → إلى · التاريخ · الراكبون</div>
-        <span class="phone-tag tag-ok">5 fields ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S03_hotels_search.png" alt="Hotels form">
-          <div class="hl hl-gold" style="top:18%;left:3%;width:94%;height:28%;"></div>
-        </div>
-        <div class="phone-label">Hotels</div>
-        <div class="phone-sub">الوجهة · تاريخ الدخول / الخروج · الغرف</div>
-        <span class="phone-tag tag-ok">3 fields ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04_visa_search.png" alt="Visa form">
-          <div class="hl hl-gold" style="top:18%;left:3%;width:94%;height:12%;"></div>
-        </div>
-        <div class="phone-label">Visas</div>
-        <div class="phone-sub">اختيار الدولة فقط</div>
-        <span class="phone-tag tag-warn">1 field only → empty state</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-ok mt16">
-      <span class="an-ico">✅</span>
-      <div><strong>Field anatomy is consistent</strong> across Flights, Hotels, and Visas: left chevron (RTL ✓) · 52px height · 8px radius · 1px border. This is the design token to use for all future products (Study Abroad, eSIM, License).</div>
-    </div>
-
-    <div class="annotation an-warn mt8">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Visa tab problem:</strong> After selecting a country, the screen is empty — no next step, no CTA, no guidance. This is a broken flow.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- TRIP TYPE SELECTOR -->
+<!-- TRIP TYPE -->
 <section class="section section-alt" id="trip-type">
   <div class="sec-kicker">Forms · 02</div>
   <div class="sec-title">Trip Type Selector</div>
   <div class="sec-desc">Segment control for trip type — one-way / round-trip / multi-city. Only Flights has this pattern. It should be standardised for Hotels (one night / multi-night) and Packages.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Segment control — Flights only</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S01b_home_header.png" alt="Flights trip type segment">
-          <div class="hl hl-gold" style="top:16%;left:3%;width:94%;height:7%;"></div>
-          <div class="pin pin-gold" style="top:14%;right:4%;">1</div>
-        </div>
-        <div class="phone-label">Flights — Trip Type</div>
-        <div class="phone-sub">ذهاب · ذهاب وعودة · رحلات متعددة</div>
-        <span class="phone-tag tag-ok">Segment control ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S03_hotels_search.png" alt="Hotels no segment">
-          <div class="hl hl-red" style="top:16%;left:3%;width:94%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Hotels</div>
-        <div class="phone-sub">لا يوجد تحديد نوع الرحلة</div>
-        <span class="phone-tag tag-warn">No trip type ❌</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S01b_home_header.png" alt="Trust signals">
-          <div class="hl hl-blue" style="top:77%;left:3%;width:94%;height:18%;"></div>
-          <div class="pin pin-blue" style="top:77%;right:4%;">2</div>
-        </div>
-        <div class="phone-label">Partner Trust Signals</div>
-        <div class="phone-sub">Booking.com · Amadeus · Sabre</div>
-        <span class="phone-tag tag-ok">Flights only ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>[1] Segment control spec:</strong> 3-pill selector, active = white pill on var(--gold) background. Height: 40px. Font: Cairo 14px medium. RTL: active underline aligns under the selected pill.<br><br>
-      <strong>[2] Trust signals:</strong> Booking.com, Amadeus, Sabre, Travelport logos appear only in Flights. These should also appear in Hotels and Packages to reinforce booking confidence across all products.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- DATE PICKER -->
@@ -1045,290 +659,31 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Forms · 03</div>
   <div class="sec-title">Date Picker</div>
   <div class="sec-desc">Calendar-style bottom sheet for date selection. Uses a native-feel scrollable month grid with Arabic day names in RTL order (أحد → سبت).</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Flight date picker — Arabic calendar sheet</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02c_flights_cta_view.png" alt="Date picker calendar">
-          <div class="hl hl-gold" style="top:3%;left:15%;width:70%;height:6%;"></div>
-          <div class="pin pin-gold" style="top:2%;right:4%;">1</div>
-          <div class="hl hl-blue" style="top:11%;left:3%;width:94%;height:5%;"></div>
-          <div class="pin pin-blue" style="top:11%;right:4%;">2</div>
-          <div class="hl hl-green" style="top:22%;left:3%;width:17%;height:7%;"></div>
-          <div class="pin pin-green" style="top:21%;right:4%;">3</div>
-        </div>
-        <div class="phone-label">Flights — Date Picker</div>
-        <div class="phone-sub">اختر تاريخ الذهاب</div>
-        <span class="phone-tag tag-ok">Arabic calendar ✓</span>
-      </div>
-
-      <div class="phone-wrap" style="max-width:260px;justify-content:flex-start;padding-top:8px;">
-        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px;font-size:12px;line-height:1.9;width:100%;">
-          <div style="font-weight:800;font-size:13px;color:#fff;margin-bottom:14px;">Anatomy</div>
-          <div style="margin-bottom:12px;"><span style="color:var(--gold);font-weight:700;">[1] Sheet title</span><br>Centered Arabic heading — describes the action clearly</div>
-          <div style="margin-bottom:12px;"><span style="color:var(--blue);font-weight:700;">[2] Day headers (RTL)</span><br>أحد · إثنين · ثلاثاء · أربعاء · خميس · جمعة · سبت — correct right-to-left order ✓</div>
-          <div style="margin-bottom:14px;"><span style="color:var(--green);font-weight:700;">[3] Today highlight</span><br>Orange circle on today's date. Past dates grey (disabled).</div>
-          <div style="padding-top:12px;border-top:1px solid rgba(255,255,255,.07);color:var(--muted);font-size:11px;">⚠️ Hotels date picker behavior not yet documented — opens differently or not at all.</div>
-        </div>
-        <div class="phone-label" style="margin-top:12px;">Anatomy breakdown</div>
-        <div class="phone-sub">تفاصيل مكوّن</div>
-        <span class="phone-tag tag-info">3 elements</span>
-      </div>
-
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- DROPDOWNS / PICKERS -->
+<!-- PICKERS & STEPPERS -->
 <section class="section section-alt" id="form-pickers">
   <div class="sec-kicker">Forms · 04</div>
   <div class="sec-title">Pickers &amp; Steppers</div>
   <div class="sec-desc">Passenger class selector uses radio buttons + stepper counters. The Packages month selector auto-opens — a critical UX failure.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Passenger &amp; class picker — radio + stepper pattern</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/v2_flights_details.png" alt="Passenger class picker">
-          <div class="hl hl-gold" style="top:27%;left:3%;width:94%;height:28%;"></div>
-          <div class="pin pin-gold" style="top:26%;right:4%;">1</div>
-          <div class="hl hl-blue" style="top:57%;left:3%;width:94%;height:33%;"></div>
-          <div class="pin pin-blue" style="top:57%;right:4%;">2</div>
-        </div>
-        <div class="phone-label">Flights — Passengers</div>
-        <div class="phone-sub">درجة الرحلة · عدد المسافرين</div>
-        <span class="phone-tag tag-ok">Radio + stepper ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04b_visa_dropdown.png" alt="Country picker">
-          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Visa — Country Picker</div>
-        <div class="phone-sub">اختيار دولة التأشيرة</div>
-        <span class="phone-tag tag-warn">No row highlight ⚠️</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>[1] Class selector:</strong> Radio button list — Economy / Business / First. Default = Economy. Spec: 24px circle, 2px border, fills with var(--gold) on selection. <br><br>
-      <strong>[2] Passenger stepper:</strong> + button (active, orange) / counter / − button (disabled when count=0, grey). Steppers cover Adults (min 1), Children (min 0), Infants (min 0).</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Packages month selector — auto-open issue</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S05_packages_search.png" alt="Packages auto-open">
-          <div class="hl hl-red" style="top:45%;left:3%;width:94%;height:20%;"></div>
-        </div>
-        <div class="phone-label">Packages — Browse</div>
-        <div class="phone-sub">اختيار شهر السفر</div>
-        <span class="phone-tag tag-warn">Auto-opens on load ❌</span>
-      </div>
-
-    </div>
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Packages month picker auto-opens</strong> when the screen loads — before the user has seen any content. This forces an interaction before context is given (cognitive overload). <strong>Fix:</strong> show the browse cards first; only open the month picker on explicit tap.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- FORM STATES -->
+<!-- FIELD STATES -->
 <section class="section" id="form-states">
   <div class="sec-kicker">Forms · 05</div>
   <div class="sec-title">Field States</div>
   <div class="sec-desc">Radio button and stepper states captured from the Flights passenger &amp; class selector — the only screen in the app that shows both selected and disabled control states.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Radio button — unselected vs. selected</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v2_flights_details.png" alt="Radio unselected state">
-          <div class="hl hl-blue" style="top:31%;left:3%;width:94%;height:9%;"></div>
-          <div class="hl hl-blue" style="top:40%;left:3%;width:94%;height:9%;"></div>
-        </div>
-        <div class="phone-label">Unselected (default)</div>
-        <div class="phone-sub">إقتصادية · أعمال — غير محدد</div>
-        <span class="phone-tag tag-info">Empty circle</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v2_flights_details.png" alt="Radio selected state">
-          <div class="hl hl-green" style="top:48%;left:3%;width:94%;height:9%;"></div>
-          <div class="pin pin-gold" style="top:47%;right:4%;">✓</div>
-        </div>
-        <div class="phone-label">Selected</div>
-        <div class="phone-sub">أولى — محدد</div>
-        <span class="phone-tag tag-ok">Filled orange ✓</span>
-      </div>
-
-      <div class="phone-wrap" style="max-width:240px;justify-content:flex-start;padding-top:4px;">
-        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px;font-size:12px;line-height:1.9;width:100%;">
-          <div style="font-weight:800;font-size:13px;color:#fff;margin-bottom:12px;">Radio spec</div>
-          <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);">
-            <strong style="color:var(--blue);">Default</strong><br>
-            24×24px circle<br>
-            Border: 2px #D1D5DB<br>
-            Background: white
-          </div>
-          <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.06);">
-            <strong style="color:var(--green);">Selected</strong><br>
-            Fill: var(--gold) #F86D0A<br>
-            Inner dot: white<br>
-            Border: none
-          </div>
-          <div style="color:var(--muted);font-size:11px;">⚠️ No focus ring visible — WCAG 2.4.7 risk for keyboard/switch users</div>
-        </div>
-        <div class="phone-label" style="margin-top:12px;">State spec</div>
-        <span class="phone-tag tag-note">2 states</span>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Stepper — active (+) vs. disabled (−) state</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v2_flights_details.png" alt="Active stepper +">
-          <div class="hl hl-green" style="top:60%;left:2%;width:15%;height:9%;"></div>
-          <div class="hl hl-green" style="top:70%;left:2%;width:15%;height:9%;"></div>
-          <div class="hl hl-green" style="top:80%;left:2%;width:15%;height:9%;"></div>
-        </div>
-        <div class="phone-label">Active (+)</div>
-        <div class="phone-sub">زر الإضافة الفعّال</div>
-        <span class="phone-tag tag-ok">Orange · 44px ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v2_flights_details.png" alt="Disabled stepper −">
-          <div class="hl hl-red" style="top:60%;left:20%;width:15%;height:9%;"></div>
-          <div class="hl hl-red" style="top:70%;left:20%;width:15%;height:9%;"></div>
-          <div class="hl hl-red" style="top:80%;left:20%;width:15%;height:9%;"></div>
-        </div>
-        <div class="phone-label">Disabled (−)</div>
-        <div class="phone-sub">زر الطرح المعطّل (عند الصفر)</div>
-        <span class="phone-tag tag-warn">No tooltip ⚠️</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>Active +:</strong> BG var(--gold), white icon, 40×40px. <strong>Disabled −:</strong> BG #E5E5E5, grey icon, same size. The disabled state is visually clear but has no accessible label or tooltip explaining <em>why</em> it is disabled. WCAG recommends adding <code>aria-label="minimum reached"</code> or similar.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- ════════════════════════════════════
-     BUTTONS / CTA
-═════════════════════════════════════ -->
-
-<!-- CTA PRIMARY -->
+<!-- PRIMARY CTA -->
 <section class="section section-alt" id="cta-primary">
   <div class="sec-kicker">Buttons · 01</div>
   <div class="sec-title">Primary CTA Button</div>
   <div class="sec-desc">The main action button label and position differs across products. The formula should be: [verb] + [object]. Only Visa Requirements gets this right.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">CTA label — current state across products</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02_flights_search.png" alt="Flights CTA">
-          <!-- bottom CTA area -->
-          <div class="hl hl-red" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Flights</div>
-        <div class="phone-sub">زر الإجراء</div>
-        <span class="phone-tag tag-warn">"بحث" — noun form</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S03_hotels_search.png" alt="Hotels CTA">
-          <div class="hl hl-red" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Hotels</div>
-        <div class="phone-sub">زر الإجراء</div>
-        <span class="phone-tag tag-warn">"ابحث" — no object</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S04_visa_search.png" alt="Visa CTA">
-          <div class="hl hl-red" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Visas</div>
-        <div class="phone-sub">زر الإجراء</div>
-        <span class="phone-tag tag-warn">No CTA at all ❌</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/clean_state.png" alt="Visa requirements CTA">
-          <div class="hl hl-green" style="bottom:5%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">"ابدأ طلب التأشيرة"</div>
-        <span class="phone-tag tag-ok">🏆 Best copy in app</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>Rule:</strong> [فعل أمر] + [الموضوع] = max 3 words.<br>
-      Flights → <strong>ابحث عن رحلات</strong> · Hotels → <strong>ابحث عن فنادق</strong> · Packages → <strong>اختر هذه الفترة</strong> · Study → <strong>ابدأ طلب القبول</strong> · License → <strong>استخرج رخصتي</strong> · eSIM → <strong>احصل على الشريحة</strong></div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">CTA position — bottom-anchored vs inline</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S06c_uk_cta.png" alt="UK visa CTA anchored">
-          <div class="hl hl-green" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">Bottom-anchored</div>
-        <span class="phone-tag tag-ok">Thumb zone ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02_flights_search.png" alt="Flights CTA position">
-          <div class="hl hl-gold" style="bottom:2%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Flights</div>
-        <div class="phone-sub">Bottom of form</div>
-        <span class="phone-tag tag-ok">Position correct ✓</span>
-      </div>
-
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- BUTTON STATES -->
@@ -1336,407 +691,103 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Buttons · 02</div>
   <div class="sec-title">Button States</div>
   <div class="sec-desc">Active and disabled button states captured from live screens. Loading state (spinner inside CTA) and pressed state could not be captured — documented as spec gaps below.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Primary CTA — active state across screens</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/v2_flights_details.png" alt="تأكيد CTA active">
-          <div class="hl hl-green" style="bottom:2%;left:3%;width:94%;height:8%;"></div>
-        </div>
-        <div class="phone-label">"تأكيد" — Passenger Picker</div>
-        <div class="phone-sub">زر التأكيد</div>
-        <span class="phone-tag tag-ok">Full-width · Active ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S06c_uk_cta.png" alt="ابدأ طلب التأشيرة">
-          <div class="hl hl-green" style="bottom:5%;left:3%;width:94%;height:9%;"></div>
-        </div>
-        <div class="phone-label">"ابدأ طلب التأشيرة" — Visa</div>
-        <div class="phone-sub">أفضل CTA في التطبيق</div>
-        <span class="phone-tag tag-ok">Best copy in app 🏆</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S02_flights_search.png" alt="بحث CTA">
-          <div class="hl hl-gold" style="bottom:2%;left:3%;width:94%;height:9%;"></div>
-        </div>
-        <div class="phone-label">"بحث" — Flights</div>
-        <div class="phone-sub">زر البحث</div>
-        <span class="phone-tag tag-warn">Verb only — no object ⚠️</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-ok mt16">
-      <span class="an-ico">✅</span>
-      <div><strong>All CTAs use the correct spec:</strong> Full-width, bottom-anchored, 56px height, var(--gold) background, white Cairo bold text. The only deviation is label copy — see the Primary CTA section for the verb+object formula.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Missing states — documented gaps</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:8px;">
-
-      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:16px;">
-        <div style="font-size:18px;margin-bottom:8px;">⏳</div>
-        <div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:4px;">Loading state</div>
-        <div style="font-size:11px;color:var(--muted);">Spinner replaces label inside the CTA while a request is in flight. Not captured. Spec: spinner left of text, label → present continuous ("جارٍ البحث…")</div>
-      </div>
-
-      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:16px;">
-        <div style="font-size:18px;margin-bottom:8px;">🚫</div>
-        <div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:4px;">Disabled state</div>
-        <div style="font-size:11px;color:var(--muted);">CTA disabled when required fields are empty. Not captured. Spec: 40% opacity, no cursor-not-allowed on iOS, no tooltip needed if reason is visible in form.</div>
-      </div>
-
-      <div style="background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:16px;">
-        <div style="font-size:18px;margin-bottom:8px;">👆</div>
-        <div style="font-weight:700;font-size:13px;color:#fff;margin-bottom:4px;">Press / tap state</div>
-        <div style="font-size:11px;color:var(--muted);">Brief visual feedback on tap. Not captured. Spec: 10% darkening of background on touchStart, UIImpactFeedbackGenerator medium for primary CTA.</div>
-      </div>
-
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- ════════════════════════════════════
-     CONTENT
-═════════════════════════════════════ -->
+<!-- CONFIRMATION POPUP -->
+<section class="section section-alt" id="confirmation-popup">
+  <div class="sec-kicker">Buttons · 03</div>
+  <div class="sec-title">Confirmation Popup / Modal</div>
+  <div class="sec-desc">Destructive or irreversible actions (cancel booking, delete card, sign out) require a confirmation step. Paste the experience screen here when ready.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
 
 <!-- CARDS -->
-<section class="section section-alt" id="cards">
+<section class="section" id="cards">
   <div class="sec-kicker">Content · 01</div>
   <div class="sec-title">Cards</div>
   <div class="sec-desc">Card layouts used in browse/discovery screens. Packages uses full-bleed photo cards; the home grid uses icon tiles.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Browse cards — Packages</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S05_packages_search.png" alt="Packages cards">
-          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:35%;"></div>
-        </div>
-        <div class="phone-label">Packages</div>
-        <div class="phone-sub">باقات السفر</div>
-        <span class="phone-tag tag-ok">Photo card ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S08_more_tab.png" alt="More tab packages">
-          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:35%;"></div>
-        </div>
-        <div class="phone-label">More Tab — Packages</div>
-        <div class="phone-sub">باقات من التبويب</div>
-        <span class="phone-tag tag-warn">RTL chevron wrong ‹</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S11_raisiyya.png" alt="Package detail">
-          <div class="hl hl-blue" style="top:0%;left:0%;width:100%;height:40%;"></div>
-        </div>
-        <div class="phone-label">Package Detail</div>
-        <div class="phone-sub">تفاصيل الباقة</div>
-        <span class="phone-tag tag-ok">Hero image ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>RTL chevron issue:</strong> Browse cards show ‹ (left-pointing) on an RTL layout — it should be ›. In Arabic right-to-left context, forward navigation uses › on the left side of the card, or no chevron if the card itself is the tap target.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Home service grid — icon tiles</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S01_home.png" alt="Home grid">
-          <div class="hl hl-blue" style="top:34%;left:3%;width:94%;height:42%;"></div>
-        </div>
-        <div class="phone-label">Home Grid</div>
-        <div class="phone-sub">خدمة مساندة للسفر</div>
-        <span class="phone-tag tag-ok">Good anatomy ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/01_after_next.png" alt="Home grid scrolled">
-          <div class="hl hl-blue" style="top:10%;left:3%;width:94%;height:65%;"></div>
-        </div>
-        <div class="phone-label">Home Grid — Services</div>
-        <div class="phone-sub">الخدمات المساندة</div>
-        <span class="phone-tag tag-warn">Study/eSIM/License buried</span>
-      </div>
-
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- LISTS -->
-<section class="section" id="lists">
+<!-- LIST ROWS -->
+<section class="section section-alt" id="lists">
   <div class="sec-kicker">Content · 02</div>
   <div class="sec-title">List Rows</div>
   <div class="sec-desc">Rows inside pickers and settings screens. The Flights airport row is the richest — 3-level hierarchy with IATA code, city, and country.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">List row anatomy — picker vs. settings</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02b_flights_swap.png" alt="Airport picker rows">
-          <!-- rows area -->
-          <div class="hl hl-gold" style="top:22%;left:2%;width:96%;height:60%;"></div>
-        </div>
-        <div class="phone-label">Airport Picker Rows</div>
-        <div class="phone-sub">IATA · مدينة · دولة</div>
-        <span class="phone-tag tag-ok">🏆 Best row design</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04b_visa_dropdown.png" alt="Country picker rows">
-          <div class="hl hl-gold" style="top:20%;left:2%;width:96%;height:60%;"></div>
-        </div>
-        <div class="phone-label">Country Picker Rows</div>
-        <div class="phone-sub">🏳️ + اسم الدولة</div>
-        <span class="phone-tag tag-note">Flag + name only</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S08b_more_scrolled.png" alt="More menu rows">
-          <div class="hl hl-blue" style="top:5%;left:2%;width:96%;height:80%;"></div>
-        </div>
-        <div class="phone-label">More / Settings Rows</div>
-        <div class="phone-sub">قائمة المزيد</div>
-        <span class="phone-tag tag-ok">Icon + label + › ✓</span>
-      </div>
-
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- ════════════════════════════════════
-     STATES
-═════════════════════════════════════ -->
+<!-- PRICE DISPLAY -->
+<section class="section" id="price-display">
+  <div class="sec-kicker">Cards / Lists · 03</div>
+  <div class="sec-title">Price Display</div>
+  <div class="sec-desc">How prices are shown across all product cards and booking summaries — currency symbol, SAR placement, strike-through prices, discount badges, and "starting from" labels.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
 
-<!-- EMPTY STATES -->
-<section class="section section-alt" id="empty-states">
-  <div class="sec-kicker">States · 02</div>
-  <div class="sec-title">Empty States</div>
-  <div class="sec-desc">What the user sees when there is no content. The Visas tab has a critical broken empty state after country selection.</div>
+<!-- FILTERS -->
+<section class="section section-alt" id="filters">
+  <div class="sec-kicker">Filters / Sort · 01</div>
+  <div class="sec-title">Filters</div>
+  <div class="sec-desc">Filter sheet, chips, active indicator, and clear button. Needs screens from search results flows.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
 
-  <div class="subsec">
-    <div class="subsec-title">Post-selection empty state — Visas tab</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S04_visa_search.png" alt="Visa empty state">
-          <div class="hl hl-red" style="top:25%;left:5%;width:90%;height:50%;"></div>
-        </div>
-        <div class="phone-label">Visas Tab — After Selection</div>
-        <div class="phone-sub">لا يوجد محتوى</div>
-        <span class="phone-tag tag-warn">Empty — no next step</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements content">
-          <div class="hl hl-green" style="top:8%;left:3%;width:94%;height:75%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements — Has Content</div>
-        <div class="phone-sub">متطلبات التأشيرة مكتملة</div>
-        <span class="phone-tag tag-ok">Content + CTA ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">🔴</span>
-      <div><strong>Critical gap:</strong> The Visa tab shows a country picker — but after the user picks a country, nothing happens. The screen stays empty. The user has no next action. <strong>Fix:</strong> After selection, show the requirements or route to Visa Requirements screen with "ابدأ طلب التأشيرة" CTA.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">No-bookings empty state — My Orders</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S07_my_orders.png" alt="My orders">
-          <div class="hl hl-blue" style="top:15%;left:5%;width:90%;height:60%;"></div>
-        </div>
-        <div class="phone-label">My Orders</div>
-        <div class="phone-sub">لا توجد طلبات</div>
-        <span class="phone-tag tag-note">Has illustration ✓</span>
-      </div>
-
-    </div>
-  </div>
+<!-- SORT -->
+<section class="section" id="sort">
+  <div class="sec-kicker">Filters / Sort · 02</div>
+  <div class="sec-title">Sort</div>
+  <div class="sec-desc">Sort options sheet and direction indicators on results lists.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- AUTH GATE -->
-<section class="section" id="auth-gate">
+<section class="section section-alt" id="auth-gate">
   <div class="sec-kicker">States · 01</div>
   <div class="sec-title">Auth Gate &amp; Splash</div>
   <div class="sec-desc">Unauthenticated state and app launch experience. The More tab gates certain features behind a login CTA, but the experience has several UX gaps.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">App launch → More tab unauthenticated</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/FRESH_launch.png" alt="App splash screen">
-          <div class="hl hl-gold" style="top:48%;left:22%;width:56%;height:12%;"></div>
-        </div>
-        <div class="phone-label">Splash Screen</div>
-        <div class="phone-sub">شاشة التحميل</div>
-        <span class="phone-tag tag-ok">Brand orange ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/01_onboarding_2.png" alt="More tab unauthenticated">
-          <div class="hl hl-gold" style="top:33%;left:12%;width:76%;height:9%;"></div>
-          <div class="pin pin-gold" style="top:32%;right:4%;">1</div>
-          <div class="hl hl-blue" style="top:48%;left:3%;width:94%;height:34%;"></div>
-          <div class="pin pin-blue" style="top:48%;right:4%;">2</div>
-        </div>
-        <div class="phone-label">More Tab — Unauthenticated</div>
-        <div class="phone-sub">المزيد · غير مسجّل دخول</div>
-        <span class="phone-tag tag-warn">Auth gate ⚠️</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone">
-          <img src="screenshots/S07_my_orders.png" alt="My orders empty">
-          <div class="hl hl-red" style="top:12%;left:5%;width:90%;height:55%;"></div>
-        </div>
-        <div class="phone-label">My Orders — Unauthenticated</div>
-        <div class="phone-sub">طلباتي · بدون دخول</div>
-        <span class="phone-tag tag-warn">No login prompt ❌</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>[1] Login CTA visibility:</strong> "تسجيل الدخول" sits on a dark full-bleed photo — low contrast against the background. The button needs a solid container or a white label override to meet WCAG 4.5:1 contrast.<br><br>
-      <strong>[2] Locked items shown before login:</strong> المحفظة, الحسابات البنكية, إهداء رصيد are visible but non-functional. This creates a broken expectation. Fix: show a locked state badge or defer rendering until authenticated.<br><br>
-      <strong>My Orders gap:</strong> Shows a generic empty state instead of detecting the unauthenticated session and showing a targeted "سجّل دخولك لمشاهدة طلباتك" CTA.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- FILTERS PENDING -->
-<section class="section section-alt" id="filters">
-  <div class="sec-kicker">States · 03</div>
-  <div class="sec-title">Filters</div>
-  <div class="sec-desc">Filter sheet, chips, active indicator, and clear button. Needs screens from search results flows.</div>
-  <div class="pending-block">
-    <div class="pending-ico">📸</div>
-    <div>Screens pending — reach search results screens in Flights &amp; Hotels</div>
-    <span class="phone-tag tag-note">Cover: filter button · modal · chips · active state · clear</span>
-  </div>
+<!-- EMPTY STATES -->
+<section class="section" id="empty-states">
+  <div class="sec-kicker">States · 02</div>
+  <div class="sec-title">Empty States</div>
+  <div class="sec-desc">What the user sees when there is no content. The Visas tab has a critical broken empty state after country selection.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- SORT PENDING -->
-<section class="section section-alt" id="sort">
-  <div class="sec-kicker">States · 04</div>
-  <div class="sec-title">Sort</div>
-  <div class="sec-desc">Sort options sheet and direction indicators on results lists.</div>
-  <div class="pending-block">
-    <div class="pending-ico">📸</div>
-    <div>Screens pending — navigate to results page after search</div>
-    <span class="phone-tag tag-note">Cover: sort button · options · direction indicator</span>
-  </div>
+<!-- RTL / LAYOUT MIRRORING -->
+<section class="section section-alt" id="rtl">
+  <div class="sec-kicker">RTL / Arabic · 01</div>
+  <div class="sec-title">Layout Mirroring</div>
+  <div class="sec-desc">All screens are in Arabic (ar-SA). RTL mirroring means forms, chevrons, and icon placement must flip. One clear failure found.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- ════════════════════════════════════
-     FIGMA vs BUILT
-═════════════════════════════════════ -->
+<!-- TYPOGRAPHY -->
+<section class="section" id="typography">
+  <div class="sec-kicker">RTL / Arabic · 02</div>
+  <div class="sec-title">Typography</div>
+  <div class="sec-desc">Font usage, type scale, Arabic/Latin pairing, and weight rules across the app. Cairo is the primary typeface — ensure consistent heading, body, caption, and button text sizes.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
 
-<!-- FIGMA: COMPONENTS -->
+<!-- ANIMATION -->
+<section class="section section-alt" id="animation">
+  <div class="sec-kicker">Motion · 01</div>
+  <div class="sec-title">Animation</div>
+  <div class="sec-desc">Transition and micro-interaction patterns — page transitions, sheet animations, loading states, success animations, and button press feedback.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
+
+<!-- FIGMA: REDESIGNED PICKERS -->
 <section class="section" id="figma-pickers">
   <div class="sec-kicker">Figma vs. Built · 01</div>
   <div class="sec-title">Redesigned Pickers</div>
   <div class="sec-desc">The Figma file contains cleaner versions of the airport picker and passenger selector — white cards, proper status bars, refined class labels. These have not been shipped.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Airport picker — Figma spec vs. live app</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_airport_picker.png" alt="Figma airport picker">
-          <div class="hl hl-green" style="top:0%;left:0%;width:100%;height:100%;"></div>
-        </div>
-        <div class="phone-label">Figma — Airport Picker</div>
-        <div class="phone-sub">محطة الوصول</div>
-        <span class="phone-tag tag-ok">White · clean ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02b_flights_swap.png" alt="Live airport picker">
-        </div>
-        <div class="phone-label">Live — Airport Picker</div>
-        <div class="phone-sub">اختيار المطار الحالي</div>
-        <span class="phone-tag tag-warn">Brown header ⚠️</span>
-      </div>
-
-    </div>
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>Figma spec:</strong> Pure white sheet, clean status bar (9:41), no app chrome visible. Search input at top, results list with IATA code + name. <strong>Live app:</strong> Sheet opens inside the brown header chrome — inconsistent with the full-screen modal pattern in the spec.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Passenger picker — Figma spec vs. live app</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_passenger_picker.png" alt="Figma passenger picker">
-          <div class="hl hl-green" style="top:0%;left:0%;width:100%;height:100%;"></div>
-        </div>
-        <div class="phone-label">Figma — Passenger Picker</div>
-        <div class="phone-sub">المسافرون والدرجة السياحية</div>
-        <span class="phone-tag tag-ok">× close · 3 classes ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/v2_flights_details.png" alt="Live passenger picker">
-        </div>
-        <div class="phone-label">Live — Passenger Picker</div>
-        <div class="phone-sub">درجة الرحلة وعدد المسافرين</div>
-        <span class="phone-tag tag-warn">No × · inside chrome ⚠️</span>
-      </div>
-
-    </div>
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>3 gaps vs. spec:</strong> (1) Figma has an × close button (top-left) — live app has only drag handle. (2) Class labels differ: Figma uses "السياحية المميزة" (Premium Economy) vs. live "أعمال" (Business). (3) Figma shows clean white full-screen modal; live app shows sheet inside brownish app chrome.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- FIGMA: DATE RANGE PICKER -->
@@ -1744,36 +795,7 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Figma vs. Built · 02</div>
   <div class="sec-title">Date Range Picker</div>
   <div class="sec-desc">The Figma spec shows a dual-date range picker (departure + return in one view). The live app only has a single departure date calendar.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Date selection — Figma spec vs. live</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_date_range_picker.png" alt="Figma date range picker">
-          <div class="hl hl-green" style="top:0%;left:0%;width:100%;height:100%;"></div>
-        </div>
-        <div class="phone-label">Figma — Date Range</div>
-        <div class="phone-sub">الذهاب + العودة معاً</div>
-        <span class="phone-tag tag-ok">Range picker ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02c_flights_cta_view.png" alt="Live date picker">
-        </div>
-        <div class="phone-label">Live — Single Date</div>
-        <div class="phone-sub">تاريخ الذهاب فقط</div>
-        <span class="phone-tag tag-warn">One date only ❌</span>
-      </div>
-
-    </div>
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Missing return date:</strong> The Figma spec has a "الذهاب / العودة" toggle at the top of the calendar with both dates selectable in one interaction. The live app opens a separate picker for the return date — or the return date is missing entirely. This is a critical booking flow gap for round-trip searches.</div>
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 <!-- FIGMA: UNBUILT SCREENS -->
@@ -1781,226 +803,10 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   <div class="sec-kicker">Figma vs. Built · 03</div>
   <div class="sec-title">Unbuilt Screens</div>
   <div class="sec-desc">These screens exist in the Figma file but have no equivalent in the live app. They represent either planned features or designs that were scoped out.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">Flight search results page</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_flight_results.png" alt="Figma flight results">
-          <div class="hl hl-gold" style="top:8%;left:3%;width:94%;height:35%;"></div>
-          <div class="hl hl-blue" style="top:46%;left:3%;width:94%;height:35%;"></div>
-        </div>
-        <div class="phone-label">Figma — Flight Results</div>
-        <div class="phone-sub">IST → DXB · نتائج البحث</div>
-        <span class="phone-tag tag-ok">Designed ✓ · Not built ❌</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_flights_loading.png" alt="Figma loading state">
-          <div class="hl hl-gold" style="top:28%;left:20%;width:60%;height:18%;"></div>
-        </div>
-        <div class="phone-label">Figma — Search Loading</div>
-        <div class="phone-sub">جاري البحث عن رحلات</div>
-        <span class="phone-tag tag-ok">Skeleton designed ✓</span>
-      </div>
-
-    </div>
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">🔴</span>
-      <div><strong>Results page not found in live app.</strong> The Figma spec shows flight result cards with: airline logo, departure/arrival times, stops, duration, and price (SAR 1,500.66). Each card has an "عرض التفاصيل" (Show Details) CTA. The skeleton loading state is also designed. Neither screen was observed in the current app build.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Hotels detail page</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_hotel_detail_2.png" alt="Figma hotel detail Saudi">
-          <div class="hl hl-gold" style="top:0%;left:0%;width:100%;height:40%;"></div>
-          <div class="hl hl-blue" style="top:42%;left:3%;width:94%;height:10%;"></div>
-        </div>
-        <div class="phone-label">Al Faisaliah Hotel, Riyadh</div>
-        <div class="phone-sub">فندق الفيصلية · الرياض</div>
-        <span class="phone-tag tag-ok">Designed ✓ · Not built ❌</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_hotel_detail_1.png" alt="Figma hotel detail intl">
-          <div class="hl hl-gold" style="top:0%;left:0%;width:100%;height:40%;"></div>
-          <div class="hl hl-blue" style="top:55%;left:3%;width:94%;height:8%;"></div>
-        </div>
-        <div class="phone-label">The Old Nickel Hotel, Amsterdam</div>
-        <div class="phone-sub">فندق دولي · أمستردام</div>
-        <span class="phone-tag tag-note">SAR 12,136 pricing</span>
-      </div>
-
-    </div>
-    <div class="annotation an-note mt16">
-      <span class="an-ico">💡</span>
-      <div><strong>Hotel detail spec includes:</strong> Hero photo gallery, hotel name + rating score + location, check-in/out dates, room type selector (Available Rooms / Hotel Details tabs), room cards with bed config, amenities icons (WiFi, TV, area m²), cancellation policy badge, and price in SAR with "Select" CTA. This is a complete, production-quality design that needs to be built.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Study Abroad — browse &amp; results</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_study_abroad_browse.png" alt="Figma study abroad browse">
-          <div class="hl hl-gold" style="top:5%;left:3%;width:94%;height:6%;"></div>
-          <div class="hl hl-blue" style="top:14%;left:3%;width:94%;height:36%;"></div>
-        </div>
-        <div class="phone-label">Study Abroad — Browse</div>
-        <div class="phone-sub">Direct · Schools tab</div>
-        <span class="phone-tag tag-ok">Designed ✓ · Not built ❌</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_study_abroad_results.png" alt="Figma study abroad results">
-          <div class="hl hl-gold" style="top:5%;left:3%;width:94%;height:6%;"></div>
-          <div class="hl hl-blue" style="top:18%;left:3%;width:94%;height:35%;"></div>
-        </div>
-        <div class="phone-label">Study Abroad — Results</div>
-        <div class="phone-sub">ETC Bournemouth · SR 938</div>
-        <span class="phone-tag tag-note">SAR pricing ✓</span>
-      </div>
-
-    </div>
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Study Abroad fully designed but not reachable in the app.</strong> Browse shows program cards with destination photos, SAR prices (27,800–34,350 SAR), and amenities (WiFi, Location, Activities, Airport). Results page shows institute cards with ratings, dates, and SAR weekly pricing. The app currently only shows this vertical as an icon in the home grid with no accessible flow.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Conversational flight search — AI pattern</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/figma_conversational_search.png" alt="Figma conversational search">
-          <div class="hl hl-gold" style="top:0%;left:0%;width:100%;height:5%;"></div>
-          <div class="hl hl-blue" style="top:10%;left:3%;width:94%;height:70%;"></div>
-          <div class="hl hl-green" style="bottom:2%;left:3%;width:94%;height:8%;"></div>
-        </div>
-        <div class="phone-label">Conversational Search</div>
-        <div class="phone-sub">نموذج الحجز بالمحادثة</div>
-        <span class="phone-tag tag-ok">Novel pattern 🔥</span>
-      </div>
-
-      <div class="phone-wrap" style="max-width:260px;justify-content:flex-start;padding-top:4px;">
-        <div style="background:rgba(248,109,10,.06);border:1px solid rgba(248,109,10,.25);border-radius:12px;padding:20px;font-size:12px;line-height:1.9;width:100%;">
-          <div style="font-weight:800;font-size:13px;color:var(--gold);margin-bottom:12px;">Chat search pattern</div>
-          <div style="margin-bottom:8px;">Route shown as pill: IST → DXB</div>
-          <div style="margin-bottom:8px;">Bot asks: what time suits you? → صباح / مساء chips</div>
-          <div style="margin-bottom:8px;">Bot asks: flexible on dates? → نعم / لا chips</div>
-          <div style="margin-bottom:8px;">Collects email + phone inline</div>
-          <div style="margin-bottom:14px;">CTA: "ابدأ البحث" (Start search)</div>
-          <div style="padding-top:12px;border-top:1px solid rgba(248,109,10,.2);color:var(--muted);font-size:11px;">This pattern reduces cognitive load vs. a full form — users answer one question at a time (progressive disclosure). Could be the differentiator vs. Almosafer.</div>
-        </div>
-        <div class="phone-label" style="margin-top:12px;">Pattern analysis</div>
-        <span class="phone-tag tag-ok">Progressive disclosure ✓</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════
-     RTL / ARABIC
-═════════════════════════════════════ -->
-
-<section class="section" id="rtl">
-  <div class="sec-kicker">RTL / Arabic · 01</div>
-  <div class="sec-title">Layout Mirroring</div>
-  <div class="sec-desc">All screens are in Arabic (ar-SA). RTL mirroring means forms, chevrons, and icon placement must flip. One clear failure found.</div>
-
-  <div class="subsec">
-    <div class="subsec-title">RTL compliance — correct vs. incorrect</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02_flights_search.png" alt="Flights RTL">
-          <!-- highlight the chevron on the left side of fields -->
-          <div class="hl hl-green" style="top:20%;left:2%;width:10%;height:6%;"></div>
-          <div class="hl hl-green" style="top:28%;left:2%;width:10%;height:6%;"></div>
-          <div class="hl hl-green" style="top:36%;left:2%;width:10%;height:6%;"></div>
-        </div>
-        <div class="phone-label">Flights — Form</div>
-        <div class="phone-sub">الحقول والشيفرون</div>
-        <span class="phone-tag tag-ok">Chevron right side (RTL ✓)</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S08_more_tab.png" alt="Packages browse RTL">
-          <!-- wrong chevron -->
-          <div class="hl hl-red" style="top:15%;left:2%;width:10%;height:5%;"></div>
-          <div class="hl hl-red" style="top:32%;left:2%;width:10%;height:5%;"></div>
-        </div>
-        <div class="phone-label">More Tab — Packages</div>
-        <div class="phone-sub">الباقات من التبويب</div>
-        <span class="phone-tag tag-warn">‹ points wrong direction</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S02b_flights_swap.png" alt="Flights airport sheet">
-          <!-- show من/إلى tabs in RTL order -->
-          <div class="hl hl-gold" style="top:5%;left:2%;width:96%;height:7%;"></div>
-        </div>
-        <div class="phone-label">Airport Sheet — RTL Tabs</div>
-        <div class="phone-sub">من / إلى (right-to-left order)</div>
-        <span class="phone-tag tag-ok">Tab order RTL ✓</span>
-      </div>
-
-    </div>
-
-    <div class="annotation an-warn mt16">
-      <span class="an-ico">⚠️</span>
-      <div><strong>Browse card chevron ‹ is wrong in RTL.</strong> In an Arabic layout, ‹ points backward (right-to-left reading direction means ‹ means "go back"). It should either be › or removed. Fix: flip to › or use a tap target without a directional chevron.</div>
-    </div>
-  </div>
-
-  <div class="subsec">
-    <div class="subsec-title">Home screen — Arabic layout check</div>
-    <div class="phone-row">
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S09_home_real.png" alt="Home real state">
-          <div class="hl hl-blue" style="top:2%;left:0%;width:100%;height:12%;"></div>
-        </div>
-        <div class="phone-label">Home — Real State</div>
-        <div class="phone-sub">الصفحة الرئيسية</div>
-        <span class="phone-tag tag-ok">Header mirrored ✓</span>
-      </div>
-
-      <div class="phone-wrap">
-        <div class="phone lg">
-          <img src="screenshots/S06_visa_requirements.png" alt="Visa requirements RTL">
-          <div class="hl hl-gold" style="top:18%;left:2%;width:96%;height:28%;"></div>
-        </div>
-        <div class="phone-label">Visa Requirements</div>
-        <div class="phone-sub">متطلبات · تبويب الدول</div>
-        <span class="phone-tag tag-ok">Flag tabs RTL ✓</span>
-      </div>
-
-    </div>
-  </div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
 </main>
-
 <script>
 // Sidebar active state
 function setActive(el) {
