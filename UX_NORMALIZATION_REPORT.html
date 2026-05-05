@@ -609,8 +609,260 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
 <section class="section" id="back-btn">
   <div class="sec-kicker">01</div>
   <div class="sec-title">Back Button</div>
-  <div class="sec-desc">Placement, labeling, hit area, and confirmation behavior on data-loss flows.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+  <div class="sec-desc">3 inconsistencies found in the live app: back button appears on root screens, placement flips left/right across verticals, and some interior screens drop it entirely.</div>
+
+  <style>
+  /* ── Back Button section styles ── */
+  .issue-list{display:flex;flex-direction:column;gap:10px;margin-top:0;}
+  .spec-block{
+    margin-top:28px;
+    border:1px solid var(--bd);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .spec-header{
+    padding:12px 20px;
+    background:rgba(34,197,94,.07);
+    border-bottom:1px solid rgba(34,197,94,.15);
+    font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+    color:var(--green);
+    display:flex;align-items:center;gap:8px;
+  }
+  .spec-header::before{content:'✓';font-size:14px;}
+  .spec-rows{display:flex;flex-direction:column;}
+  .spec-row2{
+    display:grid;grid-template-columns:140px 1fr;
+    padding:12px 20px;
+    border-bottom:1px solid var(--bd);
+    gap:12px;align-items:baseline;
+    font-size:12px;
+  }
+  .spec-row2:last-child{border-bottom:none;}
+  .spec-lbl{font-weight:800;color:#fff;font-size:11px;}
+  .spec-val2{color:var(--txt);line-height:1.5;}
+  .spec-val2 strong{color:#fff;}
+
+  /* phone header mockup */
+  .mock-header{
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,.3);
+    margin-top:20px;
+    max-width:320px;
+  }
+  .mock-bar{
+    background:#F86D0A;
+    height:52px;
+    display:flex;align-items:center;
+    padding:0 14px;
+    position:relative;
+  }
+  .mock-back{
+    width:36px;height:36px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+    border-radius:8px;
+    border:2px solid rgba(255,255,255,.5);
+  }
+  .mock-title{
+    flex:1;text-align:center;
+    font-size:14px;font-weight:700;color:#fff;
+    font-family:'Cairo',sans-serif;
+    margin-right:36px;
+  }
+
+  /* state diagram */
+  .state-row{
+    display:flex;flex-direction:column;gap:0;
+  }
+  .state-item{
+    padding:10px 14px;
+    border-bottom:1px solid var(--bd);
+  }
+  .state-item:last-child{border-bottom:none;}
+  .state-bar{
+    height:40px;
+    background:#F86D0A;
+    border-radius:6px;
+    display:flex;align-items:center;
+    padding:0 12px;
+    margin-bottom:6px;
+    position:relative;
+  }
+  .state-label-tag{
+    font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    padding:2px 8px;border-radius:100px;margin-left:8px;
+  }
+  .s-ok{background:rgba(34,197,94,.15);color:var(--green);}
+  .s-bad{background:rgba(239,68,68,.15);color:var(--red);}
+  </style>
+
+  <!-- ─── FOUND IN APP ─────────────────────────────────────────── -->
+  <div class="subsec">
+    <div class="subsec-title">Found In App</div>
+    <div class="subsec-desc">Screenshots and patterns captured from the live Direct app.</div>
+
+    <div class="phone-row">
+
+      <!-- Real screenshot: back button on root screen -->
+      <div class="phone-wrap">
+        <div class="phone lg" style="position:relative;">
+          <img src="screens/back-btn-visa-root.png" style="object-position:top center;" alt="Visa home screen">
+          <!-- red ring around back button -->
+          <div class="hl hl-red" style="top:14px;left:2px;width:42px;height:42px;border-radius:50%;"></div>
+          <div class="pin pin-red" style="top:4px;left:32px;">1</div>
+        </div>
+        <div class="phone-label">Visa — Home Screen</div>
+        <div class="phone-sub">الشاشة الرئيسية · Visa</div>
+        <div class="phone-tag tag-warn" style="margin-top:4px;">Back button on root</div>
+      </div>
+
+      <!-- Drawn diagram: Left / Right / Missing -->
+      <div class="phone-wrap">
+        <div class="phone lg" style="background:#0D1A2A;padding:0;overflow:auto;">
+          <div class="state-row">
+
+            <div class="state-item">
+              <div style="font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Flights — Back LEFT</div>
+              <div class="state-bar">
+                <div style="width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6L8 10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div style="flex:1;text-align:center;color:white;font-size:12px;font-weight:700;margin-right:30px;">Flight Search</div>
+              </div>
+              <span class="state-label-tag s-ok">✓ LEFT — iOS correct</span>
+            </div>
+
+            <div class="state-item">
+              <div style="font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Hotels — Back RIGHT</div>
+              <div class="state-bar">
+                <div style="flex:1;text-align:center;color:white;font-size:12px;font-weight:700;margin-left:30px;">Hotel Detail</div>
+                <div style="width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 2L8 6L4 10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <span class="state-label-tag s-bad">✗ RIGHT — inconsistent</span>
+            </div>
+
+            <div class="state-item">
+              <div style="font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Visa — ROOT screen</div>
+              <div class="state-bar">
+                <div style="width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M8 2L4 6L8 10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div style="flex:1;text-align:center;color:white;font-size:12px;font-weight:700;margin-right:30px;">Visas</div>
+              </div>
+              <span class="state-label-tag s-bad">✗ ROOT — no destination</span>
+            </div>
+
+            <div class="state-item">
+              <div style="font-size:9px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Packages — Step 2</div>
+              <div class="state-bar">
+                <div style="flex:1;text-align:center;color:white;font-size:12px;font-weight:700;">Select Dates</div>
+              </div>
+              <span class="state-label-tag s-bad">✗ MISSING — gesture only</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="phone-label">Placement Patterns Found</div>
+        <div class="phone-sub">أنماط غير متسقة عبر المنتجات</div>
+        <div class="phone-tag tag-warn" style="margin-top:4px;">Left · Right · Missing · Root</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── ISSUES ────────────────────────────────────────────────── -->
+  <div class="subsec">
+    <div class="subsec-title">Issues — 3 Found</div>
+    <div class="issue-list">
+
+      <div class="annotation an-warn">
+        <div class="an-ico">①</div>
+        <div><strong>Back button on root / tab-bar screens</strong> — The ‹ chevron appears on the Visa home screen even though the tab bar is active and there is no previous screen in the navigation stack. Tapping it either does nothing or crashes the nav history. Root screens must never show a back button.</div>
+      </div>
+
+      <div class="annotation an-warn">
+        <div class="an-ico">②</div>
+        <div><strong>Left vs. right placement is inconsistent</strong> — Back button sits top-left in Flights but top-right in Hotels and Packages. iOS HIG §Navigation requires back controls to always appear top-left. Switching sides between verticals breaks muscle memory and violates predictability.</div>
+      </div>
+
+      <div class="annotation an-warn">
+        <div class="an-ico">③</div>
+        <div><strong>Back button missing on interior screens</strong> — Several mid-flow screens (e.g. Packages date selection, Hotels filter step) drop the back button entirely. Users can only go back via swipe gesture — invisible on Android, not discoverable for first-time users, and inaccessible for motor-impaired users.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── FINAL APPLY ───────────────────────────────────────────── -->
+  <div class="subsec">
+    <div class="subsec-title">Final Apply — Normalized Decision</div>
+    <div class="subsec-desc">Applies to all 6 products. No vertical-specific exceptions.</div>
+
+    <div class="spec-block">
+      <div class="spec-header">Normalized Back Button Rules</div>
+      <div class="spec-rows">
+        <div class="spec-row2">
+          <div class="spec-lbl">Placement</div>
+          <div class="spec-val2"><strong>Always top-left.</strong> 44×44px minimum hit area. Never top-right, never centered.</div>
+        </div>
+        <div class="spec-row2">
+          <div class="spec-lbl">When to show</div>
+          <div class="spec-val2"><strong>Only on non-root screens</strong> — screens the user actively navigated to. If a bottom tab bar is visible and active, no back button.</div>
+        </div>
+        <div class="spec-row2">
+          <div class="spec-lbl">Icon</div>
+          <div class="spec-val2"><strong>Chevron ‹ only</strong> — no circular background. White on colored headers (#F86D0A), dark (#050E1E) on white headers. Stroke weight 2px, 18×18px.</div>
+        </div>
+        <div class="spec-row2">
+          <div class="spec-lbl">Data-loss flows</div>
+          <div class="spec-val2">If the user has unsaved input (form, booking draft), tapping ‹ triggers a <strong>confirmation sheet</strong> — "Leave page? Your changes will not be saved." Two actions: Leave / Stay.</div>
+        </div>
+        <div class="spec-row2">
+          <div class="spec-lbl">RTL (Arabic)</div>
+          <div class="spec-val2">In RTL layout, back button mirrors to <strong>top-right</strong> and the chevron points › (right). Position swaps, icon direction swaps — both are required.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Correct-state visual mockup -->
+    <div style="margin-top:28px;">
+      <div style="font-size:10px;font-weight:800;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Correct State — Interior Screen</div>
+      <div class="mock-header">
+        <div class="mock-bar">
+          <div class="mock-back" aria-label="Back">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L6 8L10 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="mock-title">متطلبات التأشيرة</div>
+        </div>
+        <div style="background:rgba(34,197,94,.07);padding:8px 14px;display:flex;gap:16px;flex-wrap:wrap;">
+          <span class="phone-tag tag-ok">✓ Top-left</span>
+          <span class="phone-tag tag-ok">✓ Chevron only</span>
+          <span class="phone-tag tag-ok">✓ 44px hit area</span>
+          <span class="phone-tag tag-ok">✓ Interior screen only</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <div style="font-size:10px;font-weight:800;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">RTL Mirrored — Arabic Layout</div>
+        <div class="mock-header" style="direction:rtl;">
+          <div class="mock-bar" style="flex-direction:row-reverse;">
+            <div class="mock-back" aria-label="رجوع">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3L10 8L6 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="mock-title" style="margin-right:0;margin-left:36px;">متطلبات التأشيرة</div>
+          </div>
+          <div style="background:rgba(34,197,94,.07);padding:8px 14px;display:flex;gap:16px;flex-wrap:wrap;direction:ltr;">
+            <span class="phone-tag tag-ok">✓ Top-right in RTL</span>
+            <span class="phone-tag tag-ok">✓ Chevron › points right</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- 02 BOTTOM SHEET -->
