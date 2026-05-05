@@ -328,51 +328,31 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
 
   <div class="sb-chapter">Overview</div>
   <a class="sb-link active" href="#cover" onclick="setActive(this)"><div class="sb-dot"></div>Cover</a>
-  <a class="sb-link" href="#matrix" onclick="setActive(this)"><div class="sb-dot"></div>UX Standards</a>
+  <a class="sb-link" href="#matrix" onclick="setActive(this)"><div class="sb-dot"></div>UX Normalization</a>
 
-  <div class="sb-chapter">Navigation</div>
-  <a class="sb-link" href="#tab-bar" onclick="setActive(this)"><div class="sb-dot"></div>Tab Bar</a>
-  <a class="sb-link" href="#bottom-nav" onclick="setActive(this)"><div class="sb-dot"></div>Bottom Navigation</a>
-  <a class="sb-link" href="#back-close" onclick="setActive(this)"><div class="sb-dot"></div>Back / Close Button</a>
-  <a class="sb-link" href="#bottom-sheet" onclick="setActive(this)"><div class="sb-dot"></div>Bottom Sheet</a>
-  <a class="sb-link" href="#header-bar" onclick="setActive(this)"><div class="sb-dot"></div>Header Bar &amp; Title</a>
-  <a class="sb-link" href="#header-icons" onclick="setActive(this)"><div class="sb-dot"></div>Header Icons</a>
-  <a class="sb-link" href="#search-bar" onclick="setActive(this)"><div class="sb-dot"></div>Search Bar</a>
-  <a class="sb-link" href="#search-results" onclick="setActive(this)"><div class="sb-dot"></div>Search Results</a>
-  <a class="sb-link" href="#form-fields" onclick="setActive(this)"><div class="sb-dot"></div>Text Input Fields</a>
-  <a class="sb-link" href="#trip-type" onclick="setActive(this)"><div class="sb-dot"></div>Trip Type Selector</a>
-  <a class="sb-link" href="#date-picker" onclick="setActive(this)"><div class="sb-dot"></div>Date Picker</a>
-  <a class="sb-link" href="#form-pickers" onclick="setActive(this)"><div class="sb-dot"></div>Pickers &amp; Steppers</a>
-  <a class="sb-link" href="#form-states" onclick="setActive(this)"><div class="sb-dot"></div>Field States</a>
-  <a class="sb-link" href="#auth-gate" onclick="setActive(this)"><div class="sb-dot"></div>Auth Gate</a>
-  <a class="sb-link" href="#empty-states" onclick="setActive(this)"><div class="sb-dot"></div>Empty States</a>
-
-  <div class="sb-chapter">Filters / Sort</div>
-  <a class="sb-link" href="#filters" onclick="setActive(this)"><div class="sb-dot"></div>Filters<span class="sb-pending">+</span></a>
-  <a class="sb-link" href="#sort" onclick="setActive(this)"><div class="sb-dot"></div>Sort<span class="sb-pending">+</span></a>
-
-  <div class="sb-chapter">Buttons</div>
-  <a class="sb-link" href="#cta-primary" onclick="setActive(this)"><div class="sb-dot"></div>Primary CTA</a>
-  <a class="sb-link" href="#btn-states" onclick="setActive(this)"><div class="sb-dot"></div>Button States</a>
-  <a class="sb-link" href="#confirmation-popup" onclick="setActive(this)"><div class="sb-dot"></div>Confirmation Popup<span class="sb-pending">+</span></a>
-
-  <div class="sb-chapter">Cards / Lists</div>
-  <a class="sb-link" href="#cards" onclick="setActive(this)"><div class="sb-dot"></div>Cards</a>
-  <a class="sb-link" href="#lists" onclick="setActive(this)"><div class="sb-dot"></div>List Rows</a>
-  <a class="sb-link" href="#price-display" onclick="setActive(this)"><div class="sb-dot"></div>Price Display<span class="sb-pending">+</span></a>
-
-  <div class="sb-chapter">RTL / Arabic</div>
-  <a class="sb-link" href="#rtl" onclick="setActive(this)"><div class="sb-dot"></div>Layout Mirroring</a>
-  <a class="sb-link" href="#typography" onclick="setActive(this)"><div class="sb-dot"></div>Typography</a>
-
-  <div class="sb-chapter">Motion</div>
-  <a class="sb-link" href="#animation" onclick="setActive(this)"><div class="sb-dot"></div>Animation<span class="sb-pending">+</span></a>
-
-  <div class="sb-chapter">Figma vs. Built</div>
-  <a class="sb-link" href="#figma-pickers" onclick="setActive(this)"><div class="sb-dot"></div>Redesigned Pickers</a>
-  <a class="sb-link" href="#figma-dates" onclick="setActive(this)"><div class="sb-dot"></div>Date Range Picker</a>
-  <a class="sb-link" href="#figma-unbuilt" onclick="setActive(this)"><div class="sb-dot"></div>Unbuilt Screens</a>
+  <div class="sb-chapter">Components</div>
+  <a class="sb-link" href="#back-btn" onclick="setActive(this)"><div class="sb-dot"></div>01 · Back Button</a>
+  <a class="sb-link" href="#bottom-sheet" onclick="setActive(this)"><div class="sb-dot"></div>02 · Bottom Sheet</a>
+  <a class="sb-link" href="#page-title" onclick="setActive(this)"><div class="sb-dot"></div>03 · Page Title</a>
+  <a class="sb-link" href="#subtitle" onclick="setActive(this)"><div class="sb-dot"></div>04 · Subtitle<span class="sb-pending">+</span></a>
+  <a class="sb-link" href="#search-results" onclick="setActive(this)"><div class="sb-dot"></div>05 · Search Results List</a>
+  <a class="sb-link" href="#filters" onclick="setActive(this)"><div class="sb-dot"></div>06 · Filter Modal / Sheet</a>
+  <a class="sb-link" href="#sort" onclick="setActive(this)"><div class="sb-dot"></div>07 · Sort Options</a>
+  <a class="sb-link" href="#primary-btn" onclick="setActive(this)"><div class="sb-dot"></div>08 · Primary Button</a>
+  <a class="sb-link" href="#secondary-btn" onclick="setActive(this)"><div class="sb-dot"></div>09 · Secondary Button<span class="sb-pending">+</span></a>
+  <a class="sb-link" href="#loading-state" onclick="setActive(this)"><div class="sb-dot"></div>10 · Loading State</a>
+  <a class="sb-link" href="#cards" onclick="setActive(this)"><div class="sb-dot"></div>11 · Card Container</a>
+  <a class="sb-link" href="#badge" onclick="setActive(this)"><div class="sb-dot"></div>12 · Badge (Sale / New)<span class="sb-pending">+</span></a>
+  <a class="sb-link" href="#empty-states" onclick="setActive(this)"><div class="sb-dot"></div>13 · Empty States</a>
+  <a class="sb-link" href="#skeleton" onclick="setActive(this)"><div class="sb-dot"></div>14 · Skeleton Screens<span class="sb-pending">+</span></a>
+  <a class="sb-link" href="#rtl" onclick="setActive(this)"><div class="sb-dot"></div>15 · Layout Mirroring</a>
+  <a class="sb-link" href="#arabic-font" onclick="setActive(this)"><div class="sb-dot"></div>16 · Arabic Font</a>
+  <a class="sb-link" href="#numerals" onclick="setActive(this)"><div class="sb-dot"></div>17 · Numerals / Calendar<span class="sb-pending">+</span></a>
+  <a class="sb-link" href="#transition" onclick="setActive(this)"><div class="sb-dot"></div>18 · Transition</a>
+  <a class="sb-link" href="#loading" onclick="setActive(this)"><div class="sb-dot"></div>19 · Loading<span class="sb-pending">+</span></a>
 </nav>
+
+
 
 <!-- ══════════════ MAIN ══════════════ -->
 <main id="main">
@@ -410,11 +390,11 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
   </div>
 </section>
 
-<!-- UX STANDARDS -->
+<!-- UX NORMALIZATION -->
 <section class="section section-alt" id="matrix">
   <div class="sec-kicker">Overview · 01</div>
   <div class="sec-title">UX Normalization</div>
-  <div class="sec-desc">These are the normalized interaction patterns that all 7 products must follow. Each rule is anchored to the best existing example inside Direct. The "Apply to" scope for each rule will be defined and filled in below.</div>
+  <div class="sec-desc">19 normalized interaction patterns that all 7 products must follow. Each rule is anchored to the best existing example inside Direct. “Apply to” scope per vertical will be filled in separately.</div>
 
   <style>
   .std-list{display:flex;flex-direction:column;gap:0;margin-top:24px;}
@@ -442,23 +422,6 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
     width:6px;height:6px;border-radius:50%;
     background:var(--gold);flex-shrink:0;
   }
-  .std-apply{
-    display:flex;flex-direction:column;gap:4px;
-    padding-top:2px;
-  }
-  .apply-label{
-    font-size:9px;font-weight:800;letter-spacing:1.5px;
-    color:var(--muted);text-transform:uppercase;
-    margin-bottom:2px;
-  }
-  .apply-tag{
-    font-size:10px;font-weight:700;
-    padding:3px 8px;border-radius:100px;
-    background:rgba(248,109,10,.12);
-    color:var(--gold);
-    display:inline-block;margin-bottom:3px;
-    width:fit-content;
-  }
   </style>
 
   <div class="std-list">
@@ -466,325 +429,326 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);displa
     <div class="std-row">
       <div class="std-num">01</div>
       <div class="std-body">
-        <div class="std-title">Search Experience</div>
-        <div class="std-rule">Every destination/location input must open a full bottom sheet with a live-filter search bar, results list with flag or icon, and row highlight on selection. Minimum 44px row height.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Flights airport picker</strong> — IATA code + city name + country, instant filter, orange row on tap</div>
+        <div class="std-title">Back Button</div>
+        <div class="std-rule">Top-left, 44×44px hit area. Use destination label on key flows (“Back to Search”), not a bare chevron. On data-loss flows, trigger a confirmation sheet before navigating away.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Visa Requirements — back button with flow-labeled breadcrumb</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">02</div>
       <div class="std-body">
-        <div class="std-title">Primary CTA — Verb + Object</div>
-        <div class="std-rule">Every main action button must follow the formula [فعل أمر] + [الموضوع], max 3 words. Full-width (padding 16px), 56px height, anchored to the bottom safe area. Background: var(--gold).</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Visa Requirements — "ابدأ طلب التأشيرة"</strong></div>
+        <div class="std-title">Bottom Sheet</div>
+        <div class="std-rule">Drag handle + × close button (44×44px) required on every sheet. Drag-only dismiss fails WCAG 2.5.3. Sheet height 50–90% of screen. Must not clip on short-display devices.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec — × top-left in RTL, drag handle retained</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">03</div>
       <div class="std-body">
-        <div class="std-title">Bottom Sheet — Close Button</div>
-        <div class="std-rule">Every bottom sheet must have a visible × close button (top-right, 44×44px hit area) in addition to the drag handle. Drag-only dismiss fails WCAG 2.5.3 for motor-impaired users.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec</strong> — × in top-left (RTL), drag handle retained</div>
+        <div class="std-title">Page Title</div>
+        <div class="std-rule">Title reflects the current page context, not the brand name. Sticky on scroll. Cairo 700, 18px. One line max — truncate with ellipsis if longer.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Visa Requirements — “متطلبات التأشيرة” as header title</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">04</div>
       <div class="std-body">
-        <div class="std-title">Header Title — Page Context, Not Brand</div>
-        <div class="std-rule">The header title must reflect the current page or destination name, not the app brand "Direct". Brand is already conveyed by icon, splash screen, and app store presence.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Visa Requirements — "متطلبات التأشيرة"</strong> as header title</div>
+        <div class="std-title">Subtitle</div>
+        <div class="std-rule">Secondary line below Page Title. Cairo 400, 13px, muted color. Used for route, traveller count, or date range (e.g. القاهرة → الرياض · 3 ليالٍ).</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Pending — scope to be defined per vertical</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">05</div>
       <div class="std-body">
-        <div class="std-title">Date Selection — Range Picker</div>
-        <div class="std-rule">For any round-trip or multi-day booking, departure and return dates must be selectable in a single calendar interaction. A two-step date flow adds unnecessary friction.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma date range picker</strong> — الذهاب + العودة in one sheet, Arabic month grid</div>
+        <div class="std-title">Search Results List</div>
+        <div class="std-rule">Row min-height 64px. Leading icon/flag + title + subtitle layout. Trailing chevron direction-aware in RTL. Selection highlights row with var(--gold) tint.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Flights airport picker — IATA + city + country, instant filter, gold row on tap</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">06</div>
       <div class="std-body">
-        <div class="std-title">Passenger &amp; Class Selector</div>
-        <div class="std-rule">Passenger count uses stepper (+/−) with type labels (بالغ, طفل, رضيع) and age ranges. Class uses a radio list. Both live in a single bottom sheet with "تأكيد" CTA.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma passenger picker spec</strong> — grouped sections, × close, clean white surface</div>
+        <div class="std-title">Filter Modal / Sheet</div>
+        <div class="std-rule">Always a bottom sheet. Active filter count badge on trigger button. Clear-all and Apply CTAs fixed at sheet bottom, never scrolled away.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Hotels filter sheet — active count badge, clear all, Apply pinned to bottom</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">07</div>
       <div class="std-body">
-        <div class="std-title">Trip Type Segment Control</div>
-        <div class="std-rule">Screens with multiple trip variants must use a pill segment control at the top of the form. Active pill: white on var(--gold). Height: 40px. Font: Cairo 14px medium.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice in app: <strong>Flights — ذهاب / ذهاب وعودة / رحلات متعددة</strong></div>
+        <div class="std-title">Sort Options</div>
+        <div class="std-rule">Bottom sheet or compact action sheet. Active option: filled radio + var(--gold). Default sort labeled explicitly. Max 5 options to avoid choice paralysis.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Flights sort sheet — labeled default, gold active state</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">08</div>
       <div class="std-body">
-        <div class="std-title">Empty State — Contextual, Not Generic</div>
-        <div class="std-rule">Empty states must detect context: unauthenticated users see a login prompt; no-results states show an illustration + retry CTA; post-search empty shows "no flights found" + suggest alternatives.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>My Orders — illustration + Arabic label</strong>. Gap: no login CTA when unauthenticated.</div>
+        <div class="std-title">Primary Button</div>
+        <div class="std-rule">Full-width, 56px height, var(--gold) fill. Cairo 700, 16px. Copy: [Verb] + [Object] max 3 words. Anchored to bottom safe area with safe-area-inset-bottom padding.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Visa — “ابدأ طلب التأشيرة”</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">09</div>
       <div class="std-body">
-        <div class="std-title">RTL — Chevron Direction</div>
-        <div class="std-rule">In Arabic RTL layout, forward navigation chevrons must point › (right-pointing). A ‹ chevron means "go back" in RTL reading direction. All card and list row chevrons must be direction-aware.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Correct in app: <strong>Flights, Hotels, Visa form fields</strong>. Failure: Packages browse cards use ‹</div>
+        <div class="std-title">Secondary Button</div>
+        <div class="std-rule">Outlined: 56px height, var(--gold) border + text, transparent fill. Stacks directly above Primary. Position never swaps. Ghost button for tertiary actions.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Pending — scope to be defined per vertical</strong></div>
       </div>
     </div>
 
     <div class="std-row">
       <div class="std-num">10</div>
       <div class="std-body">
-        <div class="std-title">Loading State — Skeleton Screen</div>
-        <div class="std-rule">Search result loading must show a skeleton screen (grey placeholder cards matching the result card shape), not a spinner. The Figma spec shows the correct skeleton pattern for flights.</div>
-        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma flights loading screen</strong> — "جاري البحث عن رحلات" + skeleton cards</div>
+        <div class="std-title">Loading State</div>
+        <div class="std-rule">Button enters loading with inline spinner + present-continuous Arabic label (“جاري الحجز…”). Full color retained; opacity unchanged. Tap blocked during load.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Booking confirmation flow — spinner inside button + Arabic label</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">11</div>
+      <div class="std-body">
+        <div class="std-title">Card Container</div>
+        <div class="std-rule">12px border-radius, 1px border (var(--bd)), 16px padding. Shadow: 0 2px 8px rgba(0,0,0,.06). Image aspect ratio 16:9 or 4:3. Text must never be clipped.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Hotels search card — consistent radius, shadow, and image ratio</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">12</div>
+      <div class="std-body">
+        <div class="std-title">Badge (Sale / New)</div>
+        <div class="std-rule">Overlays card top-left in LTR, top-right in RTL. Max 2 badges per card. Sale → var(--red), New → var(--blue), Featured → var(--gold). Cairo 700, 10px.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Pending — scope to be defined per vertical</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">13</div>
+      <div class="std-body">
+        <div class="std-title">Empty States</div>
+        <div class="std-rule">Auth-aware: unauthenticated → login CTA; no results → illustration + retry CTA; post-filter empty → “clear filters” CTA. A blank screen is never acceptable.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>My Orders — illustration + Arabic label. Gap: no login CTA when unauthenticated</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">14</div>
+      <div class="std-body">
+        <div class="std-title">Skeleton Screens</div>
+        <div class="std-rule">Skeleton shimmer cards matching result card shape for any load > 500ms. Reserve spinner for sub-500ms inline operations only.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma flights loading — “جاري البحث عن رحلات” + skeleton cards</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">15</div>
+      <div class="std-body">
+        <div class="std-title">Layout Mirroring</div>
+        <div class="std-rule">RTL flips all directional elements: chevrons, shadows, padding offsets, slide animations. Navigation reads right-to-left. Always test with the longest Arabic string.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Correct in Flights, Hotels, Visa. Failure: Packages browse cards use wrong chevron direction</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">16</div>
+      <div class="std-body">
+        <div class="std-title">Arabic Font</div>
+        <div class="std-rule">Cairo for all Arabic text. Weights: 400 body, 700 labels, 900 headings. Min 13px body, 11px captions. Never fall back to system default Arabic font.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Visa Requirements — Cairo consistently applied across all text sizes and weights</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">17</div>
+      <div class="std-body">
+        <div class="std-title">Numerals / Calendar</div>
+        <div class="std-rule">Eastern Arabic numerals (٠١٢٣٤٥٦٧٨٩) in Arabic locale. Calendar: Gregorian default, Hijri as secondary label. Date format: DD/MM/YYYY.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Pending — scope to be defined per vertical</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">18</div>
+      <div class="std-body">
+        <div class="std-title">Transition</div>
+        <div class="std-rule">Screen push: 280ms ease-out slide. Modal/sheet entry: 320ms spring (cubic-bezier). No abrupt cuts on primary navigation. Must respect OS reduce-motion setting.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Figma motion spec — spring curves for sheets, ease-out slide for screen transitions</strong></div>
+      </div>
+    </div>
+
+    <div class="std-row">
+      <div class="std-num">19</div>
+      <div class="std-body">
+        <div class="std-title">Loading</div>
+        <div class="std-rule">Full-page loading: centered spinner + Arabic label (“جاري التحميل…”). Overlay loading (e.g. payment): semi-transparent dark backdrop + centered spinner.</div>
+        <div class="std-ref"><div class="std-ref-dot"></div>Best practice: <strong>Pending — scope to be defined per vertical</strong></div>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- TAB BAR -->
-<section class="section" id="tab-bar">
-  <div class="sec-kicker">Navigation · 01</div>
-  <div class="sec-title">Tab Bar</div>
-  <div class="sec-desc">The top tab bar is the primary navigation across all search products. Currently the order and scroll behavior is inconsistent.</div>
+<!-- 01 BACK BUTTON -->
+<section class="section" id="back-btn">
+  <div class="sec-kicker">01</div>
+  <div class="sec-title">Back Button</div>
+  <div class="sec-desc">Placement, labeling, hit area, and confirmation behavior on data-loss flows.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- BOTTOM NAV -->
-<section class="section section-alt" id="bottom-nav">
-  <div class="sec-kicker">Navigation · 02</div>
-  <div class="sec-title">Bottom Navigation</div>
-  <div class="sec-desc">The bottom bar provides access to the five main areas. Label length and icon clarity varies across tabs.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- BACK / CLOSE -->
-<section class="section" id="back-close">
-  <div class="sec-kicker">Navigation · 03</div>
-  <div class="sec-title">Back Button &amp; Close (×)</div>
-  <div class="sec-desc">Back navigation and modal dismiss controls. Currently only drag gesture exists — no visible close button on any sheet.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- BOTTOM SHEET -->
+<!-- 02 BOTTOM SHEET -->
 <section class="section section-alt" id="bottom-sheet">
-  <div class="sec-kicker">Navigation · 04</div>
+  <div class="sec-kicker">02</div>
   <div class="sec-title">Bottom Sheet</div>
-  <div class="sec-desc">Bottom sheets are used for pickers across all products. Structure and header treatment are inconsistent.</div>
+  <div class="sec-desc">Drag handle, × close button, sheet height, and dismiss behavior.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- HEADER BAR -->
-<section class="section" id="header-bar">
-  <div class="sec-kicker">Header · 01</div>
-  <div class="sec-title">Header Bar &amp; Page Title</div>
-  <div class="sec-desc">The header should describe the current screen, not the brand. Most products show "Direct" — only Visa Requirements and Packages use a contextual title.</div>
+<!-- 03 PAGE TITLE -->
+<section class="section" id="page-title">
+  <div class="sec-kicker">03</div>
+  <div class="sec-title">Page Title</div>
+  <div class="sec-desc">Header reflects current page context. Sticky scroll, Cairo 700 18px, one line max.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- HEADER ICONS -->
-<section class="section section-alt" id="header-icons">
-  <div class="sec-kicker">Header · 02</div>
-  <div class="sec-title">Header Icons (Right Side)</div>
-  <div class="sec-desc">The right-side header icon action is unclear. A [›] chevron appears on most screens — its function is ambiguous.</div>
+<!-- 04 SUBTITLE -->
+<section class="section section-alt" id="subtitle">
+  <div class="sec-kicker">04</div>
+  <div class="sec-title">Subtitle</div>
+  <div class="sec-desc">Secondary header line for route summary, traveller count, or date range below Page Title.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- SEARCH BAR -->
-<section class="section" id="search-bar">
-  <div class="sec-kicker">Search · 01</div>
-  <div class="sec-title">Search Bar</div>
-  <div class="sec-desc">Search is used inside bottom sheets (pickers) rather than as a standalone bar. Placeholder copy and interaction vary by product.</div>
+<!-- 05 SEARCH RESULTS LIST -->
+<section class="section" id="search-results">
+  <div class="sec-kicker">05</div>
+  <div class="sec-title">Search Results List</div>
+  <div class="sec-desc">Row height, icon/flag, selection highlight, and RTL-aware trailing chevron.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- SEARCH RESULTS -->
-<section class="section section-alt" id="search-results">
-  <div class="sec-kicker">Search · 02</div>
-  <div class="sec-title">Search Results &amp; Selection State</div>
-  <div class="sec-desc">How rows look when a result is selected. Only Flights has an orange row highlight — other products have no selection feedback.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- FORM FIELDS -->
-<section class="section" id="form-fields">
-  <div class="sec-kicker">Forms · 01</div>
-  <div class="sec-title">Text Input Fields</div>
-  <div class="sec-desc">The main search form fields across Flights, Hotels, and Visas. These three are visually consistent — the pattern can be copied to other products.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- TRIP TYPE -->
-<section class="section section-alt" id="trip-type">
-  <div class="sec-kicker">Forms · 02</div>
-  <div class="sec-title">Trip Type Selector</div>
-  <div class="sec-desc">Segment control for trip type — one-way / round-trip / multi-city. Only Flights has this pattern. It should be standardised for Hotels (one night / multi-night) and Packages.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- DATE PICKER -->
-<section class="section" id="date-picker">
-  <div class="sec-kicker">Forms · 03</div>
-  <div class="sec-title">Date Picker</div>
-  <div class="sec-desc">Calendar-style bottom sheet for date selection. Uses a native-feel scrollable month grid with Arabic day names in RTL order (أحد → سبت).</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- PICKERS & STEPPERS -->
-<section class="section section-alt" id="form-pickers">
-  <div class="sec-kicker">Forms · 04</div>
-  <div class="sec-title">Pickers &amp; Steppers</div>
-  <div class="sec-desc">Passenger class selector uses radio buttons + stepper counters. The Packages month selector auto-opens — a critical UX failure.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- FIELD STATES -->
-<section class="section" id="form-states">
-  <div class="sec-kicker">Forms · 05</div>
-  <div class="sec-title">Field States</div>
-  <div class="sec-desc">Radio button and stepper states captured from the Flights passenger &amp; class selector — the only screen in the app that shows both selected and disabled control states.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- PRIMARY CTA -->
-<section class="section section-alt" id="cta-primary">
-  <div class="sec-kicker">Buttons · 01</div>
-  <div class="sec-title">Primary CTA Button</div>
-  <div class="sec-desc">The main action button label and position differs across products. The formula should be: [verb] + [object]. Only Visa Requirements gets this right.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- BUTTON STATES -->
-<section class="section" id="btn-states">
-  <div class="sec-kicker">Buttons · 02</div>
-  <div class="sec-title">Button States</div>
-  <div class="sec-desc">Active and disabled button states captured from live screens. Loading state (spinner inside CTA) and pressed state could not be captured — documented as spec gaps below.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- CONFIRMATION POPUP -->
-<section class="section section-alt" id="confirmation-popup">
-  <div class="sec-kicker">Buttons · 03</div>
-  <div class="sec-title">Confirmation Popup / Modal</div>
-  <div class="sec-desc">Destructive or irreversible actions (cancel booking, delete card, sign out) require a confirmation step. Paste the experience screen here when ready.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- CARDS -->
-<section class="section" id="cards">
-  <div class="sec-kicker">Content · 01</div>
-  <div class="sec-title">Cards</div>
-  <div class="sec-desc">Card layouts used in browse/discovery screens. Packages uses full-bleed photo cards; the home grid uses icon tiles.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- LIST ROWS -->
-<section class="section section-alt" id="lists">
-  <div class="sec-kicker">Content · 02</div>
-  <div class="sec-title">List Rows</div>
-  <div class="sec-desc">Rows inside pickers and settings screens. The Flights airport row is the richest — 3-level hierarchy with IATA code, city, and country.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- PRICE DISPLAY -->
-<section class="section" id="price-display">
-  <div class="sec-kicker">Cards / Lists · 03</div>
-  <div class="sec-title">Price Display</div>
-  <div class="sec-desc">How prices are shown across all product cards and booking summaries — currency symbol, SAR placement, strike-through prices, discount badges, and "starting from" labels.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- FILTERS -->
+<!-- 06 FILTER MODAL / SHEET -->
 <section class="section section-alt" id="filters">
-  <div class="sec-kicker">Filters / Sort · 01</div>
-  <div class="sec-title">Filters</div>
-  <div class="sec-desc">Filter sheet, chips, active indicator, and clear button. Needs screens from search results flows.</div>
+  <div class="sec-kicker">06</div>
+  <div class="sec-title">Filter Modal / Sheet</div>
+  <div class="sec-desc">Bottom sheet with active count badge on trigger, clear-all, and Apply CTA pinned to bottom.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- SORT -->
+<!-- 07 SORT OPTIONS -->
 <section class="section" id="sort">
-  <div class="sec-kicker">Filters / Sort · 02</div>
-  <div class="sec-title">Sort</div>
-  <div class="sec-desc">Sort options sheet and direction indicators on results lists.</div>
+  <div class="sec-kicker">07</div>
+  <div class="sec-title">Sort Options</div>
+  <div class="sec-desc">Action sheet with labeled default. Active option: filled radio + gold. Max 5 options.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- AUTH GATE -->
-<section class="section section-alt" id="auth-gate">
-  <div class="sec-kicker">States · 01</div>
-  <div class="sec-title">Auth Gate &amp; Splash</div>
-  <div class="sec-desc">Unauthenticated state and app launch experience. The More tab gates certain features behind a login CTA, but the experience has several UX gaps.</div>
+<!-- 08 PRIMARY BUTTON -->
+<section class="section section-alt" id="primary-btn">
+  <div class="sec-kicker">08</div>
+  <div class="sec-title">Primary Button</div>
+  <div class="sec-desc">Full-width, 56px, gold fill. Verb + Object copy. Anchored to bottom safe area.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- EMPTY STATES -->
+<!-- 09 SECONDARY BUTTON -->
+<section class="section" id="secondary-btn">
+  <div class="sec-kicker">09</div>
+  <div class="sec-title">Secondary Button</div>
+  <div class="sec-desc">Outlined, 56px, gold border. Stacks above Primary. Position never swaps with Primary.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
+
+<!-- 10 LOADING STATE -->
+<section class="section section-alt" id="loading-state">
+  <div class="sec-kicker">10</div>
+  <div class="sec-title">Loading State</div>
+  <div class="sec-desc">Inline spinner + present-continuous Arabic label in button. Full color retained during load.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
+
+<!-- 11 CARD CONTAINER -->
+<section class="section" id="cards">
+  <div class="sec-kicker">11</div>
+  <div class="sec-title">Card Container</div>
+  <div class="sec-desc">12px radius, 1px border, 16px padding. Image 16:9 or 4:3. Shadow: 0 2px 8px rgba(0,0,0,.06).</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
+
+<!-- 12 BADGE (SALE / NEW) -->
+<section class="section section-alt" id="badge">
+  <div class="sec-kicker">12</div>
+  <div class="sec-title">Badge (Sale / New)</div>
+  <div class="sec-desc">Card overlay top-left (RTL: top-right). Max 2 per card. Sale → red, New → blue, Featured → gold.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
+
+<!-- 13 EMPTY STATES -->
 <section class="section" id="empty-states">
-  <div class="sec-kicker">States · 02</div>
+  <div class="sec-kicker">13</div>
   <div class="sec-title">Empty States</div>
-  <div class="sec-desc">What the user sees when there is no content. The Visas tab has a critical broken empty state after country selection.</div>
+  <div class="sec-desc">Auth-aware: unauthenticated → login CTA; no results → illustration + retry CTA.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- RTL / LAYOUT MIRRORING -->
-<section class="section section-alt" id="rtl">
-  <div class="sec-kicker">RTL / Arabic · 01</div>
+<!-- 14 SKELETON SCREENS -->
+<section class="section section-alt" id="skeleton">
+  <div class="sec-kicker">14</div>
+  <div class="sec-title">Skeleton Screens</div>
+  <div class="sec-desc">Grey shimmer placeholders matching result card shape for any load over 500ms.</div>
+  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
+</section>
+
+<!-- 15 LAYOUT MIRRORING -->
+<section class="section" id="rtl">
+  <div class="sec-kicker">15</div>
   <div class="sec-title">Layout Mirroring</div>
-  <div class="sec-desc">All screens are in Arabic (ar-SA). RTL mirroring means forms, chevrons, and icon placement must flip. One clear failure found.</div>
+  <div class="sec-desc">All directional elements flip in RTL: chevrons, shadows, padding, slide animations.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- TYPOGRAPHY -->
-<section class="section" id="typography">
-  <div class="sec-kicker">RTL / Arabic · 02</div>
-  <div class="sec-title">Typography</div>
-  <div class="sec-desc">Font usage, type scale, Arabic/Latin pairing, and weight rules across the app. Cairo is the primary typeface — ensure consistent heading, body, caption, and button text sizes.</div>
+<!-- 16 ARABIC FONT -->
+<section class="section section-alt" id="arabic-font">
+  <div class="sec-kicker">16</div>
+  <div class="sec-title">Arabic Font</div>
+  <div class="sec-desc">Cairo for all Arabic text. Weights 400/700/900. Min 13px body, 11px captions.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- ANIMATION -->
-<section class="section section-alt" id="animation">
-  <div class="sec-kicker">Motion · 01</div>
-  <div class="sec-title">Animation</div>
-  <div class="sec-desc">Transition and micro-interaction patterns — page transitions, sheet animations, loading states, success animations, and button press feedback.</div>
+<!-- 17 NUMERALS / CALENDAR -->
+<section class="section" id="numerals">
+  <div class="sec-kicker">17</div>
+  <div class="sec-title">Numerals / Calendar</div>
+  <div class="sec-desc">Eastern Arabic numerals in AR locale. Gregorian + Hijri secondary. Format DD/MM/YYYY.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- FIGMA: REDESIGNED PICKERS -->
-<section class="section" id="figma-pickers">
-  <div class="sec-kicker">Figma vs. Built · 01</div>
-  <div class="sec-title">Redesigned Pickers</div>
-  <div class="sec-desc">The Figma file contains cleaner versions of the airport picker and passenger selector — white cards, proper status bars, refined class labels. These have not been shipped.</div>
+<!-- 18 TRANSITION -->
+<section class="section section-alt" id="transition">
+  <div class="sec-kicker">18</div>
+  <div class="sec-title">Transition</div>
+  <div class="sec-desc">Screen push 280ms ease-out. Modal/sheet 320ms spring. Respects OS reduce-motion.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
-<!-- FIGMA: DATE RANGE PICKER -->
-<section class="section section-alt" id="figma-dates">
-  <div class="sec-kicker">Figma vs. Built · 02</div>
-  <div class="sec-title">Date Range Picker</div>
-  <div class="sec-desc">The Figma spec shows a dual-date range picker (departure + return in one view). The live app only has a single departure date calendar.</div>
-  <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
-</section>
-
-<!-- FIGMA: UNBUILT SCREENS -->
-<section class="section" id="figma-unbuilt">
-  <div class="sec-kicker">Figma vs. Built · 03</div>
-  <div class="sec-title">Unbuilt Screens</div>
-  <div class="sec-desc">These screens exist in the Figma file but have no equivalent in the live app. They represent either planned features or designs that were scoped out.</div>
+<!-- 19 LOADING -->
+<section class="section" id="loading">
+  <div class="sec-kicker">19</div>
+  <div class="sec-title">Loading</div>
+  <div class="sec-desc">Full-page: spinner + Arabic label. Overlay (payment): semi-transparent backdrop + spinner.</div>
   <div class="pending-block"><div class="pending-ico">+</div><div>Awaiting screens — share experience from Notion</div></div>
 </section>
 
