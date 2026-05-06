@@ -1,0 +1,22 @@
+[     913ms] [WARNING] <link rel=preload> has an unsupported `type` value @ https://global.almosafer.com/ar:0
+[    1491ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://global.almosafer.com/_next/image?url=https%3A%2F%2Fcms-cdn.almosafer.com%2Fdrupal_cms%2Falm%2Ffiles%2F2024-02%2Falm-360-hero-ar2x_4.jpg&w=640&q=75:0
+[   16157ms] [LOG] i18next: languageChanged ar @ https://global.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   16158ms] [LOG] i18next: initialized {debug: true, initImmediate: false, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ https://global.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   16158ms] [LOG] function(){return r.t.apply(r,arguments)} null @ https://global.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   16215ms] [WARNING] invoking a computedFn from outside an reactive context won't be memoized, unless keepAlive is set @ https://global.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   16229ms] [WARNING] invoking a computedFn from outside an reactive context won't be memoized, unless keepAlive is set @ https://global.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   21851ms] [WARNING] Amplitude Logger [Warn]: Plugin with name @amplitude/plugin-session-replay-browser already exists, skipping registration @ https://cdn.amplitude.com/libs/analytics-browser-gtm-2.36.9-min.js.gz:0
+[   21885ms] [WARNING] Amplitude Logger [Warn]: Plugin with name gtm-library-enrichment already exists, skipping registration @ https://cdn.amplitude.com/libs/analytics-browser-gtm-2.36.9-min.js.gz:0
+[   29491ms] [WARNING] Amplitude Logger [Warn]: TypeError: Failed to fetch @ https://cdn.amplitude.com/libs/analytics-browser-gtm-2.36.9-min.js.gz:0
+[   29500ms] [WARNING] <link rel=preload> has an unsupported `type` value @ https://www.almosafer.com/ar?ncr=1:0
+[   31510ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://www.almosafer.com/_next/static/almosafer-favicon/manifest.json:0
+[   36768ms] [LOG] i18next: languageChanged ar @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   36768ms] [LOG] i18next: initialized {debug: true, initImmediate: false, ns: Array(1), defaultNS: Array(1), fallbackLng: Array(1)} @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   36768ms] [LOG] function(){return r.t.apply(r,arguments)} null @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   36827ms] [WARNING] invoking a computedFn from outside an reactive context won't be memoized, unless keepAlive is set @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   36887ms] [WARNING] invoking a computedFn from outside an reactive context won't be memoized, unless keepAlive is set @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   36898ms] [WARNING] invoking a computedFn from outside an reactive context won't be memoized, unless keepAlive is set @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/_app-0e1e0b33ba9270be.js:100
+[   37761ms] [WARNING] Amplitude Logger [Warn]: Plugin with name @amplitude/plugin-session-replay-browser already exists, skipping registration @ https://cdn.amplitude.com/libs/analytics-browser-gtm-2.36.9-min.js.gz:0
+[   37835ms] [WARNING] Amplitude Logger [Warn]: Plugin with name gtm-library-enrichment already exists, skipping registration @ https://cdn.amplitude.com/libs/analytics-browser-gtm-2.36.9-min.js.gz:0
+[   37859ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.almosafer.com/api/flight/resource/codes/:0
+[   37860ms] [LOG] undefined errorCodes @ https://www.almosafer.com/desktop/v2/assets/_next/static/chunks/pages/%5Blang%5D-578adc1c2bbcd3b2.js:0

@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - img [ref=e3]
+    - img [ref=e4] [cursor=pointer]
+  - main [ref=e7]:
+    - generic [ref=e8]:
+      - button "Skip to main content" [ref=e9] [cursor=pointer]
+      - generic [ref=e11]:
+        - link "Browserstack logo" [ref=e12] [cursor=pointer]:
+          - /url: https://www.browserstack.com/
+          - img "Browserstack logo" [ref=e13]
+        - navigation [ref=e14]:
+          - list [ref=e15]:
+            - listitem [ref=e16]:
+              - button "Products" [ref=e17] [cursor=pointer]: Products
+            - listitem [ref=e21]:
+              - button "Developers" [ref=e22] [cursor=pointer]:
+                - generic [ref=e23]:
+                  - text: Developers
+                  - img [ref=e25]
+            - listitem [ref=e27]:
+              - link "AI Agents" [ref=e28] [cursor=pointer]:
+                - /url: https://www.browserstack.com/browserstack-ai
+            - listitem [ref=e29]:
+              - link "Pricing" [ref=e30] [cursor=pointer]:
+                - /url: https://www.browserstack.com/pricing?product=live
+            - listitem [ref=e31]:
+              - link "Sign in" [ref=e32] [cursor=pointer]:
+                - /url: https://www.browserstack.com/users/sign_in
+            - listitem [ref=e33]:
+              - link "Free Trial" [ref=e34] [cursor=pointer]:
+                - /url: https://www.browserstack.com/users/sign_up
+            - listitem [ref=e35]:
+              - button "Search" [ref=e36] [cursor=pointer]:
+                - img [ref=e37]
+    - generic [ref=e43]:
+      - group "Sign in" [ref=e45]:
+        - heading "Sign in" [level=1] [ref=e47]
+        - generic [ref=e48]:
+          - img "Google icon illustration" [ref=e49]
+          - link "Sign in with Google" [ref=e50] [cursor=pointer]:
+            - /url: https://www.browserstack.com/users/auth/google_oauth2?state=eyJzaWduX2luX3BhZ2UiOnRydWUsInY0X2F1dGhfcGFnZV9leHAiOmZhbHNlfQ==
+        - generic [ref=e53]: or
+        - textbox "Business Email" [ref=e56]: saeed@direct-trvl.com
+        - generic [ref=e58]:
+          - textbox "Enter your password" [ref=e59]:
+            - /placeholder: Password
+            - text: "555555555"
+          - alert [ref=e74]:
+            - generic "Password:Invalid password" [ref=e76]: Invalid password
+        - button "Sign me in" [ref=e62] [cursor=pointer]
+        - generic [ref=e64]:
+          - link "Sign up" [ref=e65] [cursor=pointer]:
+            - /url: /users/sign_up
+          - link "Forgot password?" [ref=e66] [cursor=pointer]:
+            - /url: /users/password/new
+      - generic [ref=e68]:
+        - paragraph
+        - link "Register Now" [ref=e70] [cursor=pointer]:
+          - /url: https://www.browserstack.com/events/breakpoint-2026?ref=guide-page&utm_source=growth_ads&utm_medium=website&utm_platform=&utm_content=digitalevent&utm_campaign=Summit Breakpoint-12-May-2026-Testing-Reimagined-by-Intelligent-AI&utm_campaigncode=701OW00000fkoF8YAI&utm_term=sign_in_page_1
+  - iframe [ref=e73]:
+    - generic [ref=f1e4]:
+      - text: protected by
+      - strong [ref=f1e5]: reCAPTCHA
+  - complementary:
+    - generic [ref=e77]:
+      - alert [ref=e78]: Incorrect password entered. You have 2 attempts left.
+      - link "Close" [ref=e79] [cursor=pointer]:
+        - /url: "#"

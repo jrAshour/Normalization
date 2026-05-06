@@ -1,0 +1,617 @@
+- generic [ref=e3]:
+  - navigation [ref=e6]:
+    - generic [ref=e7]:
+      - button "Open navigation" [ref=e8] [cursor=pointer]
+      - img "App Store" [ref=e10]:
+        - img
+    - generic [ref=e11]:
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - button [ref=e15] [cursor=pointer]:
+            - generic [ref=e16]:
+              - generic [ref=e17]:
+                - img
+              - generic [ref=e18]: Today
+        - listitem [ref=e19]:
+          - button [ref=e20] [cursor=pointer]:
+            - generic [ref=e21]:
+              - generic [ref=e22]:
+                - img
+              - generic [ref=e23]: Games
+        - listitem [ref=e24]:
+          - button [ref=e25] [cursor=pointer]:
+            - generic [ref=e26]:
+              - generic [ref=e27]:
+                - img
+              - generic [ref=e28]: Apps
+        - listitem [ref=e29]:
+          - button [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]:
+              - generic [ref=e32]:
+                - img
+              - generic [ref=e33]: Arcade
+        - listitem [ref=e34]:
+          - button [ref=e35] [cursor=pointer]:
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - img
+              - generic [ref=e38]: Search
+      - generic [ref=e39]:
+        - generic [ref=e41]: Categories
+        - list [ref=e42]:
+          - listitem [ref=e43]:
+            - button [ref=e44] [cursor=pointer]:
+              - generic [ref=e48]: Categories
+          - listitem [ref=e49]:
+            - button [ref=e50] [cursor=pointer]:
+              - generic [ref=e54]: Photo & Video
+          - listitem [ref=e55]:
+            - button [ref=e56] [cursor=pointer]:
+              - generic [ref=e60]: Health & Fitness
+          - listitem [ref=e61]:
+            - button [ref=e62] [cursor=pointer]:
+              - generic [ref=e66]: Productivity
+          - listitem [ref=e67]:
+            - button [ref=e68] [cursor=pointer]:
+              - generic [ref=e72]: Entertainment
+          - listitem [ref=e73]:
+            - button [ref=e74] [cursor=pointer]:
+              - generic [ref=e78]: Action
+          - listitem [ref=e79]:
+            - button [ref=e80] [cursor=pointer]:
+              - generic [ref=e84]: Adventure
+          - listitem [ref=e85]:
+            - button [ref=e86] [cursor=pointer]:
+              - generic [ref=e90]: Puzzle
+          - listitem [ref=e91]:
+            - button [ref=e92] [cursor=pointer]:
+              - generic [ref=e96]: Indie
+      - generic [ref=e97]:
+        - text: Platform
+        - list [ref=e98]:
+          - listitem [ref=e99]:
+            - link [ref=e100] [cursor=pointer]:
+              - /url: https://apps.apple.com/sa/iphone/today
+              - generic [ref=e101]:
+                - generic [ref=e102]:
+                  - img
+                - generic [ref=e103]: iPhone
+          - listitem [ref=e104]:
+            - link [ref=e105] [cursor=pointer]:
+              - /url: https://apps.apple.com/sa/ipad/today
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - img
+                - generic [ref=e108]: iPad
+          - listitem [ref=e109]:
+            - link [ref=e110] [cursor=pointer]:
+              - /url: https://apps.apple.com/sa/mac/discover
+              - generic [ref=e111]:
+                - generic [ref=e112]:
+                  - img
+                - generic [ref=e113]: Mac
+          - listitem [ref=e114]:
+            - link [ref=e115] [cursor=pointer]:
+              - /url: https://apps.apple.com/sa/watch/apps-and-games
+              - generic [ref=e116]:
+                - generic [ref=e117]:
+                  - img
+                - generic [ref=e118]: Watch
+          - listitem [ref=e119]:
+            - link [ref=e120] [cursor=pointer]:
+              - /url: https://apps.apple.com/sa/tv/discover
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - img
+                - generic [ref=e123]: TV
+  - generic [ref=e124]:
+    - main [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e140]:
+          - heading "Direct | دايركت" [level=1] [ref=e141]:
+            - generic [ref=e142]: Direct | دايركت
+          - paragraph [ref=e143]: التطبيق الشامل للسفر
+          - paragraph [ref=e144]: Only for iPhone
+          - paragraph [ref=e145]: Free · Designed for iPhone. Not verified for macOS.
+          - generic [ref=e146]:
+            - button "View in Mac App Store" [ref=e148] [cursor=pointer]:
+              - generic [ref=e150]: View in Mac App Store
+              - img
+            - button "Share" [ref=e151] [cursor=pointer]:
+              - img
+        - list [ref=e157]:
+          - listitem [ref=e158]:
+            - link "9.8k Ratings 4.7 Stars" [ref=e160] [cursor=pointer]:
+              - /url: "#productRatings"
+              - generic [ref=e162]:
+                - term [ref=e163]:
+                  - generic [ref=e164]: 9.8k Ratings
+                - definition [ref=e165]:
+                  - generic [ref=e166]: "4.7"
+                  - list "4.7 Stars" [ref=e167]:
+                    - listitem [ref=e168]:
+                      - img
+                    - listitem [ref=e169]:
+                      - img
+                    - listitem [ref=e170]:
+                      - img
+                    - listitem [ref=e171]:
+                      - img
+                    - listitem [ref=e172]:
+                      - generic [ref=e173]:
+                        - img
+                      - img
+          - listitem [ref=e174]:
+            - link "Ages 4+ Years" [ref=e176] [cursor=pointer]:
+              - /url: "#information"
+              - generic [ref=e178]:
+                - term [ref=e179]:
+                  - generic [ref=e180]: Ages
+                - definition [ref=e181]:
+                  - generic [ref=e182]: 4+
+                  - generic [ref=e183]: Years
+          - listitem [ref=e184]:
+            - link [ref=e186] [cursor=pointer]:
+              - /url: "#information"
+              - generic [ref=e188]:
+                - term [ref=e189]:
+                  - generic [ref=e190]: Category
+                - definition [ref=e191]:
+                  - generic [ref=e195]: Travel
+          - listitem [ref=e196]:
+            - link [ref=e198] [cursor=pointer]:
+              - /url: https://apps.apple.com/sa/developer/al-musafir-al-mabashir-company-for-travel-and-tourism/id1270140474?platform=iphone
+              - generic [ref=e200]:
+                - term [ref=e201]:
+                  - generic [ref=e202]: Developer
+                - definition [ref=e203]:
+                  - generic [ref=e204]:
+                    - img
+                  - generic [ref=e205]: AL-MUSAFIR AL-MABASHIR COMPANY FOR TRAVEL AND TOURISM
+          - listitem [ref=e206]:
+            - link [ref=e208] [cursor=pointer]:
+              - /url: "#information"
+              - generic [ref=e210]:
+                - term [ref=e211]:
+                  - generic [ref=e212]: Language
+                - definition [ref=e213]:
+                  - generic [ref=e214]: EN
+                  - generic [ref=e215]: + 1 More
+          - listitem [ref=e216]:
+            - link [ref=e218] [cursor=pointer]:
+              - /url: "#information"
+              - generic [ref=e220]:
+                - term [ref=e221]:
+                  - generic [ref=e222]: Size
+                - definition [ref=e223]:
+                  - generic [ref=e224]: "75.2"
+                  - generic [ref=e225]: MB
+        - generic [ref=e226]:
+          - list [ref=e230]:
+            - listitem [ref=e231]:
+              - generic "Screenshot" [ref=e233]
+            - listitem [ref=e237]:
+              - generic "Screenshot" [ref=e239]
+            - listitem [ref=e243]
+            - listitem [ref=e249]
+            - listitem [ref=e255]
+            - listitem [ref=e261]
+            - listitem [ref=e267]
+            - listitem [ref=e268]
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - img
+            - generic [ref=e271]: iPhone
+        - paragraph [ref=e274]:
+          - generic [ref=e276]: دايركت رفيقك الأمثل في السفر و السياحة ! نحن هنا لنجعل رحلتك ليست فقط ممكنة بل نضمن بأن تكون سهلة و ممتعة و خالية من أي تعقيدات سواء كنت تخطط لقضاء عطلة أو رحلة عمل. دايركت شـوف العـالـم ماذا يقدم تطبيق دايركت ؟ - استلام جواز العميل لاستخراج التأشيرة و القيام بجميع الإجراءات نيابة عنه من ثم تسليمه الجواز بعد الانتهاء من إصدار التأشيرة. - حجز الفنادق , من خلال أكثر من 2.5 مليون خيار للإقامة حول العالم و كما تحب. - حجز الطيران , نراهن على عدد الحلول المتاحة و أسعار التذاكر الأقل سعراً بالتواصل مع أكثر من 450 شركة طيران حول العالم. - خدمات مسـاندة و مصاحبة للمسافر "رخصة دولية – ترجمة مستندات – غيرها ..." - حلول الدراسة بالخارج " لغة إنجليزية – قبول جامعات - دراسة تخصصية" , وكلاء أعرق المعاهد العالمية مع أكثر من 1,500 خيار حول العالم.
+          - button "more" [ref=e277] [cursor=pointer]
+        - generic [ref=e278]:
+          - link "Ratings & Reviews" [ref=e280] [cursor=pointer]:
+            - /url: https://apps.apple.com/sa/app/1270140475?see-all=reviews&platform=iphone
+            - generic [ref=e281]:
+              - heading "Ratings & Reviews" [level=2] [ref=e282]
+              - generic [ref=e283]:
+                - img
+          - list [ref=e284]:
+            - listitem [ref=e285]:
+              - generic [ref=e287]:
+                - generic [ref=e288]:
+                  - generic [ref=e289]: "4.7"
+                  - generic [ref=e290]: out of 5
+                - generic [ref=e291]:
+                  - generic [ref=e292]: 9.8K Ratings
+                  - generic [ref=e293]:
+                    - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**" [ref=e294]:
+                      - generic [ref=e295]:
+                        - generic [ref=e296]:
+                          - img
+                        - generic [ref=e297]:
+                          - img
+                        - generic [ref=e298]:
+                          - img
+                        - generic [ref=e299]:
+                          - img
+                        - generic [ref=e300]:
+                          - img
+                    - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**" [ref=e303]:
+                      - generic [ref=e304]:
+                        - generic [ref=e305]:
+                          - img
+                        - generic [ref=e306]:
+                          - img
+                        - generic [ref=e307]:
+                          - img
+                        - generic [ref=e308]:
+                          - img
+                    - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**" [ref=e311]:
+                      - generic [ref=e312]:
+                        - generic [ref=e313]:
+                          - img
+                        - generic [ref=e314]:
+                          - img
+                        - generic [ref=e315]:
+                          - img
+                    - generic "**ASE.Shared.Ratings.Review.StarsAria.one.other**" [ref=e318]:
+                      - generic [ref=e319]:
+                        - generic [ref=e320]:
+                          - img
+                        - generic [ref=e321]:
+                          - img
+                    - generic "**ASE.Shared.Ratings.Review.StarsAria.other.one**" [ref=e324]:
+                      - generic [ref=e326]:
+                        - img
+        - list [ref=e333]:
+          - listitem [ref=e334]:
+            - generic "Outstanding professional service 👏" [ref=e336]:
+              - generic [ref=e337]:
+                - generic [ref=e338]:
+                  - heading "Outstanding professional service 👏" [level=3] [ref=e341]
+                  - list "5 Stars" [ref=e343]:
+                    - listitem [ref=e344]:
+                      - img
+                    - listitem [ref=e345]:
+                      - img
+                    - listitem [ref=e346]:
+                      - img
+                    - listitem [ref=e347]:
+                      - img
+                    - listitem [ref=e348]:
+                      - img
+                - generic [ref=e349]:
+                  - time [ref=e350]: 18 Apr
+                  - paragraph [ref=e353]: Amgad Sanad
+              - generic [ref=e354]:
+                - paragraph [ref=e356]: Outstanding professional service in every step from beginning to end 👏 I fully 100% recommend
+                - generic [ref=e357]:
+                  - text: Developer Response
+                  - generic [ref=e358]:
+                    - paragraph [ref=e359]: أهلاً وسهلاً، شكرًا على وقتك وتقييمك .. نسعى دائمًا لتقديم تجربة أفضل وأمتع، ننتظرك في رحلتك الجاية بكل حماس 🧡
+                    - button "MORE" [ref=e360] [cursor=pointer]
+          - listitem [ref=e361]:
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - generic [ref=e365]:
+                  - heading [level=3] [ref=e368]: لم استلم شهادتي من المعهد
+                  - list [ref=e370]:
+                    - listitem [ref=e371]:
+                      - img
+                    - listitem [ref=e372]:
+                      - img
+                    - listitem [ref=e373]:
+                      - img
+                    - listitem [ref=e374]:
+                      - img
+                    - listitem [ref=e375]:
+                      - img
+                - generic [ref=e376]:
+                  - time [ref=e377]: 07/10/2025
+                  - paragraph [ref=e380]: Doha0
+              - generic [ref=e381]:
+                - generic [ref=e382]:
+                  - paragraph [ref=e383]: نجمة وحده وكثيره بعد لان انا رحت لندن مع داريكت واتفقت معهم بالمعهد وسجلوني فيه وبرضوا حجزوا لي تذاكر طبعاً انا رايحه مع اخوي ف كلنا نفس التسجيل.. اتفاجئ بعد 3 شهور دراسة ب اخر اسبوع انا استلم شهادتي واخوي لا ! طلع فيه مشكلة بالتسجيل وبسبب اهمال دايركت بالمتابعه معهم صار فيه لاخوي اسبوع زياده حضور والمشكلة الادهى انو رحلتنا من بكرا وهم عندهم علم بالرحله .. كلمنا دايركت وقالوا حنا بنتعامل مع المشكلة ورجعنا السعودية .. هل اخوي استلم الشهادة ؟ لا طبعاً مااستلمها لحد الان مع العلم دافعة 16 الف ريال لهم وبسببهم ماستلمها وضاع جهد 3 شهورOnly one star — and that’s even too much. I went to London through Direct, and they handled everything with the institute — they registered me and also booked our tickets. I traveled with my brother, so we had the same registration.After three months of studying, during the last week, I was surprised that I received my certificate but my brother didn’t! It turned out there was a registration issue, and because of Direct’s negligence in following up with the institute, my brother had to attend an extra week.The worst part is that our flight was the next day — and Direct knew about it. We contacted them, and they said they were handling the issue. We returned to Saudi Arabia, but did my brother ever receive his certificate? Of course not.I paid them 16,000 SAR, and because of their carelessness, he never got his certificate, and three months of effort went to waste.
+                  - button [disabled] [ref=e384]: MORE
+                - generic [ref=e385]:
+                  - text: Developer Response
+                  - generic [ref=e386]:
+                    - paragraph [ref=e387]: نأسف إذا ما كانت التجربة على قدر تطلعاتك 🙏🏼 نقدّر ملاحظتك، ونسعد بخدمتك على 0115122170 وبتلقانا معك بكل حرص لضمان تجربة أفضل 🧡
+                    - button [disabled] [ref=e388]: MORE
+          - listitem [ref=e389]:
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - generic [ref=e393]:
+                  - heading [level=3] [ref=e396]: Unprofessional and scam
+                  - list [ref=e398]:
+                    - listitem [ref=e399]:
+                      - img
+                    - listitem [ref=e400]:
+                      - img
+                    - listitem [ref=e401]:
+                      - img
+                    - listitem [ref=e402]:
+                      - img
+                    - listitem [ref=e403]:
+                      - img
+                - generic [ref=e404]:
+                  - time [ref=e405]: 13/03/2025
+                  - paragraph [ref=e408]: Engmohaaa
+              - generic [ref=e409]:
+                - generic [ref=e410]:
+                  - paragraph [ref=e411]: First of all their customers service need more more improvement in all ways knowledge and been professional cuz every one will tell you need this and this when actually you do not need it compared to the office staff .2nd my appointment was passed and I could attend due to sickness in same day of the appointment and i just ask them to schedule another new appointment they ask to pay the whole money again for new visa application i told them why you just need to schedule a new appointment they telling me some talk not making any sense by telling that there no available appointment and the insurance will end and when I checked up there were actually closer appointment.I prefer to do it by your self better because they do nothing
+                  - button [disabled] [ref=e412]: MORE
+                - generic [ref=e413]:
+                  - text: Developer Response
+                  - generic [ref=e414]:
+                    - paragraph [ref=e415]: حياك الله عميلنا الغالي, يؤسفنا سماع ذلك و نعتذر عن ما حدث, و نقدر تقييمك لتحسين جودة الخدمة تواصل مع خدمة العملاء 0115122170 وابشر بعزك 🧡.
+                    - button [disabled] [ref=e416]: MORE
+          - listitem [ref=e417]:
+            - generic [ref=e419]:
+              - generic [ref=e420]:
+                - generic [ref=e421]:
+                  - heading [level=3] [ref=e424]: Great but needs improvements
+                  - list [ref=e426]:
+                    - listitem [ref=e427]:
+                      - img
+                    - listitem [ref=e428]:
+                      - img
+                    - listitem [ref=e429]:
+                      - img
+                    - listitem [ref=e430]:
+                      - img
+                    - listitem [ref=e431]:
+                      - img
+                - generic [ref=e432]:
+                  - time [ref=e433]: 23/04/2022
+                  - paragraph [ref=e436]: Lubnalmu
+              - generic [ref=e437]:
+                - generic [ref=e438]:
+                  - paragraph [ref=e439]: "Great app and service but needs improvements in user experience: -Giving option to change payment method after application is sent, also including apple Pay option. -Showing the amount to be paid in orders page and also in emails received. -Giving the option to copy the request number for smooth costumer service. -Allowing user to preview profile and edit information, (phone number should not be used without OTP at all)(I mistakenly used a wrong phone number and I wasn’t able to edit it.)جميل التطبيق ولكن يحتاج تحسين تجربة المستخدم-إتاحة تغيير طريقة الدفع بعد انهاء الطلب (من كاش الى حساب او حوالة أو العكس)-إظهار المبلغ المطلوب سداده في صفحة استعراض الطلب وأيضًا في الايميل المرسل-إتاحة خيار نسخ رقم الطلب من صفحة الطلبات لسهولة التواصل مع خدمة العملاء -إتاحة خدمة تعديل البيانات والملف الشخصي في التطبيق، حطيت رقم بالغلط مو رقمي ولا قدرت اعدله ولا عرفت اصلًا اني اخطأت الا من تنبيه موظفتكم بالإيميل. المفترض فيه OTP قبل ندخل التطبيق."
+                  - button [disabled] [ref=e440]: MORE
+                - generic [ref=e441]:
+                  - text: Developer Response
+                  - paragraph [ref=e443]: نسعد بتجربتك معنا , وملاحظاتك محط اهتمام لنا
+          - listitem [ref=e444]
+          - listitem [ref=e445]
+          - listitem [ref=e446]
+          - listitem [ref=e447]
+        - generic [ref=e448]:
+          - button "What’s New" [ref=e450] [cursor=pointer]:
+            - generic [ref=e452]:
+              - heading "What’s New" [level=2] [ref=e453]
+              - generic [ref=e454]:
+                - img
+          - generic "What’s New استمتع بتجربة سفر أسرع وأكثر سلاسة مع أحدث التحسينات والإصلاحات Enjoy a faster, smoother travel experience with the latest improvements and fixes Version 9.3.95 23 Apr" [ref=e455]:
+            - generic [ref=e456]:
+              - paragraph [ref=e457]:
+                - generic [ref=e458]: استمتع بتجربة سفر أسرع وأكثر سلاسة مع أحدث التحسينات والإصلاحات Enjoy a faster, smoother travel experience with the latest improvements and fixes
+              - generic [ref=e459]:
+                - generic [ref=e460]: Version 9.3.95
+                - time [ref=e461]: 23 Apr
+        - generic [ref=e462]:
+          - button "App Privacy" [ref=e464] [cursor=pointer]:
+            - link "App Privacy" [ref=e466]:
+              - /url: "#"
+              - generic [ref=e467]:
+                - heading "App Privacy" [level=2] [ref=e468]
+                - generic [ref=e469]:
+                  - img
+          - paragraph [ref=e473]:
+            - text: The developer, AL-MUSAFIR AL-MABASHIR COMPANY FOR TRAVEL AND TOURISM, indicated that the app’s privacy practices may include handling of data as described below. For more information, see the
+            - link "Developer’s Privacy Policy" [ref=e474] [cursor=pointer]:
+              - /url: https://visa.directksa.com/website/privacy_policy
+              - text: developer’s privacy policy
+            - text: .
+        - list [ref=e476]:
+          - listitem [ref=e477]:
+            - generic [ref=e478]:
+              - generic [ref=e479]:
+                - img
+              - heading "Data Used to Track You" [level=3] [ref=e480]
+              - paragraph [ref=e481]: "The following data may be used to track you across apps and websites owned by other companies:"
+              - list [ref=e482]:
+                - listitem [ref=e483]:
+                  - generic [ref=e484]:
+                    - img
+                  - text: Usage Data
+          - listitem [ref=e485]:
+            - generic [ref=e486]:
+              - generic [ref=e487]:
+                - img
+              - heading "Data Linked to You" [level=3] [ref=e488]
+              - paragraph [ref=e489]: "The following data may be collected and linked to your identity:"
+              - list [ref=e490]:
+                - listitem [ref=e491]:
+                  - generic [ref=e492]:
+                    - img
+                  - text: Contact Info
+          - listitem [ref=e493]:
+            - generic [ref=e494]:
+              - generic [ref=e495]:
+                - img
+              - heading "Data Not Linked to You" [level=3] [ref=e496]
+              - paragraph [ref=e497]: "The following data may be collected but it is not linked to your identity:"
+              - list [ref=e498]:
+                - listitem [ref=e499]:
+                  - generic [ref=e500]:
+                    - img
+                  - text: Contact Info
+                - listitem [ref=e501]:
+                  - generic [ref=e502]:
+                    - img
+                  - text: Identifiers
+                - listitem [ref=e503]:
+                  - generic [ref=e504]:
+                    - img
+                  - text: Usage Data
+                - listitem [ref=e505]:
+                  - generic [ref=e506]:
+                    - img
+                  - text: Diagnostics
+        - paragraph [ref=e508]:
+          - text: Privacy practices may vary based, for example, on the features you use or your age.
+          - link "Learn More" [ref=e509] [cursor=pointer]:
+            - /url: https://apps.apple.com/sa/iphone/story/id1538632801
+        - generic [ref=e510]:
+          - heading "Accessibility" [level=2] [ref=e514]
+          - paragraph [ref=e518]:
+            - text: The developer has not yet indicated which accessibility features this app supports.
+            - link "Learn More" [ref=e519] [cursor=pointer]:
+              - /url: https://apps.apple.com/story/id1814164299
+        - generic [ref=e520]:
+          - heading "Information" [level=2] [ref=e523]
+          - generic [ref=e524]:
+            - generic [ref=e525]:
+              - term [ref=e526]: Provider
+              - definition [ref=e527]:
+                - list [ref=e528]:
+                  - listitem [ref=e529]: AL-MUSAFIR AL-MABASHIR COMPANY FOR TRAVEL AND TOURISM
+            - generic [ref=e530]:
+              - term [ref=e531]: Size
+              - definition [ref=e532]:
+                - list [ref=e533]:
+                  - listitem [ref=e534]: 75.2 MB
+            - generic [ref=e535]:
+              - term [ref=e536]: Category
+              - definition [ref=e537]:
+                - list [ref=e538]:
+                  - listitem [ref=e539]: Travel
+            - generic [ref=e540]:
+              - term [ref=e541]: Compatibility
+              - definition [ref=e542]:
+                - group [ref=e543]:
+                  - generic "Requires iOS 15.1 or later." [ref=e544] [cursor=pointer]:
+                    - text: Requires iOS 15.1 or later.
+                    - img
+            - generic [ref=e545]:
+              - term [ref=e546]: Languages
+              - definition [ref=e547]:
+                - list [ref=e548]:
+                  - listitem [ref=e549]: English and Arabic
+            - generic [ref=e550]:
+              - term [ref=e551]: Age Rating
+              - definition [ref=e552]:
+                - group [ref=e553]:
+                  - generic "4+" [ref=e554] [cursor=pointer]:
+                    - text: 4+
+                    - img
+            - generic [ref=e555]:
+              - term [ref=e556]: Copyright
+              - definition [ref=e557]:
+                - list [ref=e558]:
+                  - listitem [ref=e559]: Copyright © 2026 DirectKSA
+        - generic [ref=e561]:
+          - listitem [ref=e562]:
+            - link "Developer Website" [ref=e564] [cursor=pointer]:
+              - /url: https://www.directksa.com/
+              - text: Developer Website
+              - img
+          - listitem [ref=e565]:
+            - link "Privacy Policy" [ref=e567] [cursor=pointer]:
+              - /url: https://visa.directksa.com/website/privacy_policy
+              - text: Privacy Policy
+              - img
+        - generic [ref=e568]:
+          - link "You Might Also Like" [ref=e570] [cursor=pointer]:
+            - /url: https://apps.apple.com/sa/app/1270140475?see-all=customers-also-bought-apps&platform=iphone
+            - generic [ref=e571]:
+              - heading "You Might Also Like" [level=2] [ref=e572]
+              - generic [ref=e573]:
+                - img
+          - list [ref=e577]:
+            - listitem [ref=e578]:
+              - link "View Trips:Booking Hotels & Flights Enjoy travel experience" [ref=e582] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/trips-booking-hotels-flights/id1599444740
+                - generic [ref=e584]: View
+                - generic [ref=e589]:
+                  - heading "Trips:Booking Hotels & Flights" [level=3] [ref=e592]
+                  - paragraph [ref=e595]: Enjoy travel experience
+            - listitem [ref=e596]:
+              - 'link "View MacQueen: Best Hotel Rates Your Travel Choice" [ref=e600] [cursor=pointer]':
+                - /url: https://apps.apple.com/sa/app/macqueen-best-hotel-rates/id1495088277
+                - generic [ref=e602]: View
+                - generic [ref=e607]:
+                  - 'heading "MacQueen: Best Hotel Rates" [level=3] [ref=e610]'
+                  - paragraph [ref=e613]: Your Travel Choice
+            - listitem [ref=e614]:
+              - 'link "View almatar: Book. Travel. Save Flights, Hotels & Travel Deals" [ref=e618] [cursor=pointer]':
+                - /url: https://apps.apple.com/sa/app/almatar-book-travel-save/id1440595039
+                - generic [ref=e620]: View
+                - generic [ref=e625]:
+                  - 'heading "almatar: Book. Travel. Save" [level=3] [ref=e628]'
+                  - paragraph [ref=e631]: Flights, Hotels & Travel Deals
+            - listitem [ref=e632]:
+              - link [ref=e636] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/%D9%83%D8%B1%D9%88%D8%A9-carwah-i-%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1-%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1387161215
+                - generic [ref=e638]: View
+                - generic [ref=e643]:
+                  - heading [level=3] [ref=e646]: كروة Carwah I تأجير سيارات
+                  - paragraph [ref=e649]: "#مستقبل_التأجير"
+            - listitem [ref=e650]:
+              - link [ref=e654] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/lumi-car-rental/id1489446283
+                - generic [ref=e656]: View
+                - generic [ref=e661]:
+                  - heading [level=3] [ref=e664]: "Lumi: Car Rental"
+                  - paragraph [ref=e667]: Speedy bookings at great rates
+            - listitem [ref=e668]:
+              - link [ref=e672] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/flyin-com-%D8%B7%D9%8A%D8%B1%D8%A7%D9%86-%D9%88-%D9%81%D9%86%D8%A7%D8%AF%D9%82/id1106268318
+                - generic [ref=e674]: View
+                - generic [ref=e679]:
+                  - heading [level=3] [ref=e682]: Flyin.com - طيران و فنادق
+                  - paragraph [ref=e685]: Flights, Hotels & Travel Deals
+            - listitem [ref=e686]:
+              - link [ref=e690] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/flyadeal-app/id6450943801
+                - generic [ref=e692]: View
+                - generic [ref=e697]:
+                  - heading [level=3] [ref=e700]: flyadeal App
+                  - paragraph [ref=e703]: Book Now and Fly for Less
+            - listitem [ref=e704]:
+              - link [ref=e708] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/theeb-%D8%B0%D9%8A%D8%A8-%D9%84%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1-%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1417199904
+                - generic [ref=e710]: View
+                - generic [ref=e715]:
+                  - heading [level=3] [ref=e718]: Theeb ذيب لتأجير السيارات
+                  - paragraph [ref=e721]: Theeb ذيب لتأجير السيارات
+            - listitem [ref=e722]:
+              - link [ref=e726] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/shift-carsharing-chauffeur/id1364137537
+                - generic [ref=e728]: View
+                - generic [ref=e733]:
+                  - heading [level=3] [ref=e736]: SHIFT – Carsharing & Chauffeur
+                  - paragraph [ref=e739]: Book a car or Chauffeur
+            - listitem [ref=e740]:
+              - link [ref=e744] [cursor=pointer]:
+                - /url: https://apps.apple.com/sa/app/rehlat-book-flights-hotels/id1141857583
+                - generic [ref=e746]: View
+                - generic [ref=e751]:
+                  - heading [level=3] [ref=e754]: Rehlat- Book Flights & Hotels
+                  - paragraph [ref=e757]: Save up to 20% on bookings
+    - generic [ref=e759]:
+      - generic [ref=e761]:
+        - button "Saudi Arabia" [ref=e762] [cursor=pointer]
+        - list [ref=e763]:
+          - listitem [ref=e764]:
+            - link "This page is available in العربية" [ref=e765] [cursor=pointer]:
+              - /url: "?l=ar"
+              - text: العربية
+      - generic [ref=e766]:
+        - paragraph [ref=e767]:
+          - generic [ref=e768]:
+            - text: Copyright © 2026
+            - link "Apple Inc." [ref=e769] [cursor=pointer]:
+              - /url: https://www.apple.com/uk
+          - text: All rights reserved.
+        - list [ref=e770]:
+          - listitem [ref=e771]:
+            - link "Internet Service Terms" [ref=e772] [cursor=pointer]:
+              - /url: https://www.apple.com/uk/legal/internet-services/
+          - listitem [ref=e773]:
+            - link "App Store & Privacy" [ref=e774] [cursor=pointer]:
+              - /url: https://www.apple.com/legal/privacy/data/en/app-store/
+          - listitem [ref=e775]:
+            - link "Cookie Warning" [ref=e776] [cursor=pointer]:
+              - /url: https://www.apple.com/legal/privacy/en-ww/cookies/
+          - listitem [ref=e777]:
+            - link "Support" [ref=e778] [cursor=pointer]:
+              - /url: https://support.apple.com/en-gb/billing

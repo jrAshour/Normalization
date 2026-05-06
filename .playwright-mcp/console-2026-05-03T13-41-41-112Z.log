@@ -1,0 +1,4 @@
+[    2314ms] [LOG] [captcha-guard] Script injected: https://challenges.cloudflare.com/turnstile/v0/api.js @ https://directksa.com/assets/bugsnag.7242b57c.js:13
+[    8787ms] [WARNING] [TikTok Pixel] - Invalid pixel ID
+Issue: The pixel ID is invalid. This could prevent your pixel from receiving data.
+Suggestion: Please go to Events Manager and find the correct pixel ID. @ https://directksa.com/assets/bugsnag.7242b57c.js:13

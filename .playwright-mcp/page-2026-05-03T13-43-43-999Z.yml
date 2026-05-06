@@ -1,0 +1,398 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "رأس الصفحة" [ref=e3]:
+      - link "شعار Google Play" [ref=e4] [cursor=pointer]:
+        - /url: /store/games
+        - img [ref=e5]
+        - generic [ref=e12]: google_logo Play
+      - navigation "شريط التنقُّل الرئيسي" [ref=e14]:
+        - tablist [ref=e16]:
+          - generic [ref=e19]:
+            - tab "الألعاب" [ref=e20] [cursor=pointer]:
+              - generic:
+                - generic: الألعاب
+            - tab "التطبيقات" [selected] [ref=e22] [cursor=pointer]:
+              - generic:
+                - generic: التطبيقات
+            - tab "الكتب" [ref=e24] [cursor=pointer]:
+              - generic:
+                - generic: الكتب
+            - tab "للأطفال" [ref=e26] [cursor=pointer]:
+              - generic:
+                - generic: للأطفال
+      - generic [ref=e28]:
+        - button "بحث" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: search
+        - button "مركز المساعدة" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: help_outline
+        - button "فتح قائمة الحسابات" [ref=e39] [cursor=pointer]:
+          - img [ref=e40]
+  - generic [ref=e45]:
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - img [ref=e51]
+          - img [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e56]:
+            - heading "Direct | دايركت" [level=1] [ref=e58]
+            - link "Direct for Travel & Tourism‏" [ref=e61] [cursor=pointer]:
+              - /url: /store/apps/developer?id=Direct+for+Travel+%26+Tourism
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - generic "تم التقييم بـ 4.7 نجمة من خمس نجوم" [ref=e68]:
+                - text: "4.7"
+                - generic [ref=e69]: star
+              - generic [ref=e70]: 1.3 ألف مراجعة
+            - generic [ref=e71]:
+              - generic [ref=e72]: +500 ألف
+              - generic [ref=e73]: عملية تنزيل
+      - generic [ref=e74]:
+        - button "التثبيت" [ref=e82]:
+          - generic [ref=e85]: التثبيت
+        - generic [ref=e86]:
+          - button "مشاركة" [ref=e90] [cursor=pointer]:
+            - img [ref=e92]
+          - button "الإضافة إلى قائمة المحتوى المفضّل" [ref=e97] [cursor=pointer]:
+            - img [ref=e99]
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - list [ref=e108]:
+            - listitem [ref=e109]:
+              - button "صورة لقطة الشاشة" [ref=e111] [cursor=pointer]
+            - listitem [ref=e112]:
+              - button "صورة لقطة الشاشة" [ref=e114] [cursor=pointer]
+            - listitem [ref=e115]:
+              - button "صورة لقطة الشاشة" [ref=e117] [cursor=pointer]
+            - listitem [ref=e118]:
+              - button "صورة لقطة الشاشة" [ref=e120] [cursor=pointer]
+            - listitem [ref=e121]:
+              - button "صورة لقطة الشاشة" [ref=e123] [cursor=pointer]
+            - listitem [ref=e124]:
+              - button "صورة لقطة الشاشة" [ref=e126] [cursor=pointer]
+            - listitem [ref=e127]:
+              - button "صورة لقطة الشاشة" [ref=e129] [cursor=pointer]
+            - listitem [ref=e130]:
+              - button "صورة لقطة الشاشة" [ref=e132] [cursor=pointer]
+          - generic [ref=e135]:
+            - generic [ref=e137]:
+              - heading "لمحة عن هذا التطبيق" [level=2] [ref=e139]
+              - button "الاطّلاع على المزيد من المعلومات حول قسم \"لمحة عن هذا التطبيق\"" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: arrow_forward
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - text: دايركت رفيقك الأمثل في السفر و السياحة ! نحن هنا لنجعل رحلتك ليست فقط ممكنة بل نضمن بأن تكون سهلة و ممتعة و خالية من أي تعقيدات سواء كنت تخطط لقضاء عطلة أو رحلة عمل.
+                - text: دايركت شـوف العـالـم
+                - text: ماذا يقدم تطبيق دايركت ؟
+                - text: "- استلام جواز العميل لاستخراج التأشيرة و القيام بجميع الإجراءات نيابة عنه من ثم تسليمه الجواز بعد الانتهاء من إصدار التأشيرة."
+                - text: "- حجز الفنادق , من خلال أكثر من 2.5 مليون خيار للإقامة حول العالم و كما تحب."
+                - text: "- حجز الطيران , نراهن على عدد الحلول المتاحة و أسعار التذاكر الأقل سعراً بالتواصل مع أكثر من 450 شركة طيران حول العالم."
+                - text: "- خدمات مسـاندة و مصاحبة للمسافر \"رخصة دولية – ترجمة مستندات – غيرها ...\""
+                - text: "- حلول الدراسة بالخارج \" لغة إنجليزية – قبول جامعات - دراسة تخصصية\" , وكلاء أعرق المعاهد العالمية مع أكثر من 1,500 خيار حول العالم."
+              - generic [ref=e147]:
+                - generic [ref=e148]: تاريخ التحديث
+                - generic [ref=e149]: 22‏/04‏/2026
+              - generic [ref=e152]:
+                - generic [ref=e154]: سفر وخدمات محلية
+                - link "سفر وخدمات محلية" [ref=e155] [cursor=pointer]:
+                  - /url: /store/apps/category/TRAVEL_AND_LOCAL
+          - generic [ref=e157]:
+            - generic [ref=e159]:
+              - heading "أمان البيانات" [level=2] [ref=e161]
+              - generic [ref=e162] [cursor=pointer]:
+                - generic [ref=e163]: arrow_forward
+                - link "الاطّلاع على المزيد من المعلومات حول قسم \"أمان البيانات\"" [ref=e164]:
+                  - /url: /store/apps/datasafety?id=com.direct.travel
+            - generic [ref=e165]:
+              - text: يبدأ الحفاظ على أمان بياناتك بفهم الطريقة التي يتّبعها مطوِّرو التطبيقات لجمع بياناتك ومشاركتها. قد تختلف خصوصية البيانات وممارسات الأمان حسب كيفية استخدامك للتطبيق ومنطقتك وعمرك. يوفّر مطوِّر التطبيقات هذه المعلومات وقد يعدِّلها بمرور الوقت.
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - img [ref=e168]
+                  - generic [ref=e169]:
+                    - text: لا تتم مشاركة أيّ بيانات مع جهات خارجية
+                    - generic [ref=e170]:
+                      - link "مزيد من المعلومات" [ref=e171] [cursor=pointer]:
+                        - /url: https://support.google.com/googleplay?p=data-safety&hl=ar
+                      - text: حول الآلية التي يتّبعها مطوِّرو البرامج للإشارة إلى مشاركة بيانات المستخدمين
+                - generic [ref=e172]:
+                  - img [ref=e173]
+                  - generic [ref=e174]:
+                    - text: قد يجمع هذا التطبيق أنواع البيانات هذه
+                    - generic [ref=e175]: المعلومات الشخصية والمعلومات المالية و5 نوع آخر من البيانات
+                - generic [ref=e176]:
+                  - img [ref=e177]
+                  - generic [ref=e178]: يتم تشفير البيانات أثناء النقل
+                - generic [ref=e179]:
+                  - img [ref=e180]
+                  - generic [ref=e181]: يمكن أن تطلب حذف البيانات
+                - generic [ref=e184]:
+                  - generic [ref=e186]: عرض التفاصيل
+                  - link "الاطّلاع على المزيد من التفاصيل حول \"أمان البيانات\"" [ref=e187] [cursor=pointer]:
+                    - /url: /store/apps/datasafety?id=com.direct.travel
+          - generic [ref=e189]:
+            - generic [ref=e191]:
+              - heading "التقييمات والتعليقات" [level=2] [ref=e193]
+              - button "الاطّلاع على المزيد من المعلومات حول قسم \"التقييمات والتعليقات\"" [ref=e195] [cursor=pointer]:
+                - generic [ref=e196]: arrow_forward
+              - button "تم التحقّق من التقييمات والمراجعات" [ref=e200]:
+                - generic [ref=e203]: تم التحقّق من التقييمات والمراجعات
+                - generic [ref=e204]: info_outline
+            - generic [ref=e205]:
+              - generic [ref=e208]:
+                - button "الهاتف" [pressed] [ref=e209] [cursor=pointer]:
+                  - generic [ref=e211]:
+                    - generic [ref=e213]: phone_android
+                    - generic [ref=e214]: الهاتف
+                - button "جهاز لوحي" [ref=e215] [cursor=pointer]:
+                  - generic [ref=e217]:
+                    - generic [ref=e219]: tablet_android
+                    - generic [ref=e220]: جهاز لوحي
+              - generic [ref=e221]:
+                - generic [ref=e224]:
+                  - generic [ref=e225]:
+                    - generic [ref=e226]: "4.7"
+                    - img "تم التقييم بـ 4.7 نجمة من خمس نجوم" [ref=e227]:
+                      - img [ref=e230]
+                      - img [ref=e236]
+                      - img [ref=e242]
+                      - img [ref=e248]
+                      - img [ref=e254]
+                    - generic [ref=e258]: 1.3 ألف مراجعة
+                  - generic [ref=e259]:
+                    - img "1,110 مراجعات للتقييم بالنجوم 5" [ref=e260]:
+                      - generic [ref=e261]: "5"
+                    - img "67 مراجعة للتقييم بالنجوم 4" [ref=e264]:
+                      - generic [ref=e265]: "4"
+                    - img "33 مراجعة للتقييم بالنجوم 3" [ref=e268]:
+                      - generic [ref=e269]: "3"
+                    - img "50 مراجعة للتقييم بالنجوم 2" [ref=e272]:
+                      - generic [ref=e273]: "2"
+                    - img "33 مراجعة للتقييم بالنجوم 1" [ref=e276]:
+                      - generic [ref=e277]: "1"
+                - generic [ref=e280]:
+                  - generic [ref=e281]:
+                    - generic [ref=e282]:
+                      - generic [ref=e283]:
+                        - img [ref=e284]
+                        - generic [ref=e285]: Bayan Yahya
+                      - button "إجراءات إضافية مرتبطة بالمراجعة" [ref=e289] [cursor=pointer]:
+                        - generic [ref=e290]: more_vert
+                    - generic [ref=e291]:
+                      - img "تم التقييم بـ 5 نجمة من خمس نجوم" [ref=e292]:
+                        - img [ref=e295]
+                        - img [ref=e301]
+                        - img [ref=e307]
+                        - img [ref=e313]
+                        - img [ref=e319]
+                      - text: 10 أبريل 2026
+                  - generic [ref=e323]: تطبيق ممتاز واداء عالي وسهوله في الاستخدام ومصداقيه في المعروض شكرا ليكم واتمنى لكم دوام التوفيق والازدهار
+                  - generic [ref=e324]:
+                    - generic [ref=e325]: رأى شخص واحد أنّ هذه المراجعة مفيدة.
+                    - generic [ref=e326]:
+                      - generic [ref=e327]: هل كان هذا المحتوى مفيدًا؟
+                      - generic [ref=e329]:
+                        - button "نعم" [ref=e330] [cursor=pointer]:
+                          - generic [ref=e333]: نعم
+                        - button "لا" [ref=e334] [cursor=pointer]:
+                          - generic [ref=e337]: لا
+                  - generic [ref=e338]:
+                    - generic [ref=e339]:
+                      - generic [ref=e340]: Direct for Travel & Tourism
+                      - generic [ref=e341]: 14 أبريل 2026
+                    - generic [ref=e343]: أهلاً وسهلاً، شكرًا على وقتك وتقييمك .. نسعى دائمًا لتقديم تجربة أفضل وأمتع، ننتظرك في رحلتك الجاية بكل حماس 🧡
+                - generic [ref=e344]:
+                  - generic [ref=e345]:
+                    - generic [ref=e346]:
+                      - generic [ref=e347]:
+                        - img [ref=e348]
+                        - generic [ref=e349]: yaser hassan
+                      - button "إجراءات إضافية مرتبطة بالمراجعة" [ref=e353] [cursor=pointer]:
+                        - generic [ref=e354]: more_vert
+                    - generic [ref=e355]:
+                      - img "تم التقييم بـ 5 نجمة من خمس نجوم" [ref=e356]:
+                        - img [ref=e359]
+                        - img [ref=e365]
+                        - img [ref=e371]
+                        - img [ref=e377]
+                        - img [ref=e383]
+                      - text: 14 أبريل 2026
+                  - generic [ref=e387]: الافضل لاستخراج تاشيرات والفيزا سعودي لجميع الدول طلعت تاشيرتين من التطبيق وبسهولة وما خاب ظني وايضا استخراج رخصة قيادة دولية 👍
+                  - generic [ref=e389]:
+                    - generic [ref=e390]: هل كان هذا المحتوى مفيدًا؟
+                    - generic [ref=e392]:
+                      - button "نعم" [ref=e393] [cursor=pointer]:
+                        - generic [ref=e396]: نعم
+                      - button "لا" [ref=e397] [cursor=pointer]:
+                        - generic [ref=e400]: لا
+                  - generic [ref=e401]:
+                    - generic [ref=e402]:
+                      - generic [ref=e403]: Direct for Travel & Tourism
+                      - generic [ref=e404]: 19 أبريل 2026
+                    - generic [ref=e406]: أهلاً وسهلاً، شكرًا على وقتك وتقييمك .. نسعى دائمًا لتقديم تجربة أفضل وأمتع، ننتظرك في رحلتك الجاية بكل حماس 🧡
+                - generic [ref=e407]:
+                  - generic [ref=e408]:
+                    - generic [ref=e409]:
+                      - generic [ref=e410]:
+                        - img [ref=e411]
+                        - generic [ref=e412]: Abdullah
+                      - button "إجراءات إضافية مرتبطة بالمراجعة" [ref=e416] [cursor=pointer]:
+                        - generic [ref=e417]: more_vert
+                    - generic [ref=e418]:
+                      - img "تم التقييم بـ 1 نجمة من خمس نجوم" [ref=e419]:
+                        - img [ref=e422]
+                        - img [ref=e428]
+                        - img [ref=e434]
+                        - img [ref=e440]
+                        - img [ref=e446]
+                      - text: 5 يناير 2026
+                  - generic [ref=e450]: للأسف تجربة سيئة من بدايتها، شحنت المحفظة لديهم لخدمة الرخصة الدولية وكنسلت لظروف خاصة، ومنذ أكثر من أسبوع أحاول استرداد المبلغ وكل موظف يحولك على آخر، مماطلة عجيبة، نموذج خدمة العملاء لديهم يحتاج إعادة تأهيل وإشراف إذا أرادو مواكبة التطور في السوق، البديل فارق عنهم كثير..
+                  - generic [ref=e451]:
+                    - generic [ref=e452]: رأى شخص واحد أنّ هذه المراجعة مفيدة.
+                    - generic [ref=e453]:
+                      - generic [ref=e454]: هل كان هذا المحتوى مفيدًا؟
+                      - generic [ref=e456]:
+                        - button "نعم" [ref=e457] [cursor=pointer]:
+                          - generic [ref=e460]: نعم
+                        - button "لا" [ref=e461] [cursor=pointer]:
+                          - generic [ref=e464]: لا
+                  - generic [ref=e465]:
+                    - generic [ref=e466]:
+                      - generic [ref=e467]: Direct for Travel & Tourism
+                      - generic [ref=e468]: 8 يناير 2026
+                    - generic [ref=e470]: نأسف إذا ما كانت التجربة على قدر تطلعاتك 🙏🏼 نقدّر ملاحظتك، ونسعد بخدمتك على 0115122170 وبتلقانا معك بكل حرص لضمان تجربة أفضل 🧡
+                - button "عرض جميع المراجعات" [ref=e474]:
+                  - generic [ref=e477]: عرض جميع المراجعات
+          - generic [ref=e479]:
+            - heading "أحدث الميزات" [level=2] [ref=e483]
+            - generic [ref=e485]: استمتع بتجربة سفر أسرع وأكثر سلاسة مع أحدث التحسينات والإصلاحات
+        - link "الإبلاغ عن محتوى غير ملائم" [ref=e489] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/?p=report_content
+          - generic [ref=e490]: flag
+          - text: الإبلاغ عن محتوى غير ملائم
+      - generic [ref=e491]:
+        - generic [ref=e492]:
+          - img "تقييم المحتوى" [ref=e493]
+          - generic [ref=e494]:
+            - generic [ref=e495]: مناسب لأعمار 3 أعوام وما فوق
+            - link "مزيد من المعلومات حول التقييمات حسب الفئة العمرية" [ref=e496] [cursor=pointer]:
+              - /url: https://support.google.com/googleplay?p=appgame_ratings
+              - text: مزيد من المعلومات
+        - generic [ref=e500]:
+          - heading "الحصول على الدعم" [level=2] [ref=e502]
+          - button "توسيع" [ref=e504] [cursor=pointer]:
+            - generic [ref=e505]: expand_more
+        - generic [ref=e507]:
+          - generic [ref=e509]:
+            - heading "تطبيقات مشابهة" [level=2] [ref=e511]:
+              - generic [ref=e512]: تطبيقات مشابهة
+            - generic [ref=e513] [cursor=pointer]:
+              - generic [ref=e514]: arrow_forward
+              - link "الاطّلاع على المزيد من المعلومات حول قسم \"تطبيقات مشابهة\"" [ref=e515]:
+                - /url: /store/apps/collection/cluster?gsr=SmZqGG1ZYlhPVE9BVEcreVR6NHkwTk4vOEE9PcICRgoVChFjb20uZGlyZWN0LnRyYXZlbBAHGAgwATgASiEIARAAGhVEaXJlY3QgfCDYr9in2YrYsdmD2KogACgAMABQAFgBYACwEgA%3D:S:ANO1ljIqZJA
+          - generic [ref=e517]:
+            - 'link "Halalbooking: فنادق حول العالم Halalbooking تم التقييم بـ 5.0 نجمة من خمس نجوم" [ref=e519] [cursor=pointer]':
+              - /url: /store/apps/details?id=com.halalbooking
+              - generic [ref=e520]:
+                - img [ref=e521]
+                - generic [ref=e522]:
+                  - generic [ref=e524]: "Halalbooking: فنادق حول العالم"
+                  - generic [ref=e526]: Halalbooking
+                  - generic "تم التقييم بـ 5.0 نجمة من خمس نجوم" [ref=e528]:
+                    - generic [ref=e529]: "5.0"
+                    - generic [ref=e531]: star
+            - link "Mytrip - ضمان السعر Etraveli Group AB تم التقييم بـ 4.4 نجمة من خمس نجوم" [ref=e533] [cursor=pointer]:
+              - /url: /store/apps/details?id=com.etraveli.mytrip.android
+              - generic [ref=e534]:
+                - img [ref=e535]
+                - generic [ref=e536]:
+                  - generic [ref=e538]: Mytrip - ضمان السعر
+                  - generic [ref=e540]: Etraveli Group AB
+                  - generic "تم التقييم بـ 4.4 نجمة من خمس نجوم" [ref=e542]:
+                    - generic [ref=e543]: "4.4"
+                    - generic [ref=e545]: star
+            - 'link "المسافر: إقامة ورحلات طيران Almosafer for Travel and Tourism تم التقييم بـ 4.7 نجمة من خمس نجوم" [ref=e547] [cursor=pointer]':
+              - /url: /store/apps/details?id=com.travel.almosafer
+              - generic [ref=e548]:
+                - img [ref=e549]
+                - generic [ref=e550]:
+                  - generic [ref=e552]: "المسافر: إقامة ورحلات طيران"
+                  - generic [ref=e554]: Almosafer for Travel and Tourism
+                  - generic "تم التقييم بـ 4.7 نجمة من خمس نجوم" [ref=e556]:
+                    - generic [ref=e557]: "4.7"
+                    - generic [ref=e559]: star
+            - link "Etihad Etihad Airways P.J.S.C تم التقييم بـ 4.2 نجمة من خمس نجوم" [ref=e561] [cursor=pointer]:
+              - /url: /store/apps/details?id=com.mttnow.android.etihad
+              - generic [ref=e562]:
+                - img [ref=e563]
+                - generic [ref=e564]:
+                  - generic [ref=e566]: Etihad
+                  - generic [ref=e568]: Etihad Airways P.J.S.C
+                  - generic "تم التقييم بـ 4.2 نجمة من خمس نجوم" [ref=e570]:
+                    - generic [ref=e571]: "4.2"
+                    - generic [ref=e573]: star
+            - link "Flightnetwork Etraveli Group AB تم التقييم بـ 4.4 نجمة من خمس نجوم" [ref=e575] [cursor=pointer]:
+              - /url: /store/apps/details?id=com.etraveli.flightnetwork.android
+              - generic [ref=e576]:
+                - img [ref=e577]
+                - generic [ref=e578]:
+                  - generic [ref=e580]: Flightnetwork
+                  - generic [ref=e582]: Etraveli Group AB
+                  - generic "تم التقييم بـ 4.4 نجمة من خمس نجوم" [ref=e584]:
+                    - generic [ref=e585]: "4.4"
+                    - generic [ref=e587]: star
+            - link "فلاب الناقل الجوي TRAVELSTART ONLINE TRAVEL OPERATIONS (PTY) LTD تم التقييم بـ 3.9 نجمة من خمس نجوم" [ref=e589] [cursor=pointer]:
+              - /url: /store/apps/details?id=za.co.travelstart.flapp
+              - generic [ref=e590]:
+                - img [ref=e591]
+                - generic [ref=e592]:
+                  - generic [ref=e594]: فلاب الناقل الجوي
+                  - generic [ref=e596]: TRAVELSTART ONLINE TRAVEL OPERATIONS (PTY) LTD
+                  - generic "تم التقييم بـ 3.9 نجمة من خمس نجوم" [ref=e598]:
+                    - generic [ref=e599]: "3.9"
+                    - generic [ref=e601]: star
+  - contentinfo [ref=e603]:
+    - generic [ref=e605]:
+      - generic [ref=e607]:
+        - text: Google Play
+        - link "Play Pass" [ref=e609] [cursor=pointer]:
+          - /url: /store/pass/getstarted
+          - paragraph [ref=e610]: Play Pass
+        - link "Play Points" [ref=e612] [cursor=pointer]:
+          - /url: /store/points/enroll
+          - paragraph [ref=e613]: Play Points
+        - link "بطاقات الهدايا" [ref=e615] [cursor=pointer]:
+          - /url: https://play.google.com/about/giftcards
+          - paragraph [ref=e616]: بطاقات الهدايا
+        - link "تحصيل القيمة" [ref=e618] [cursor=pointer]:
+          - /url: /redeem
+          - paragraph [ref=e619]: تحصيل القيمة
+        - link "سياسة رد الأموال" [ref=e621] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/answer/134336
+          - paragraph [ref=e622]: سياسة رد الأموال
+      - generic [ref=e624]:
+        - text: الأطفال والعائلة
+        - link "دليل الوالدَين" [ref=e626] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay?p=pff_parentguide
+          - paragraph [ref=e627]: دليل الوالدَين
+        - link "المشاركة بين أفراد العائلة" [ref=e629] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/answer/7007852
+          - paragraph [ref=e630]: المشاركة بين أفراد العائلة
+    - generic [ref=e631]:
+      - link "بنود الخدمة" [ref=e633] [cursor=pointer]:
+        - /url: https://play.google.com/intl/ar_eg/about/play-terms.html
+        - paragraph [ref=e634]: بنود الخدمة
+      - link "الخصوصية" [ref=e636] [cursor=pointer]:
+        - /url: https://policies.google.com/privacy
+        - paragraph [ref=e637]: الخصوصية
+      - link "لمحة عن Google Play" [ref=e639] [cursor=pointer]:
+        - /url: https://support.google.com/googleplay/?p=about_play
+        - paragraph [ref=e640]: لمحة عن Google Play
+      - link "مطوّرو البرامج" [ref=e642] [cursor=pointer]:
+        - /url: http://developer.android.com/index.html
+        - paragraph [ref=e643]: مطوّرو البرامج
+      - link "Google Store" [ref=e645] [cursor=pointer]:
+        - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+        - paragraph [ref=e646]: Google Store
+      - generic [ref=e647]: تشمل جميع الأسعار ضريبة القيمة المضافة.
+      - generic [ref=e650]: مصر (العربية)

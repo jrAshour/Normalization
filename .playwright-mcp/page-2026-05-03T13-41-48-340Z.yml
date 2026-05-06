@@ -1,0 +1,611 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic:
+        - banner [ref=e6]:
+          - generic [ref=e8]:
+            - generic [ref=e9]:
+              - button "Menu" [ref=e10] [cursor=pointer]:
+                - img [ref=e13]
+              - button [ref=e16] [cursor=pointer]:
+                - img [ref=e19]
+            - img "Direct KSA" [ref=e25] [cursor=pointer]:
+              - img "Direct KSA" [ref=e26]
+        - tablist [ref=e28]:
+          - generic [ref=e30]:
+            - tab "تأشيرات" [ref=e31] [cursor=pointer]:
+              - generic [ref=e34]: تأشيرات
+            - tab "فنادق" [ref=e35] [cursor=pointer]:
+              - generic [ref=e38]: فنادق
+            - tab "طيران" [ref=e39] [cursor=pointer]:
+              - generic [ref=e42]: طيران
+            - tab "معاهد" [ref=e43] [cursor=pointer]:
+              - generic [ref=e46]: معاهد
+            - tab "بكجات" [ref=e47] [cursor=pointer]:
+              - generic [ref=e50]: بكجات
+        - navigation [ref=e51]:
+          - generic [ref=e52]:
+            - listbox [ref=e53]:
+              - generic [ref=e56] [cursor=pointer]: تأشيرات
+              - generic [ref=e59] [cursor=pointer]: فنادق
+              - generic [ref=e62] [cursor=pointer]: طيران
+              - generic [ref=e65] [cursor=pointer]: معاهد
+              - generic [ref=e68] [cursor=pointer]: بكجات
+            - listbox [ref=e69]:
+              - generic [ref=e70] [cursor=pointer]:
+                - img [ref=e73]
+                - generic [ref=e77]: من نحن
+              - generic [ref=e78] [cursor=pointer]:
+                - img [ref=e81]
+                - generic [ref=e92]: فروعنا
+              - generic [ref=e93] [cursor=pointer]:
+                - img [ref=e96]
+                - generic [ref=e100]: اتصل بنا
+              - generic [ref=e101] [cursor=pointer]:
+                - img [ref=e104]
+                - generic [ref=e108]: تتبع طلبي
+              - generic [ref=e109] [cursor=pointer]:
+                - img [ref=e112]
+                - generic [ref=e116]: الأسئلة الشائعة
+            - generic [ref=e119]:
+              - button "English" [ref=e121] [cursor=pointer]:
+                - generic [ref=e122]: English
+              - button "SAR" [ref=e126] [cursor=pointer]:
+                - generic [ref=e127]: SAR
+    - generic:
+      - tooltip
+  - generic [ref=e128]:
+    - main [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - generic [ref=e133]: تقدم بطلب التأشيرة الآن
+            - paragraph [ref=e134]: مع دايركت يمكنك الحصول على تأشيرات السفر بكل سهولة
+          - link "ابدأ الآن" [ref=e136] [cursor=pointer]:
+            - /url: https://visa.directksa.com/user/request?lang=ar
+            - generic [ref=e138]: ابدأ الآن
+        - separator [ref=e140]
+      - generic [ref=e143]:
+        - paragraph [ref=e146]: اكتشف المزيد مع خدماتنا المميزة
+        - generic [ref=e147]:
+          - generic [ref=e152] [cursor=pointer]: استقبال المطار
+          - generic [ref=e157] [cursor=pointer]: سائق مع سيارة
+          - generic [ref=e162] [cursor=pointer]: الرخصة الدولية - دفتر
+          - generic [ref=e167] [cursor=pointer]: تعبئة نماذج السفر
+          - generic [ref=e172] [cursor=pointer]: قبول جامعات
+          - generic [ref=e177] [cursor=pointer]: تأمين طبي للسفر
+          - generic [ref=e182] [cursor=pointer]: ترجمة مستندات
+          - generic [ref=e187] [cursor=pointer]: تجديد الجوازات للعمالة
+          - generic [ref=e192] [cursor=pointer]: استمارات الدخول للدول
+          - generic [ref=e197] [cursor=pointer]: خدمة تأجير السيارات
+          - generic [ref=e202] [cursor=pointer]: شرائح eSIM
+          - generic [ref=e207] [cursor=pointer]: تأشيرة الإمارات للمقيمين
+          - generic [ref=e212] [cursor=pointer]: تجديد عقود العمالة الفلبينية
+          - generic [ref=e217] [cursor=pointer]: تذاكر القطارات
+          - generic [ref=e222] [cursor=pointer]: تأشيرة البحرين للمقيمين
+          - generic [ref=e227] [cursor=pointer]: تأشيرة قطر للمقيمين
+          - generic [ref=e232] [cursor=pointer]: اختبار الايلتس
+          - generic [ref=e237] [cursor=pointer]: اختبار PTE
+          - generic [ref=e242] [cursor=pointer]: اختبار Duolingo (Online)
+          - generic [ref=e247] [cursor=pointer]: الرخصة الدولية - كرت
+          - generic [ref=e252] [cursor=pointer]: تأمين المركبات البحرين
+          - generic [ref=e257] [cursor=pointer]: إصدار جوازات المقيمين ( أطفال )
+      - generic [ref=e258]:
+        - separator [ref=e260]
+        - generic [ref=e261]: لماذا دايركت ؟
+        - generic [ref=e262]:
+          - generic [ref=e264]:
+            - generic [ref=e265]: check_circle
+            - generic [ref=e267]: سهولة في التقديم
+            - generic [ref=e268]: قدم طلب التأشيرة خلال دقيقتين ومن أي مكان بأسعار منافسة
+          - generic [ref=e271]:
+            - generic [ref=e272]: check_circle
+            - generic [ref=e274]: أوراقك جاهزة ومكتملة
+            - generic [ref=e275]: مالها داعي تتوهق وقت تقديم الطلب، نضبط لك الموعد والابليكشن والتأمين والترجمة
+          - generic [ref=e278]:
+            - generic [ref=e279]: check_circle
+            - generic [ref=e281]: أفضل المعاهد العالمية
+            - generic [ref=e282]: تمتع بتجربة بحث سهلة وخدمات ممتازة تشمل رسوم الدراسة والسكن والوجبات بتكلفة مناسبة
+        - separator [ref=e285]
+      - generic [ref=e286]:
+        - generic [ref=e287]: المتطلبات بضغطة زر
+        - generic [ref=e289]:
+          - generic [ref=e290]:
+            - generic:
+              - group "1 / 44" [ref=e291] [cursor=pointer]:
+                - generic [ref=e292]:
+                  - img "بريطانيا (إلكترونية)" [ref=e293]:
+                    - img [ref=e296]
+                    - img [ref=e298]
+                  - img [ref=e302]:
+                    - img [ref=e305]
+                    - img [ref=e307]
+                  - generic [ref=e309]: بريطانيا (إلكترونية)
+              - group "2 / 44" [ref=e311] [cursor=pointer]:
+                - generic [ref=e312]:
+                  - img "أمريكا" [ref=e313]:
+                    - img [ref=e316]
+                    - img [ref=e318]
+                  - img [ref=e322]:
+                    - img [ref=e325]
+                    - img [ref=e327]
+                  - generic [ref=e329]: أمريكا
+              - group "3 / 44" [ref=e331] [cursor=pointer]:
+                - generic [ref=e332]:
+                  - img "كندا" [ref=e333]:
+                    - img [ref=e336]
+                    - img [ref=e338]
+                  - img [ref=e342]:
+                    - img [ref=e345]
+                    - img [ref=e347]
+                  - generic [ref=e349]: كندا
+              - group "4 / 44" [ref=e351] [cursor=pointer]:
+                - generic [ref=e352]:
+                  - img "فرنسا" [ref=e353]:
+                    - img [ref=e356]
+                    - img [ref=e358]
+                  - img [ref=e362]:
+                    - img [ref=e365]
+                    - img [ref=e367]
+                  - generic [ref=e369]: فرنسا
+              - group "5 / 44" [ref=e371] [cursor=pointer]:
+                - generic [ref=e372]:
+                  - img "ألمانيا" [ref=e373]:
+                    - img [ref=e376]
+                    - img [ref=e378]
+                  - img [ref=e382]:
+                    - img [ref=e385]
+                    - img [ref=e387]
+                  - generic [ref=e389]: ألمانيا
+              - group "6 / 44" [ref=e391] [cursor=pointer]:
+                - generic [ref=e392]:
+                  - img "تنزانيا (إلكترونية)" [ref=e393]:
+                    - img [ref=e396]
+                    - img [ref=e398]
+                  - img [ref=e402]:
+                    - img [ref=e405]
+                    - img [ref=e407]
+                  - generic [ref=e409]: تنزانيا (إلكترونية)
+              - group "7 / 44" [ref=e411] [cursor=pointer]:
+                - generic [ref=e412]:
+                  - img "تشيلي (إلكترونية)" [ref=e413]:
+                    - img [ref=e416]
+                    - img [ref=e418]
+                  - img [ref=e422]:
+                    - img [ref=e425]
+                    - img [ref=e427]
+                  - generic [ref=e429]: تشيلي (إلكترونية)
+              - group "8 / 44" [ref=e431] [cursor=pointer]:
+                - generic [ref=e432]:
+                  - img "ماليزيا (إلكترونية)" [ref=e433]:
+                    - img [ref=e436]
+                    - img [ref=e438]
+                  - img [ref=e442]:
+                    - img [ref=e445]
+                    - img [ref=e447]
+                  - generic [ref=e449]: ماليزيا (إلكترونية)
+              - group "9 / 44" [ref=e451] [cursor=pointer]:
+                - generic [ref=e452]:
+                  - img "سنغافورة (إلكترونية)" [ref=e453]:
+                    - img [ref=e456]
+                    - img [ref=e458]
+                  - img [ref=e462]:
+                    - img [ref=e465]
+                    - img [ref=e467]
+                  - generic [ref=e469]: سنغافورة (إلكترونية)
+              - group "10 / 44" [ref=e471] [cursor=pointer]:
+                - generic [ref=e472]:
+                  - img "فيتنام (إلكترونية)" [ref=e473]:
+                    - img [ref=e476]
+                    - img [ref=e478]
+                  - img [ref=e482]:
+                    - img [ref=e485]
+                    - img [ref=e487]
+                  - generic [ref=e489]: فيتنام (إلكترونية)
+              - group "11 / 44" [ref=e491] [cursor=pointer]:
+                - generic [ref=e492]:
+                  - img "روسيا (إلكترونية)" [ref=e493]:
+                    - img [ref=e496]
+                    - img [ref=e498]
+                  - img [ref=e502]:
+                    - img [ref=e505]
+                    - img [ref=e507]
+                  - generic [ref=e509]: روسيا (إلكترونية)
+              - group "12 / 44" [ref=e511] [cursor=pointer]:
+                - generic [ref=e512]:
+                  - img "قبرص" [ref=e513]:
+                    - img [ref=e516]
+                    - img [ref=e518]
+                  - img [ref=e522]:
+                    - img [ref=e525]
+                    - img [ref=e527]
+                  - generic [ref=e529]: قبرص
+              - group "13 / 44" [ref=e531] [cursor=pointer]:
+                - generic [ref=e532]:
+                  - img "روسيا" [ref=e533]:
+                    - img [ref=e536]
+                    - img [ref=e538]
+                  - img [ref=e542]:
+                    - img [ref=e545]
+                    - img [ref=e547]
+                  - generic [ref=e549]: روسيا
+              - group "14 / 44" [ref=e551] [cursor=pointer]:
+                - generic [ref=e552]:
+                  - img "إيطاليا" [ref=e553]:
+                    - img [ref=e556]
+                    - img [ref=e558]
+                  - img [ref=e562]:
+                    - img [ref=e565]
+                    - img [ref=e567]
+                  - generic [ref=e569]: إيطاليا
+              - group "15 / 44" [ref=e571] [cursor=pointer]:
+                - generic [ref=e572]:
+                  - img "هولندا" [ref=e573]:
+                    - img [ref=e576]
+                    - img [ref=e578]
+                  - img [ref=e582]:
+                    - img [ref=e585]
+                    - img [ref=e587]
+                  - generic [ref=e589]: هولندا
+              - group "16 / 44" [ref=e591] [cursor=pointer]:
+                - generic [ref=e592]:
+                  - img "أسبانيا" [ref=e593]:
+                    - img [ref=e596]
+                    - img [ref=e598]
+                  - img [ref=e602]:
+                    - img [ref=e605]
+                    - img [ref=e607]
+                  - generic [ref=e609]: أسبانيا
+              - group "17 / 44" [ref=e611] [cursor=pointer]:
+                - generic [ref=e612]:
+                  - img "الهند (إلكترونية)" [ref=e613]:
+                    - img [ref=e616]
+                    - img [ref=e618]
+                  - img [ref=e622]:
+                    - img [ref=e625]
+                    - img [ref=e627]
+                  - generic [ref=e629]: الهند (إلكترونية)
+              - group "18 / 44" [ref=e631] [cursor=pointer]:
+                - generic [ref=e632]:
+                  - img "أيرلندا" [ref=e633]:
+                    - img [ref=e636]
+                    - img [ref=e638]
+                  - img [ref=e642]:
+                    - img [ref=e645]
+                    - img [ref=e647]
+                  - generic [ref=e649]: أيرلندا
+              - group "19 / 44" [ref=e651] [cursor=pointer]:
+                - generic [ref=e652]:
+                  - img "كينيا (إلكترونية)" [ref=e653]:
+                    - img [ref=e656]
+                    - img [ref=e658]
+                  - img [ref=e662]:
+                    - img [ref=e665]
+                    - img [ref=e667]
+                  - generic [ref=e669]: كينيا (إلكترونية)
+              - group "20 / 44" [ref=e671] [cursor=pointer]:
+                - generic [ref=e672]:
+                  - img "أوغندا (إلكترونية)" [ref=e673]:
+                    - img [ref=e676]
+                    - img [ref=e678]
+                  - img [ref=e682]:
+                    - img [ref=e685]
+                    - img [ref=e687]
+                  - generic [ref=e689]: أوغندا (إلكترونية)
+              - group "21 / 44" [ref=e691] [cursor=pointer]:
+                - generic [ref=e692]:
+                  - img "اليابان (إلكترونية)" [ref=e693]:
+                    - img [ref=e696]
+                    - img [ref=e698]
+                  - img [ref=e702]:
+                    - img [ref=e705]
+                    - img [ref=e707]
+                  - generic [ref=e709]: اليابان (إلكترونية)
+              - group "22 / 44" [ref=e711] [cursor=pointer]:
+                - generic [ref=e712]:
+                  - img "الصين" [ref=e713]:
+                    - img [ref=e716]
+                    - img [ref=e718]
+                  - img [ref=e722]:
+                    - img [ref=e725]
+                    - img [ref=e727]
+                  - generic [ref=e729]: الصين
+              - group "23 / 44" [ref=e731] [cursor=pointer]:
+                - generic [ref=e732]:
+                  - img "السويد" [ref=e733]:
+                    - img [ref=e736]
+                    - img [ref=e738]
+                  - img [ref=e742]:
+                    - img [ref=e745]
+                    - img [ref=e747]
+                  - generic [ref=e749]: السويد
+              - group "24 / 44" [ref=e751] [cursor=pointer]:
+                - generic [ref=e752]:
+                  - img "سويسرا" [ref=e753]:
+                    - img [ref=e756]
+                    - img [ref=e758]
+                  - img [ref=e762]:
+                    - img [ref=e765]
+                    - img [ref=e767]
+                  - generic [ref=e769]: سويسرا
+              - group "25 / 44" [ref=e771] [cursor=pointer]:
+                - generic [ref=e772]:
+                  - img "التشيك" [ref=e773]:
+                    - img [ref=e776]
+                    - img [ref=e778]
+                  - img [ref=e782]:
+                    - img [ref=e785]
+                    - img [ref=e787]
+                  - generic [ref=e789]: التشيك
+              - group "26 / 44" [ref=e791] [cursor=pointer]:
+                - generic [ref=e792]:
+                  - img "النمسا" [ref=e793]:
+                    - img [ref=e796]
+                    - img [ref=e798]
+                  - img [ref=e802]:
+                    - img [ref=e805]
+                    - img [ref=e807]
+                  - generic [ref=e809]: النمسا
+              - group "27 / 44" [ref=e811] [cursor=pointer]:
+                - generic [ref=e812]:
+                  - img "اليونان" [ref=e813]:
+                    - img [ref=e816]
+                    - img [ref=e818]
+                  - img [ref=e822]:
+                    - img [ref=e825]
+                    - img [ref=e827]
+                  - generic [ref=e829]: اليونان
+              - group "28 / 44" [ref=e831] [cursor=pointer]:
+                - generic [ref=e832]:
+                  - img "النرويج" [ref=e833]:
+                    - img [ref=e836]
+                    - img [ref=e838]
+                  - img [ref=e842]:
+                    - img [ref=e845]
+                    - img [ref=e847]
+                  - generic [ref=e849]: النرويج
+              - group "29 / 44" [ref=e851] [cursor=pointer]:
+                - generic [ref=e852]:
+                  - img "المجر" [ref=e853]:
+                    - img [ref=e856]
+                    - img [ref=e858]
+                  - img [ref=e862]:
+                    - img [ref=e865]
+                    - img [ref=e867]
+                  - generic [ref=e869]: المجر
+              - group "30 / 44" [ref=e871] [cursor=pointer]:
+                - generic [ref=e872]:
+                  - img "الدنمارك" [ref=e873]:
+                    - img [ref=e876]
+                    - img [ref=e878]
+                  - img [ref=e882]:
+                    - img [ref=e885]
+                    - img [ref=e887]
+                  - generic [ref=e889]: الدنمارك
+              - group "31 / 44" [ref=e891] [cursor=pointer]:
+                - generic [ref=e892]:
+                  - img "البرتغال" [ref=e893]:
+                    - img [ref=e896]
+                    - img [ref=e898]
+                  - img [ref=e902]:
+                    - img [ref=e905]
+                    - img [ref=e907]
+                  - generic [ref=e909]: البرتغال
+              - group "32 / 44" [ref=e911] [cursor=pointer]:
+                - generic [ref=e912]:
+                  - img "كوريا الجنوبية (إلكترونية)" [ref=e913]:
+                    - img [ref=e916]
+                    - img [ref=e918]
+                  - img [ref=e922]:
+                    - img [ref=e925]
+                    - img [ref=e927]
+                  - generic [ref=e929]: كوريا الجنوبية (إلكترونية)
+              - group "33 / 44" [ref=e931] [cursor=pointer]:
+                - generic [ref=e932]:
+                  - img "مصر (إلكترونية)" [ref=e933]:
+                    - img [ref=e936]
+                    - img [ref=e938]
+                  - img [ref=e942]:
+                    - img [ref=e945]
+                    - img [ref=e947]
+                  - generic [ref=e949]: مصر (إلكترونية)
+              - group "34 / 44" [ref=e951] [cursor=pointer]:
+                - generic [ref=e952]:
+                  - img "إندونيسيا (إلكترونية)" [ref=e953]:
+                    - img [ref=e956]
+                    - img [ref=e958]
+                  - img [ref=e962]:
+                    - img [ref=e965]
+                    - img [ref=e967]
+                  - generic [ref=e969]: إندونيسيا (إلكترونية)
+              - group "35 / 44" [ref=e971] [cursor=pointer]:
+                - generic [ref=e972]:
+                  - img "نيوزيلندا (إلكترونية)" [ref=e973]:
+                    - img [ref=e976]
+                    - img [ref=e978]
+                  - img [ref=e982]:
+                    - img [ref=e985]
+                    - img [ref=e987]
+                  - generic [ref=e989]: نيوزيلندا (إلكترونية)
+              - group "36 / 44" [ref=e991] [cursor=pointer]:
+                - generic [ref=e992]:
+                  - img "أستراليا (إلكترونية)" [ref=e993]:
+                    - img [ref=e996]
+                    - img [ref=e998]
+                  - img [ref=e1002]:
+                    - img [ref=e1005]
+                    - img [ref=e1007]
+                  - generic [ref=e1009]: أستراليا (إلكترونية)
+              - group "37 / 44" [ref=e1011] [cursor=pointer]:
+                - generic [ref=e1012]:
+                  - img "بلغاريا" [ref=e1013]:
+                    - img [ref=e1016]
+                    - img [ref=e1018]
+                  - img [ref=e1022]:
+                    - img [ref=e1025]
+                    - img [ref=e1027]
+                  - generic [ref=e1029]: بلغاريا
+              - group "38 / 44" [ref=e1031] [cursor=pointer]:
+                - generic [ref=e1032]:
+                  - img "بريطانيا" [ref=e1033]:
+                    - img [ref=e1036]
+                    - img [ref=e1038]
+                  - img [ref=e1042]:
+                    - img [ref=e1045]
+                    - img [ref=e1047]
+                  - generic [ref=e1049]: بريطانيا
+              - group "39 / 44" [ref=e1051] [cursor=pointer]:
+                - generic [ref=e1052]:
+                  - img "تايلاند (للمقيمين)" [ref=e1053]:
+                    - img [ref=e1056]
+                    - img [ref=e1058]
+                  - img [ref=e1062]:
+                    - img [ref=e1065]
+                    - img [ref=e1067]
+                  - generic [ref=e1069]: تايلاند (للمقيمين)
+              - group "40 / 44" [ref=e1071] [cursor=pointer]:
+                - generic [ref=e1072]:
+                  - img "تركيا (للمقيمين)" [ref=e1073]:
+                    - img [ref=e1076]
+                    - img [ref=e1078]
+                  - img [ref=e1082]:
+                    - img [ref=e1085]
+                    - img [ref=e1087]
+                  - generic [ref=e1089]: تركيا (للمقيمين)
+              - group "41 / 44" [ref=e1091] [cursor=pointer]:
+                - generic [ref=e1092]:
+                  - img "كمبوديا" [ref=e1093]:
+                    - img [ref=e1096]
+                    - img [ref=e1098]
+                  - img [ref=e1102]:
+                    - img [ref=e1105]
+                    - img [ref=e1107]
+                  - generic [ref=e1109]: كمبوديا
+              - group "42 / 44" [ref=e1111] [cursor=pointer]:
+                - generic [ref=e1112]:
+                  - img "الجزائر" [ref=e1113]:
+                    - img [ref=e1116]
+                    - img [ref=e1118]
+                  - img [ref=e1122]:
+                    - img [ref=e1125]
+                    - img [ref=e1127]
+                  - generic [ref=e1129]: الجزائر
+              - group "43 / 44" [ref=e1131] [cursor=pointer]:
+                - generic [ref=e1132]:
+                  - img "كوبا (إلكترونية)" [ref=e1133]:
+                    - img [ref=e1136]
+                    - img [ref=e1138]
+                  - img [ref=e1142]:
+                    - img [ref=e1145]
+                    - img [ref=e1147]
+                  - generic [ref=e1149]: كوبا (إلكترونية)
+              - group "44 / 44" [ref=e1151] [cursor=pointer]:
+                - generic [ref=e1152]:
+                  - img "سيشل (إلكترونية)" [ref=e1153]:
+                    - img [ref=e1156]
+                    - img [ref=e1158]
+                  - img [ref=e1162]:
+                    - img [ref=e1165]
+                    - img [ref=e1167]
+                  - generic [ref=e1169]: سيشل (إلكترونية)
+          - generic [ref=e1171]:
+            - button "Go to slide 1" [ref=e1172] [cursor=pointer]
+            - button "Go to slide 2" [ref=e1173] [cursor=pointer]
+            - button "Go to slide 3" [ref=e1174] [cursor=pointer]
+            - button "Go to slide 4" [ref=e1175] [cursor=pointer]
+            - button "Go to slide 5" [ref=e1176] [cursor=pointer]
+            - button "Go to slide 6" [ref=e1177] [cursor=pointer]
+            - button "Go to slide 7" [ref=e1178] [cursor=pointer]
+            - button "Go to slide 8" [ref=e1179] [cursor=pointer]
+            - button "Go to slide 9" [ref=e1180] [cursor=pointer]
+            - button "Go to slide 10" [ref=e1181] [cursor=pointer]
+            - button "Go to slide 11" [ref=e1182] [cursor=pointer]
+            - button "Go to slide 12" [ref=e1183] [cursor=pointer]
+            - button "Go to slide 13" [ref=e1184] [cursor=pointer]
+            - button "Go to slide 14" [ref=e1185] [cursor=pointer]
+            - button "Go to slide 15" [ref=e1186] [cursor=pointer]
+            - button "Go to slide 16" [ref=e1187] [cursor=pointer]
+            - button "Go to slide 17" [ref=e1188] [cursor=pointer]
+            - button "Go to slide 18" [ref=e1189] [cursor=pointer]
+            - button "Go to slide 19" [ref=e1190] [cursor=pointer]
+            - button "Go to slide 20" [ref=e1191] [cursor=pointer]
+            - button "Go to slide 21" [ref=e1192] [cursor=pointer]
+            - button "Go to slide 22" [ref=e1193] [cursor=pointer]
+            - button "Go to slide 23" [ref=e1194] [cursor=pointer]
+            - button "Go to slide 24" [ref=e1195] [cursor=pointer]
+            - button "Go to slide 25" [ref=e1196] [cursor=pointer]
+            - button "Go to slide 26" [ref=e1197] [cursor=pointer]
+            - button "Go to slide 27" [ref=e1198] [cursor=pointer]
+            - button "Go to slide 28" [ref=e1199] [cursor=pointer]
+            - button "Go to slide 29" [ref=e1200] [cursor=pointer]
+            - button "Go to slide 30" [ref=e1201] [cursor=pointer]
+            - button "Go to slide 31" [ref=e1202] [cursor=pointer]
+            - button "Go to slide 32" [ref=e1203] [cursor=pointer]
+            - button "Go to slide 33" [ref=e1204] [cursor=pointer]
+            - button "Go to slide 34" [ref=e1205] [cursor=pointer]
+            - button "Go to slide 35" [ref=e1206] [cursor=pointer]
+            - button "Go to slide 36" [ref=e1207] [cursor=pointer]
+            - button "Go to slide 37" [ref=e1208] [cursor=pointer]
+            - button "Go to slide 38" [ref=e1209] [cursor=pointer]
+            - button "Go to slide 39" [ref=e1210] [cursor=pointer]
+            - button "Go to slide 40" [ref=e1211] [cursor=pointer]
+            - button "Go to slide 41" [ref=e1212] [cursor=pointer]
+            - button "Go to slide 42" [ref=e1213] [cursor=pointer]
+            - button "Go to slide 43" [ref=e1214] [cursor=pointer]
+            - button "Go to slide 44" [ref=e1215] [cursor=pointer]
+      - separator [ref=e1216]
+    - generic [ref=e1218]:
+      - generic [ref=e1219]: حمل التطبيق الآن
+      - generic [ref=e1220]:
+        - button "Apple Store" [ref=e1221] [cursor=pointer]:
+          - generic [ref=e1223]: Apple Store
+        - button "Google Play" [ref=e1225] [cursor=pointer]:
+          - generic [ref=e1227]: Google Play
+      - generic [ref=e1229]:
+        - button "من نحن" [ref=e1230] [cursor=pointer]:
+          - generic [ref=e1231]: من نحن
+        - button "فروعنا" [ref=e1232] [cursor=pointer]:
+          - generic [ref=e1233]: فروعنا
+        - button "اتصل بنا" [ref=e1234] [cursor=pointer]:
+          - generic [ref=e1235]: اتصل بنا
+        - button "تتبع طلبي" [ref=e1236] [cursor=pointer]:
+          - generic [ref=e1237]: تتبع طلبي
+        - button "الأسئلة الشائعة" [ref=e1238] [cursor=pointer]:
+          - generic [ref=e1239]: الأسئلة الشائعة
+        - button "الشروط والأحكام" [ref=e1240] [cursor=pointer]:
+          - generic [ref=e1241]: الشروط والأحكام
+        - button "سياسة الخصوصية" [ref=e1242] [cursor=pointer]:
+          - generic [ref=e1243]: سياسة الخصوصية
+        - button "الوظائف" [ref=e1244] [cursor=pointer]:
+          - generic [ref=e1245]: الوظائف
+      - generic [ref=e1246]:
+        - img [ref=e1247]
+        - img [ref=e1248]
+        - generic [ref=e1249]:
+          - img [ref=e1250]
+          - img [ref=e1251]
+          - img [ref=e1252]
+        - img [ref=e1253]
+        - img [ref=e1254] [cursor=pointer]
+      - paragraph [ref=e1256]: "الرقم الضريبي : 311479280800003 - رقم السجل التجاري : 1010611219"
+      - generic [ref=e1258]: "الاسم التجاري : شركة المسافر المباشر - ترخيص وزارة السياحة : 73103226 - التصنيف : خدمات سفر و سياحة عامة"
+      - generic [ref=e1259]:
+        - button "Twitter" [ref=e1260] [cursor=pointer]:
+          - generic:
+            - img "Twitter"
+        - button "Facebook" [ref=e1261] [cursor=pointer]:
+          - generic:
+            - img "Facebook"
+        - button "Instagram" [ref=e1262] [cursor=pointer]:
+          - generic:
+            - img "Instagram"
+        - button "Youtube" [ref=e1263] [cursor=pointer]:
+          - generic:
+            - img "Youtube"
+        - button "Snapchat" [ref=e1264] [cursor=pointer]:
+          - generic:
+            - img "Snapchat"
+      - separator [ref=e1265]
+      - generic [ref=e1266]:
+        - text: 2026 ©
+        - strong [ref=e1267]: دايركت للسفر والسياحة

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(adb devices *)",
+      "Read(//Users/user/Library/Android/sdk/**)",
+      "Bash(pip3 install *)",
+      "Read(//Users/user/Applications/**)",
+      "Read(//Users/user/Applications/Direct.app/**)",
+      "Bash(python3 *nice but the details should be with small font with reqular such as flight to normlize this ecxpeirnece)",
+      "Bash(python3 *nice but the back button need to be copy the same one we apply in back button because i see it it's bigger and not the same color)"
+    ]
+  }
+}

@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#F86D0A;--navy:#050E1E;--green:#22C55E;--red:#EF4444;--bd:rgba(255,255,255,.07);--txt:rgba(255,255,255,.75);--muted:rgba(255,255,255,.35);--bg:#07101C;--bg2:#0A1524;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Cairo,sans-serif;background:#07101C;color:rgba(255,255,255,.75);padding:40px;}
+.subsec{margin-bottom:32px;}
+.subsec-title{font-size:14px;font-weight:800;color:#fff;letter-spacing:.5px;margin-bottom:6px;}
+.subsec-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;}
+
+:root{
+  --gold:#F86D0A; --navy:#050E1E; --blue:#2196F3; --teal:#0EA5E9;
+  --green:#22C55E; --red:#EF4444; --orange:#F97316;
+  --bd:rgba(255,255,255,.07); --txt:rgba(255,255,255,.75);
+  --muted:rgba(255,255,255,.35); --bg:#07101C; --bg2:#0A1524;
+}
+
+/* ── LOGO WHITE ── */
+.logo-white path[fill="#323E48"]{fill:#FFFFFF;}
+.logo-white path[fill="#FF6B00"]{fill:#F86D0A;}
+.logo-white path[fill="#0B2545"]{fill:#FFFFFF;}
+/* ── ICON PILLS ── */
+.cpill svg{display:block;flex-shrink:0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--txt);display:flex;}
+
+/* ── SIDEBAR ── */
+#sidebar{
+  width:220px;flex-shrink:0;
+  position:fixed;top:0;left:0;bottom:0;
+  background:var(--bg2);
+  border-right:1px solid var(--bd);
+  overflow-y:auto;
+  padding:24px 0 40px;
+  z-index:100;
+}
+.sb-logo{
+  padding:0 20px 20px;
+  border-bottom:1px solid var(--bd);
+  margin-bottom:16px;
+}
+.sb-logo-inner{
+  padding:6px 0;
+  display:block;
+}
+.sb-logo-inner img{height:24px;width:auto;display:block;}
+.sb-logo-inner .fallback{font-size:18px;font-weight:900;color:#050E1E;font-family:'Cairo',sans-serif;}
+.sb-chapter{
+  font-size:9px;font-weight:800;color:var(--muted);
+  letter-spacing:2.5px;text-transform:uppercase;
+  padding:16px 20px 6px;
+}
+.sb-link{
+  display:flex;align-items:center;gap:8px;
+  padding:7px 20px;
+  font-size:12px;font-weight:600;color:var(--muted);
+  text-decoration:none;
+  border-left:2px solid transparent;
+  transition:color .15s,border-color .15s,background .15s;
+  cursor:pointer;
+}
+.sb-link:hover,.sb-link.active{
+  color:#fff;background:rgba(255,255,255,.04);
+  border-left-color:var(--gold);
+}
+.sb-dot{
+  width:6px;height:6px;border-radius:50%;flex-shrink:0;
+  background:var(--bd);
+}
+.sb-link:hover .sb-dot,.sb-link.active .sb-dot{background:var(--gold);}
+.sb-pending{
+  font-size:9px;font-weight:700;color:var(--muted);
+  padding:4px 8px;border-radius:100px;
+  background:rgba(255,255,255,.05);
+  margin-left:auto;
+}
+
+/* ── MAIN ── */
+#main{
+  margin-left:220px;
+  flex:1;
+  min-height:100vh;
+}
+
+/* ── COVER ── */
+#cover{
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  background:linear-gradient(155deg,#060C18 0%,#0B1928 60%,#071628 100%);
+  position:relative;overflow:hidden;
+  padding:80px 60px;text-align:center;
+}
+#cover::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 65% 55% at 15% 55%,rgba(248,109,10,.06) 0%,transparent 100%),
+    radial-gradient(ellipse 55% 65% at 82% 22%,rgba(33,150,243,.07) 0%,transparent 100%);
+}
+#cover::after{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.012) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+.cover-inner{position:relative;z-index:1;max-width:720px;}
+.cover-logo-wrap{
+  display:block;
+  margin-bottom:32px;
+}
+.cover-logo-wrap img{height:54px;width:auto;display:block;}
+.cover-eyebrow{
+  font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+.cover-title{font-size:clamp(28px,4vw,48px);font-weight:900;color:#fff;line-height:1.1;margin-bottom:8px;}
+.cover-sub{font-size:16px;font-weight:600;color:var(--muted);margin-bottom:6px;}
+.cover-sub-ar{font-size:14px;color:rgba(255,255,255,.2);direction:rtl;margin-bottom:40px;}
+.cover-rule{width:48px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 36px;}
+.cover-pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.cpill{
+  display:flex;align-items:center;gap:6px;
+  padding:8px 16px;border-radius:100px;
+  font-size:12px;font-weight:700;
+  background:rgba(255,255,255,.05);border:1px solid var(--bd);
+  color:var(--txt);
+}
+.cpill-ico{font-size:14px;}
+
+/* ── SECTION ── */
+.section{
+  padding:64px 60px;
+  border-top:1px solid var(--bd);
+  scroll-margin-top:0;
+}
+.section:first-child{border-top:none;}
+.section-alt{background:var(--bg2);}
+.sec-kicker{
+  font-size:9px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;
+  display:flex;align-items:center;gap:8px;
+}
+.sec-kicker::after{content:'';flex:0 0 24px;height:1px;background:var(--gold);opacity:.3;}
+.sec-title{font-size:clamp(20px,2.4vw,30px);font-weight:900;color:#fff;margin-bottom:4px;}
+.sec-desc{font-size:13px;color:var(--muted);margin-bottom:36px;max-width:600px;line-height:1.6;}
+
+/* ── SUBSECTION ── */
+.subsec{margin-bottom:48px;}
+.subsec:last-child{margin-bottom:0;}
+.subsec-title{
+  font-size:14px;font-weight:800;color:#fff;
+  margin-bottom:4px;
+  display:flex;align-items:center;gap:10px;
+}
+.subsec-title::after{content:'';flex:1;height:1px;background:var(--bd);}
+.subsec-desc{font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.5;}
+
+/* ── PHONE FRAMES ── */
+.phone-row{
+  display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;
+}
+.phone-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.phone{
+  width:200px;height:326px;
+  overflow:hidden;
+  position:relative;
+  flex-shrink:0;
+}
+.phone.lg{width:200px;height:326px;}
+.phone img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:top center;
+  display:block;
+}
+/* highlight overlay */
+.hl{
+  position:absolute;
+  border:2px solid;
+  border-radius:4px;
+  pointer-events:none;
+}
+.hl-gold{border-color:var(--gold);background:rgba(248,109,10,.08);}
+.hl-red{border-color:var(--red);background:rgba(239,68,68,.08);}
+.hl-green{border-color:var(--green);background:rgba(34,197,94,.08);}
+.hl-blue{border-color:var(--blue);background:rgba(33,150,243,.08);}
+/* callout pin */
+.pin{
+  position:absolute;
+  width:18px;height:18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:800;color:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+.pin-gold{background:var(--gold);}
+.pin-red{background:var(--red);}
+.pin-blue{background:var(--blue);}
+.pin-green{background:var(--green);}
+.pin-teal{background:var(--teal);}
+
+.phone-label{
+  font-size:11px;font-weight:800;color:#fff;text-align:center;
+}
+.phone-sub{
+  font-size:10px;color:var(--muted);text-align:center;direction:rtl;margin-top:-6px;
+}
+.phone-tag{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:9px;font-weight:700;
+  padding:2px 8px;border-radius:100px;
+}
+.tag-ok{background:rgba(34,197,94,.12);color:var(--green);}
+.tag-warn{background:rgba(239,68,68,.12);color:var(--red);}
+.tag-note{background:rgba(248,109,10,.12);color:var(--gold);}
+.tag-info{background:rgba(33,150,243,.12);color:var(--blue);}
+
+/* ── ANNOTATION BLOCK ── */
+.annotation{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:12px;color:var(--txt);line-height:1.5;
+  margin-top:20px;
+}
+.annotation.an-warn{background:rgba(239,68,68,.05);border:1px solid rgba(239,68,68,.14);}
+.annotation.an-ok{background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.14);}
+.annotation.an-note{background:rgba(248,109,10,.05);border:1px solid rgba(248,109,10,.14);}
+.annotation strong{color:#fff;}
+.an-ico{font-size:16px;flex-shrink:0;margin-top:1px;}
+
+/* ── COMPARISON TABLE ── */
+.comp-table{
+  width:100%;border-collapse:collapse;margin-top:16px;
+}
+.comp-table th{
+  font-size:9px;font-weight:800;color:var(--muted);
+  letter-spacing:2px;text-transform:uppercase;
+  padding:8px 12px;border-bottom:1px solid var(--bd);text-align:left;
+}
+.comp-table td{
+  font-size:12px;color:var(--txt);
+  padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.03);
+  vertical-align:middle;
+}
+.comp-table tr:last-child td{border-bottom:none;}
+.comp-table td:first-child{color:#fff;font-weight:700;}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;}
+.bg{background:rgba(248,109,10,.12);color:var(--gold);}
+.bgr{background:rgba(34,197,94,.12);color:var(--green);}
+.br{background:rgba(239,68,68,.12);color:var(--red);}
+.bb{background:rgba(33,150,243,.12);color:var(--blue);}
+.bgy{background:rgba(255,255,255,.06);color:var(--muted);}
+.bo{background:rgba(249,115,22,.12);color:var(--orange);}
+
+/* ── PENDING SECTION ── */
+.pending-block{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:160px;
+  border:1px dashed rgba(255,255,255,.1);
+  border-radius:14px;
+  gap:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.pending-ico{font-size:32px;opacity:.4;}
+
+/* ── UTILS ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.mt8{margin-top:8px;} .mt12{margin-top:12px;} .mt16{margin-top:16px;} .mt24{margin-top:24px;} .mt32{margin-top:32px;}
+.fw8{font-weight:800;} .fw7{font-weight:700;}
+.gold{color:var(--gold);} .muted{color:var(--muted);}
+
+
+  .std-list{display:flex;flex-direction:column;gap:0;margin-top:24px;}
+  .std-row{
+    display:grid;
+    grid-template-columns:28px 1fr;
+    gap:0 20px;
+    align-items:start;
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .std-row:last-child{border-bottom:none;}
+  .std-num{
+    font-size:11px;font-weight:900;color:var(--muted);
+    letter-spacing:1px;padding-top:2px;
+  }
+  .std-body{}
+  .std-title{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;}
+  .std-rule{font-size:12px;color:var(--txt);line-height:1.6;margin-bottom:8px;}
+  .std-ref{
+    font-size:11px;color:var(--muted);
+    display:flex;align-items:center;gap:6px;
+  }
+  .std-ref-dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--gold);flex-shrink:0;
+  }
+  
+
+  .issue-list{display:flex;flex-direction:column;gap:10px;margin-top:0;}
+  .spec-block{margin-top:28px;border:1px solid var(--bd);border-radius:14px;overflow:hidden;}
+  .spec-header{padding:12px 20px;background:rgba(34,197,94,.07);border-bottom:1px solid rgba(34,197,94,.15);font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--green);display:flex;align-items:center;gap:8px;}
+  .spec-header::before{content:"✓";font-size:14px;}
+  .spec-rows{display:flex;flex-direction:column;}
+  .spec-row2{display:grid;grid-template-columns:160px 1fr;padding:12px 20px;border-bottom:1px solid var(--bd);gap:12px;align-items:baseline;font-size:12px;}
+  .spec-row2:last-child{border-bottom:none;}
+  .spec-lbl{font-weight:800;color:#fff;font-size:11px;}
+  .spec-val2{color:var(--txt);line-height:1.5;}
+  .spec-val2 strong{color:#fff;}
+  .mock-header{border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3);margin-top:20px;max-width:320px;}
+  .mock-bar{background:#F86D0A;height:52px;display:flex;align-items:center;padding:0 14px;position:relative;}
+  .mock-back{width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .mock-title{flex:1;text-align:center;font-size:14px;font-weight:700;color:#fff;font-family:"Cairo",sans-serif;}
+  .icard{border:1px solid var(--bd);border-radius:12px;overflow:hidden;margin-bottom:16px;}
+  .icard-head{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--bd);background:rgba(255,255,255,.03);}
+  .icard-num{width:28px;height:28px;border-radius:50%;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:var(--red);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .icard-title{font-size:12px;font-weight:800;color:#fff;}
+  .icard-body{display:grid;grid-template-columns:auto 1fr;gap:0;}
+  .icard-screens{display:flex;gap:12px;padding:16px;border-right:1px solid var(--bd);flex-wrap:wrap;}
+  .icard-desc{padding:16px;font-size:12px;color:var(--muted);font-style:italic;display:flex;align-items:center;justify-content:center;text-align:center;}
+  @media(max-width:600px){.icard-body{grid-template-columns:1fr;}.icard-screens{border-right:none;border-bottom:1px solid var(--bd);}}
+  
+
+    .cmp-group{margin-bottom:36px;}
+    .cmp-label{
+      font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
+      color:var(--muted);margin-bottom:14px;
+      display:flex;align-items:center;gap:10px;
+    }
+    .cmp-label::after{content:'';flex:1;height:1px;background:var(--bd);}
+    .cmp-row{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;}
+    .cmp-phone{display:flex;flex-direction:column;align-items:center;gap:8px;}
+    .cmp-phone img{width:240px;height:auto;display:block;border-radius:14px;}
+    .cmp-tag{font-size:10px;font-weight:800;padding:3px 10px;border-radius:100px;}
+    .cmp-ok{background:rgba(34,197,94,.12);color:var(--green);}
+    .cmp-bad{background:rgba(239,68,68,.12);color:var(--red);}
+    .cmp-vs{font-size:10px;font-weight:800;color:var(--muted);align-self:center;padding:0 4px;}
+    .type-banner{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:5px 14px;border-radius:100px;
+      font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
+      margin-bottom:16px;margin-top:8px;
+    }
+    .type-banner-a{background:rgba(248,109,10,.1);color:#F86D0A;border:1px solid rgba(248,109,10,.2);}
+    .type-banner-b{background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12);}
+    .type-banner-c{background:rgba(33,150,243,.08);color:#2196F3;border:1px solid rgba(33,150,243,.18);}
+    .type-banner-d{background:rgba(14,165,233,.08);color:#0EA5E9;border:1px solid rgba(14,165,233,.18);}
+    .type-banner-e{background:rgba(255,255,255,.04);color:var(--muted);border:1px solid rgba(255,255,255,.07);}
+    
+
+    .applied-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:16px;}
+    .applied-card{border-radius:12px;overflow:hidden;border:1px solid var(--bd);background:var(--bg2);}
+    .applied-header{background:#F86D0A;height:50px;display:flex;align-items:center;padding:0 14px;gap:10px;}
+    .applied-back{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .applied-title{flex:1;text-align:center;font-family:"Cairo",sans-serif;font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-right:32px;}
+    .applied-title.rtl{direction:rtl;margin-right:0;margin-left:32px;}
+    .applied-header-sec{background:#ffffff;min-height:64px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;padding:0 14px;border-bottom:1px solid rgba(0,0,0,.08);}
+    .applied-back-sec{width:32px;height:32px;display:flex;align-items:center;justify-content:center;}
+    .applied-title-sec-wrap{display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px 0;}
+    .applied-title-sec{font-family:"Cairo",sans-serif;font-size:14px;font-weight:700;color:#050E1E;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
+    .applied-subtitle-sec{font-family:"Cairo",sans-serif;font-size:11px;font-weight:400;color:#b0b8c4;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
+    .applied-title-sec.rtl,.applied-subtitle-sec.rtl{direction:rtl;}
+    .applied-foot{padding:8px 14px;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.5px;text-transform:uppercase;}
+    .applied-tier-label{font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-top:24px;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+    .applied-tier-label span{flex:1;height:1px;background:var(--bd);display:block;}
+    
+</style>
+</head>
+<body>
+<!-- ─── HIGH FIDELITY PROTOTYPE ───────────────────────────── -->
+  <div class="subsec" style="margin-top:40px;">
+    <div class="subsec-title">High Fidelity Prototype — Normalized Design</div>
+    <div class="subsec-desc">How each header type looks in context. All screens apply the unified spec — back button, title, pencil icon, and hierarchy as defined above.</div>
+
+    <style>
+    .hf-type-label{
+      font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+      margin-top:32px;margin-bottom:16px;
+      display:flex;align-items:center;gap:12px;
+    }
+    .hf-type-label span{flex:1;height:1px;background:var(--bd);display:block;}
+    .hf-row{display:flex;gap:24px;flex-wrap:wrap;justify-content:flex-start;}
+    </style>
+
+    <!-- ── A · Primary ── -->
+    <div class="hf-type-label" style="color:#F86D0A;">
+      A · Primary — Orange Header <span></span>
+    </div>
+    <div class="hf-row">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#F86D0A;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">A · Primary</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <!-- Dynamic Island -->
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#ffffff;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#ffffff;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#ffffff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#ffffff"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #ffffff;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#ffffff;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#ffffff;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#F86D0A;height:50px;display:flex;align-items:center;padding:0 14px;gap:8px;">
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span style="font-family:Cairo,sans-serif;font-size:15px;font-weight:700;color:#fff;flex:1;text-align:center;margin-right:32px;">Search Flights</span>
+        </div>
+          <div style="background:#fff;padding:0 0 16px;">
+          <div style="background:#F86D0A;height:4px;opacity:.15;"></div>
+          <div style="margin:16px 16px 0;border:1.5px solid #f0f0f0;border-radius:12px;overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #f0f0f0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#F86D0A" stroke-width="1.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">From</div>
+                <div style="font-size:13px;font-weight:600;color:#050E1E;font-family:Cairo,sans-serif;">Riyadh</div>
+              </div>
+            </div>
+            <div style="height:1px;background:#f5f0ff;position:relative;">
+              <div style="position:absolute;right:16px;top:-14px;width:28px;height:28px;border-radius:50%;background:#F86D0A;border:2px solid #fff;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(248,109,10,.3);">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7l5 5 5-5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#F86D0A" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="#F86D0A" stroke-width="1.5"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">To</div>
+                <div style="font-size:13px;font-weight:600;color:#aaa;font-family:Cairo,sans-serif;">Select destination</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin:10px 16px 0;border:1.5px solid #f0f0f0;border-radius:12px;overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #f0f0f0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="2" stroke="#F86D0A" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 9h18" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">Departure</div>
+                <div style="font-size:13px;font-weight:600;color:#050E1E;font-family:Cairo,sans-serif;">Tue, 03 Jun 2025</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#F86D0A" stroke-width="1.5"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">Passengers</div>
+                <div style="font-size:13px;font-weight:600;color:#050E1E;font-family:Cairo,sans-serif;">1 Passenger · Economy</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin:14px 16px 0;background:#F86D0A;border-radius:12px;height:48px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:Cairo,sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px;">SEARCH FLIGHTS</span>
+          </div>
+        </div>
+        </div>
+        <!-- Home indicator -->
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Flights · Entry</div>
+    </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#F86D0A;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">A · Primary</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <!-- Dynamic Island -->
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#ffffff;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#ffffff;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#ffffff"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#ffffff"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #ffffff;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#ffffff;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#ffffff;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#F86D0A;height:50px;display:flex;align-items:center;padding:0 14px;gap:8px;">
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span style="font-family:Cairo,sans-serif;font-size:15px;font-weight:700;color:#fff;flex:1;text-align:center;margin-right:32px;">Search Hotels</span>
+        </div>
+          <div style="background:#fff;padding:0 0 16px;">
+          <div style="background:#F86D0A;height:4px;opacity:.15;"></div>
+          <div style="margin:16px 16px 0;border:1.5px solid #f0f0f0;border-radius:12px;overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid #f0f0f0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#F86D0A" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="#F86D0A" stroke-width="1.5"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">Where to?</div>
+                <div style="font-size:13px;font-weight:600;color:#050E1E;font-family:Cairo,sans-serif;">Cairo, Egypt</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="2" stroke="#F86D0A" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 9h18" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">Check-in – Check-out</div>
+                <div style="font-size:13px;font-weight:600;color:#050E1E;font-family:Cairo,sans-serif;">19 May – 26 May</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin:10px 16px 0;border:1.5px solid #f0f0f0;border-radius:12px;overflow:hidden;">
+            <div style="display:flex;align-items:center;gap:10px;padding:11px 16px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 21V5a2 2 0 012-2h14a2 2 0 012 2v16" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/><path d="M3 21h18M9 21v-5h6v5M9 10h2M13 10h2M9 14h2M13 14h2" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div style="flex:1;">
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;line-height:1.2;">Rooms &amp; Guests</div>
+                <div style="font-size:13px;font-weight:600;color:#050E1E;font-family:Cairo,sans-serif;">1 Room · 2 Adults · 0 Children</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin:14px 16px 0;background:#F86D0A;border-radius:12px;height:48px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:Cairo,sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px;">SEARCH HOTELS</span>
+          </div>
+        </div>
+        </div>
+        <!-- Home indicator -->
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Hotels · Entry</div>
+    </div>
+    </div>
+
+    <!-- ── B · Secondary ── -->
+    <div class="hf-type-label" style="color:rgba(255,255,255,.7);">
+      B · Secondary — White Header · Context + Pencil <span></span>
+    </div>
+    <div class="hf-row">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">B · Secondary</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <!-- Dynamic Island -->
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#ffffff;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#050E1E"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#050E1E"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #050E1E;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#050E1E;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#050E1E;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#ffffff;min-height:60px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;padding:0 14px;border-bottom:1px solid rgba(0,0,0,.07);">
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div style="display:flex;flex-direction:column;align-items:center;padding:6px 0;">
+            <span style="font-family:Cairo,sans-serif;font-size:14px;font-weight:700;color:#050E1E;white-space:nowrap;">Riyadh → Dammam</span>
+            <span style="font-family:Cairo,sans-serif;font-size:11px;color:#b0b8c4;margin-top:2px;white-space:nowrap;">Economy · Direct · 1h 5m</span>
+          </div>
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13.2601 3.59997L5.0501 12.29C4.7401 12.62 4.4401 13.27 4.3801 13.72L4.0101 16.96C3.8801 18.13 4.7201 18.93 5.8801 18.73L9.1001 18.18C9.5501 18.1 10.1801 17.77 10.4901 17.43L18.7001 8.73997C20.1201 7.23997 20.7601 5.52997 18.5501 3.43997C16.3501 1.36997 14.6801 2.09997 13.2601 3.59997Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8899 5.05005C12.3199 7.81005 14.5599 9.92005 17.3399 10.2" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 22H21" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+          <div style="background:#f7f8fa;">
+          <div style="display:flex;gap:8px;padding:10px 14px;overflow:hidden;">
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:6px 12px;font-size:11px;font-weight:700;color:#F86D0A;white-space:nowrap;">Cheapest</div>
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:6px 12px;font-size:11px;font-weight:700;color:#666;white-space:nowrap;">Fastest</div>
+            <div style="background:#fff;border:1px solid #eee;border-radius:8px;padding:6px 12px;font-size:11px;font-weight:700;color:#666;white-space:nowrap;">Best</div>
+          </div>
+          <div style="padding:0 14px;display:flex;flex-direction:column;gap:8px;">
+            <div style="background:#fff;border-radius:12px;padding:14px;border:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,.04);">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                <span style="font-size:10px;font-weight:800;color:#2196F3;background:rgba(33,150,243,.08);padding:2px 8px;border-radius:6px;">DIRECT</span>
+                <span style="font-size:15px;font-weight:800;color:#F86D0A;font-family:Cairo,sans-serif;">490 SAR</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:24px;height:24px;border-radius:6px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#555;">SV</div>
+                <div style="flex:1;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <span style="font-size:13px;font-weight:700;color:#050E1E;">09:00</span>
+                    <div style="flex:1;height:1px;background:#ddd;margin:0 8px;position:relative;"><div style="position:absolute;top:-6px;left:50%;transform:translateX(-50%);font-size:9px;color:#aaa;">1h 5m</div></div>
+                    <span style="font-size:13px;font-weight:700;color:#050E1E;">10:05</span>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;margin-top:2px;">
+                    <span style="font-size:10px;color:#888;">RUH</span>
+                    <span style="font-size:10px;color:#888;">DMM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:14px;border:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,.04);">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                <span style="font-size:10px;font-weight:800;color:#2196F3;background:rgba(33,150,243,.08);padding:2px 8px;border-radius:6px;">DIRECT</span>
+                <span style="font-size:15px;font-weight:800;color:#F86D0A;font-family:Cairo,sans-serif;">520 SAR</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:24px;height:24px;border-radius:6px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#555;">GF</div>
+                <div style="flex:1;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <span style="font-size:13px;font-weight:700;color:#050E1E;">11:30</span>
+                    <div style="flex:1;height:1px;background:#ddd;margin:0 8px;"></div>
+                    <span style="font-size:13px;font-weight:700;color:#050E1E;">12:40</span>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;margin-top:2px;">
+                    <span style="font-size:10px;color:#888;">RUH</span>
+                    <span style="font-size:10px;color:#888;">DMM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Home indicator -->
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Flights · Results</div>
+    </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">B · Secondary</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <!-- Dynamic Island -->
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#ffffff;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#050E1E"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#050E1E"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #050E1E;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#050E1E;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#050E1E;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#ffffff;min-height:60px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;padding:0 14px;border-bottom:1px solid rgba(0,0,0,.07);">
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div style="display:flex;flex-direction:column;align-items:center;padding:6px 0;">
+            <span style="font-family:Cairo,sans-serif;font-size:14px;font-weight:700;color:#050E1E;">Cairo</span>
+            <span style="font-family:Cairo,sans-serif;font-size:11px;color:#b0b8c4;margin-top:2px;white-space:nowrap;">19 May – 26 May · 2 Guests</span>
+          </div>
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13.2601 3.59997L5.0501 12.29C4.7401 12.62 4.4401 13.27 4.3801 13.72L4.0101 16.96C3.8801 18.13 4.7201 18.93 5.8801 18.73L9.1001 18.18C9.5501 18.1 10.1801 17.77 10.4901 17.43L18.7001 8.73997C20.1201 7.23997 20.7601 5.52997 18.5501 3.43997C16.3501 1.36997 14.6801 2.09997 13.2601 3.59997Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.8899 5.05005C12.3199 7.81005 14.5599 9.92005 17.3399 10.2" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 22H21" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+          <div style="background:#f7f8fa;padding:10px 14px;display:flex;flex-direction:column;gap:8px;">
+          <div style="background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,.04);">
+            <div style="background:linear-gradient(135deg,#6b9fbd 0%,#4a7c9a 100%);height:80px;position:relative;">
+              <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:6px;padding:3px 7px;font-size:9px;font-weight:700;color:#fff;">4.8 ★</div>
+            </div>
+            <div style="padding:10px 12px;">
+              <div style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;">Marriott Cairo</div>
+              <div style="font-size:10px;color:#888;margin-top:2px;">5-star · Cairo, Egypt · Free cancellation</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+                <div><span style="font-size:16px;font-weight:800;color:#F86D0A;font-family:Cairo,sans-serif;">850</span><span style="font-size:10px;color:#888;"> SAR/night</span></div>
+                <div style="background:#F86D0A;border-radius:8px;padding:5px 12px;font-size:11px;font-weight:800;color:#fff;">Select</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;box-shadow:0 1px 4px rgba(0,0,0,.04);">
+            <div style="background:linear-gradient(135deg,#8b7a6b 0%,#6b5a4e 100%);height:80px;position:relative;">
+              <div style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,.35);border-radius:6px;padding:3px 7px;font-size:9px;font-weight:700;color:#fff;">4.6 ★</div>
+            </div>
+            <div style="padding:10px 12px;">
+              <div style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;">Hilton Cairo Zamalek</div>
+              <div style="font-size:10px;color:#888;margin-top:2px;">5-star · Zamalek Island</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px;">
+                <div><span style="font-size:16px;font-weight:800;color:#F86D0A;font-family:Cairo,sans-serif;">720</span><span style="font-size:10px;color:#888;"> SAR/night</span></div>
+                <div style="background:#F86D0A;border-radius:8px;padding:5px 12px;font-size:11px;font-weight:800;color:#fff;">Select</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- Home indicator -->
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Hotels · Results</div>
+    </div>
+    </div>
+
+    <!-- ── C · Booking Flow ── -->
+    <div class="hf-type-label" style="color:#2196F3;">
+      C · Booking Flow — White Header · Step Name · No Pencil <span></span>
+    </div>
+    <div class="hf-row">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#2196F3;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">C · Booking Flow</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <!-- Dynamic Island -->
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#ffffff;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#050E1E"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#050E1E"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #050E1E;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#050E1E;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#050E1E;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#ffffff;height:52px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;padding:0 14px;border-bottom:1px solid rgba(0,0,0,.07);">
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span style="font-family:Cairo,sans-serif;font-size:15px;font-weight:700;color:#050E1E;text-align:center;">Guest Details</span>
+          <div style="width:32px;"></div>
+        </div>
+          <div style="background:#fff;padding:0 0 16px;">
+          <!-- Price summary -->
+          <div style="background:#FFF8F3;border-bottom:1px solid #f0e8e0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-size:10px;color:#888;font-family:Cairo,sans-serif;">Total</div>
+              <div style="font-size:16px;font-weight:800;color:#050E1E;font-family:Cairo,sans-serif;">407.05 <span style="font-size:11px;font-weight:600;color:#888;">SAR</span></div>
+            </div>
+            <div style="font-size:11px;font-weight:700;color:#F86D0A;font-family:Cairo,sans-serif;">Show Details ›</div>
+          </div>
+          <!-- Step indicator -->
+          <div style="padding:14px 16px 10px;display:flex;align-items:center;justify-content:center;gap:0;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#F86D0A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;">1</div>
+            <div style="height:2px;width:40px;background:#F86D0A;"></div>
+            <div style="width:26px;height:26px;border-radius:50%;background:#F86D0A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;flex-shrink:0;">2</div>
+            <div style="height:2px;width:40px;background:#e0e0e0;"></div>
+            <div style="width:26px;height:26px;border-radius:50%;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#aaa;flex-shrink:0;">3</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:0 22px 12px;font-size:9px;color:#aaa;font-family:Cairo,sans-serif;">
+            <span style="color:#F86D0A;font-weight:700;">Search</span>
+            <span style="color:#F86D0A;font-weight:700;">Details</span>
+            <span>Payment</span>
+          </div>
+          <!-- Form fields -->
+          <div style="padding:0 16px;display:flex;flex-direction:column;gap:10px;">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#888;margin-bottom:4px;font-family:Cairo,sans-serif;">LEAD PASSENGER</div>
+              <div style="border:1.5px solid #e0e0e0;border-radius:10px;padding:11px 14px;font-size:13px;color:#aaa;font-family:Cairo,sans-serif;">First &amp; Last Name</div>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <div style="flex:1;border:1.5px solid #F86D0A;border-radius:10px;padding:11px 14px;font-size:13px;color:#050E1E;font-family:Cairo,sans-serif;background:#FFF8F3;">+966 · 5X XXX XXXX</div>
+            </div>
+            <div style="border:1.5px solid #e0e0e0;border-radius:10px;padding:11px 14px;font-size:13px;color:#aaa;font-family:Cairo,sans-serif;">Email address</div>
+          </div>
+          <div style="margin:14px 16px 0;background:#F86D0A;border-radius:12px;height:48px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:Cairo,sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px;">CONTINUE TO PAYMENT</span>
+          </div>
+        </div>
+        </div>
+        <!-- Home indicator -->
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Flights · Booking — Step 2</div>
+    </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#2196F3;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">C · Booking Flow</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <!-- Dynamic Island -->
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#ffffff;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#050E1E"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#050E1E"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #050E1E;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#050E1E;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#050E1E;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#ffffff;height:52px;display:grid;grid-template-columns:40px 1fr 40px;align-items:center;padding:0 14px;border-bottom:1px solid rgba(0,0,0,.07);">
+          <div style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span style="font-family:Cairo,sans-serif;font-size:15px;font-weight:700;color:#050E1E;text-align:center;">Guest Details</span>
+          <div style="width:32px;"></div>
+        </div>
+          <div style="background:#fff;padding:0 0 16px;">
+          <div style="background:#FFF8F3;border-bottom:1px solid #f0e8e0;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div style="font-size:10px;color:#888;font-family:Cairo,sans-serif;">Marriott Cairo · 7 nights</div>
+              <div style="font-size:16px;font-weight:800;color:#050E1E;font-family:Cairo,sans-serif;">5,950 <span style="font-size:11px;font-weight:600;color:#888;">SAR</span></div>
+            </div>
+            <div style="font-size:11px;font-weight:700;color:#F86D0A;font-family:Cairo,sans-serif;">Show Details ›</div>
+          </div>
+          <div style="padding:14px 16px 10px;display:flex;align-items:center;justify-content:center;gap:0;">
+            <div style="width:26px;height:26px;border-radius:50%;background:#F86D0A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;">1</div>
+            <div style="height:2px;width:40px;background:#F86D0A;"></div>
+            <div style="width:26px;height:26px;border-radius:50%;background:#F86D0A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff;">2</div>
+            <div style="height:2px;width:40px;background:#e0e0e0;"></div>
+            <div style="width:26px;height:26px;border-radius:50%;background:#e0e0e0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#aaa;">3</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:0 22px 12px;font-size:9px;color:#aaa;font-family:Cairo,sans-serif;">
+            <span style="color:#F86D0A;font-weight:700;">Search</span>
+            <span style="color:#F86D0A;font-weight:700;">Details</span>
+            <span>Payment</span>
+          </div>
+          <div style="padding:0 16px;display:flex;flex-direction:column;gap:10px;">
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#888;margin-bottom:4px;font-family:Cairo,sans-serif;">MAIN GUEST</div>
+              <div style="border:1.5px solid #e0e0e0;border-radius:10px;padding:11px 14px;font-size:13px;color:#aaa;font-family:Cairo,sans-serif;">First &amp; Last Name</div>
+            </div>
+            <div style="border:1.5px solid #F86D0A;border-radius:10px;padding:11px 14px;font-size:13px;color:#050E1E;font-family:Cairo,sans-serif;background:#FFF8F3;">+966 · 5X XXX XXXX</div>
+            <div style="border:1.5px solid #e0e0e0;border-radius:10px;padding:11px 14px;font-size:13px;color:#aaa;font-family:Cairo,sans-serif;">Email address</div>
+          </div>
+          <div style="margin:14px 16px 0;background:#F86D0A;border-radius:12px;height:48px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:Cairo,sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px;">CONTINUE TO PAYMENT</span>
+          </div>
+        </div>
+        </div>
+        <!-- Home indicator -->
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Hotels · Booking — Step 2</div>
+    </div>
+    </div>
+
+    <!-- ── D · Gallery / Hero ── -->
+    <div class="hf-type-label" style="color:#0EA5E9;">
+      D · Gallery / Hero — Full-bleed Image · Dark Circle Overlay <span></span>
+    </div>
+    <div class="hf-row">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0EA5E9;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">D · Gallery / Hero</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);overflow:hidden;">
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#f7f8fa;">
+          <div style="position:relative;">
+          <!-- Dynamic Island space -->
+          <div style="height:0;"></div>
+          <!-- Hero image area — full bleed -->
+          <div style="background:linear-gradient(160deg,#6b9fbd 0%,#3a7ca5 40%,#2c5f7a 100%);height:240px;position:relative;overflow:hidden;">
+            <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;position:absolute;top:0;left:0;right:0;z-index:10;">
+        <span style="font-size:13px;font-weight:700;color:#ffffff;font-family:Cairo,sans-serif;text-shadow:0 1px 3px rgba(0,0,0,.4);">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="white"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="white" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="white" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="white" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="white"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid white;border-radius:3px;padding:1.5px 2px;"><div style="width:78%;height:100%;background:white;border-radius:1px;"></div></div>
+            <div style="width:2px;height:5px;background:white;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+            <!-- Back button overlay -->
+            <div style="position:absolute;top:50px;left:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:5;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <!-- Image counter -->
+            <div style="position:absolute;top:52px;right:16px;background:rgba(0,0,0,.45);border-radius:100px;padding:4px 10px;font-size:10px;font-weight:700;color:#fff;z-index:5;">2 / 5</div>
+            <!-- Gradient overlay at bottom -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,.6));"></div>
+            <!-- Destination text -->
+            <div style="position:absolute;bottom:14px;left:16px;right:16px;">
+              <div style="font-size:20px;font-weight:800;color:#fff;font-family:Cairo,sans-serif;text-shadow:0 1px 4px rgba(0,0,0,.3);">Santorini</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.8);font-family:Cairo,sans-serif;margin-top:2px;">Greece · Cyclades Islands</div>
+            </div>
+            <!-- Dots indicator -->
+            <div style="position:absolute;bottom:56px;left:50%;transform:translateX(-50%);display:flex;gap:5px;">
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:#fff;"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+            </div>
+          </div>
+          <!-- Detail content area -->
+          <div style="background:#ffffff;padding:16px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+              <div>
+                <div style="font-size:16px;font-weight:800;color:#050E1E;font-family:Cairo,sans-serif;">Santorini Escape</div>
+                <div style="font-size:11px;color:#888;margin-top:2px;">7 nights · 2 Adults · All Inclusive</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:4px;">
+                <span style="color:#F86D0A;font-size:13px;">★</span>
+                <span style="font-size:12px;font-weight:700;color:#050E1E;">4.9</span>
+                <span style="font-size:10px;color:#aaa;">(245)</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:6px;margin-bottom:4px;">
+              <div style="background:#F86D0A;border-radius:6px;padding:4px 10px;font-size:10px;font-weight:800;color:#fff;">BEST SELLER</div>
+              <div style="background:rgba(34,197,94,.1);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:700;color:#22C55E;">FREE CANCEL</div>
+            </div>
+            <div style="border-top:1px solid #f0f0f0;margin-top:10px;padding-top:10px;display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:11px;color:#888;">From</div>
+                <div style="font-size:22px;font-weight:800;color:#F86D0A;font-family:Cairo,sans-serif;">2,450 <span style="font-size:12px;font-weight:600;color:#aaa;">SAR</span></div>
+                <div style="font-size:10px;color:#aaa;">per person</div>
+              </div>
+            </div>
+            <div style="background:#F86D0A;border-radius:12px;height:46px;display:flex;align-items:center;justify-content:center;margin-top:14px;">
+              <span style="font-family:Cairo,sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px;">SELECT PACKAGE</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Packages · Detail Gallery</div>
+    </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#0EA5E9;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:3px 10px;border-radius:100px;">D · Gallery / Hero</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);overflow:hidden;">
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#f7f8fa;">
+          <div style="position:relative;">
+          <!-- Dynamic Island space -->
+          <div style="height:0;"></div>
+          <!-- Hero image area — full bleed -->
+          <div style="background:linear-gradient(160deg,#8b7a6b 0%,#6b5040 40%,#4a3328 100%);height:240px;position:relative;overflow:hidden;">
+            <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;position:absolute;top:0;left:0;right:0;z-index:10;">
+        <span style="font-size:13px;font-weight:700;color:#ffffff;font-family:Cairo,sans-serif;text-shadow:0 1px 3px rgba(0,0,0,.4);">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="white"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="white" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="white" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="white" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="white"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid white;border-radius:3px;padding:1.5px 2px;"><div style="width:78%;height:100%;background:white;border-radius:1px;"></div></div>
+            <div style="width:2px;height:5px;background:white;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+            <!-- Back button overlay -->
+            <div style="position:absolute;top:50px;left:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:5;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.57 5.93018L3.5 12.0002L9.57 18.0702" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.4999 12H3.66992" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <!-- Image counter -->
+            <div style="position:absolute;top:52px;right:16px;background:rgba(0,0,0,.45);border-radius:100px;padding:4px 10px;font-size:10px;font-weight:700;color:#fff;z-index:5;">1 / 8</div>
+            <!-- Gradient overlay at bottom -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,.6));"></div>
+            <!-- Destination text -->
+            <div style="position:absolute;bottom:14px;left:16px;right:16px;">
+              <div style="font-size:20px;font-weight:800;color:#fff;font-family:Cairo,sans-serif;text-shadow:0 1px 4px rgba(0,0,0,.3);">Marriott Cairo</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.8);font-family:Cairo,sans-serif;margin-top:2px;">Zamalek Island · Egypt</div>
+            </div>
+            <!-- Dots indicator -->
+            <div style="position:absolute;bottom:56px;left:50%;transform:translateX(-50%);display:flex;gap:5px;">
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:#fff;"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+              <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);"></div>
+            </div>
+          </div>
+          <!-- Detail content area -->
+          <div style="background:#ffffff;padding:16px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+              <div>
+                <div style="font-size:16px;font-weight:800;color:#050E1E;font-family:Cairo,sans-serif;">Marriott Cairo</div>
+                <div style="font-size:11px;color:#888;margin-top:2px;">5-star · Zamalek Island · Cairo</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:4px;">
+                <span style="color:#F86D0A;font-size:13px;">★</span>
+                <span style="font-size:12px;font-weight:700;color:#050E1E;">4.8</span>
+                <span style="font-size:10px;color:#aaa;">(312)</span>
+              </div>
+            </div>
+            <div style="border-top:1px solid #f0f0f0;margin-top:6px;padding-top:10px;display:flex;align-items:center;justify-content:space-between;">
+              <div>
+                <div style="font-size:11px;color:#888;">Per night</div>
+                <div style="font-size:22px;font-weight:800;color:#F86D0A;font-family:Cairo,sans-serif;">850 <span style="font-size:12px;font-weight:600;color:#aaa;">SAR</span></div>
+              </div>
+              <div style="background:rgba(34,197,94,.1);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:700;color:#22C55E;">FREE CANCEL</div>
+            </div>
+            <div style="background:#F86D0A;border-radius:12px;height:46px;display:flex;align-items:center;justify-content:center;margin-top:14px;">
+              <span style="font-family:Cairo,sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px;">SELECT PACKAGE</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Hotels · Gallery — Corrected</div>
+    </div>
+    </div>
+
+    <!-- ── E · Root / Tab ── -->
+    <div class="hf-type-label" style="color:var(--muted);">
+      E · Root / Tab — No Back Button · Tab Bar Anchors Position <span></span>
+    </div>
+    <div class="hf-row">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:3px 10px;border-radius:100px;">E · Root / Tab</div>
+      <div style="width:264px;border-radius:36px;background:#0d1117;padding:14px 8px;box-shadow:0 24px 64px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.06);">
+        <div style="width:90px;height:28px;background:#0d1117;border-radius:14px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;">
+          <div style="width:10px;height:10px;background:#1a2535;border-radius:50%;"></div>
+        </div>
+        <div style="border-radius:28px;overflow:hidden;background:#f7f8fa;">
+          <div style="height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 20px 0 18px;">
+        <span style="font-size:13px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;letter-spacing:.3px;">9:41</span>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <svg width="16" height="11" viewBox="0 0 16 11" fill="#050E1E"><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.3" y="2.5" width="3" height="8.5" rx="1"/><rect x="8.6" y="0.5" width="3" height="10.5" rx="1"/><rect x="12.9" y="0" width="3" height="11" rx="1" opacity=".25"/></svg>
+          <svg width="15" height="10" viewBox="0 0 15 10" fill="none"><path d="M0.5 2.5Q3.5 0 7.5 0Q11.5 0 14.5 2.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".3"/><path d="M2.5 4.5Q4.8 2.5 7.5 2.5Q10.2 2.5 12.5 4.5" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round" opacity=".6"/><path d="M4.8 6.8Q5.9 5.5 7.5 5.5Q9.1 5.5 10.2 6.8" stroke="#050E1E" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="9.2" r="1" fill="#050E1E"/></svg>
+          <div style="display:flex;align-items:center;">
+            <div style="width:23px;height:11px;border:1.5px solid #050E1E;border-radius:3px;padding:1.5px 2px;position:relative;">
+              <div style="width:78%;height:100%;background:#050E1E;border-radius:1px;"></div>
+            </div>
+            <div style="width:2px;height:5px;background:#050E1E;border-radius:0 1.5px 1.5px 0;opacity:.5;margin-left:.5px;"></div>
+          </div>
+        </div>
+      </div>
+          <div style="background:#ffffff;height:52px;display:flex;align-items:center;padding:0 18px;border-bottom:1px solid rgba(0,0,0,.06);">
+          <svg width="90" height="24" viewBox="0 0 90 24" fill="none">
+            <text x="0" y="18" font-family="Cairo,sans-serif" font-size="16" font-weight="800" fill="#050E1E">direct</text>
+            <circle cx="74" cy="12" r="5" fill="#F86D0A"/>
+          </svg>
+          <div style="flex:1;"></div>
+          <div style="width:32px;height:32px;border-radius:50%;background:#f5f5f5;display:flex;align-items:center;justify-content:center;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#292D32" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#292D32" stroke-width="1.5"/></svg>
+          </div>
+        </div>
+          <div style="background:#f7f8fa;padding-bottom:0;">
+          <!-- Greeting -->
+          <div style="padding:16px 18px 10px;">
+            <div style="font-size:12px;color:#888;font-family:Cairo,sans-serif;">Good morning</div>
+            <div style="font-size:18px;font-weight:800;color:#050E1E;font-family:Cairo,sans-serif;">Where to next?</div>
+          </div>
+          <!-- Search card -->
+          <div style="margin:0 14px 12px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08);border:1.5px solid #f0f0f0;">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #f5f5f5;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 16l-9-5-9 5M3 8l9 5 9-5" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <div>
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;">FROM</div>
+                <div style="font-size:14px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;">Riyadh (RUH)</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#F86D0A" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="#F86D0A" stroke-width="1.5"/></svg>
+              <div>
+                <div style="font-size:10px;color:#aaa;font-family:Cairo,sans-serif;">TO</div>
+                <div style="font-size:14px;font-weight:600;color:#aaa;font-family:Cairo,sans-serif;">Where are you going?</div>
+              </div>
+            </div>
+          </div>
+          <!-- Quick picks -->
+          <div style="padding:0 14px 10px;">
+            <div style="font-size:11px;font-weight:700;color:#aaa;margin-bottom:8px;font-family:Cairo,sans-serif;">POPULAR DESTINATIONS</div>
+            <div style="display:flex;gap:8px;overflow:hidden;">
+              <div style="background:#fff;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.06);">Dubai ✈</div>
+              <div style="background:#fff;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.06);">Cairo ✈</div>
+              <div style="background:#fff;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;color:#050E1E;font-family:Cairo,sans-serif;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.06);">London ✈</div>
+            </div>
+          </div>
+          <!-- Tab bar -->
+          <div style="background:#ffffff;border-top:1px solid #f0f0f0;display:flex;align-items:stretch;padding:8px 0 4px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 16l-9-5-9 5M3 8l9 5 9-5" stroke="#F86D0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span style="font-size:9px;font-weight:700;color:#F86D0A;font-family:Cairo,sans-serif;">Flights</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21V5a2 2 0 012-2h14a2 2 0 012 2v16" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/><path d="M3 21h18M9 21v-5h6v5" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span style="font-size:9px;font-weight:600;color:#aaa;font-family:Cairo,sans-serif;">Hotels</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#aaa" stroke-width="1.5"/><path d="M7 10h4M7 14h6" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span style="font-size:9px;font-weight:600;color:#aaa;font-family:Cairo,sans-serif;">Visas</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="1.5" fill="#aaa"/><circle cx="12" cy="12" r="1.5" fill="#aaa"/><circle cx="19" cy="12" r="1.5" fill="#aaa"/></svg>
+              <span style="font-size:9px;font-weight:600;color:#aaa;font-family:Cairo,sans-serif;">More</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div style="height:20px;display:flex;align-items:center;justify-content:center;margin-top:6px;">
+          <div style="width:100px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+        </div>
+      </div>
+      <div style="font-size:11px;font-weight:700;color:var(--txt);text-align:center;">Flights · Root (Home Tab)</div>
+    </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

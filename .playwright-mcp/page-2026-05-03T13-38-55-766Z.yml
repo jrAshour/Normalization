@@ -1,0 +1,316 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - img [ref=e6] [cursor=pointer]
+      - img [ref=e10]
+      - img [ref=e12] [cursor=pointer]
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e19]:
+          - heading [level=1] [ref=e20]: معك لحجز إقامتك الفندقية
+          - heading [level=2] [ref=e21]: اختر من بين أكثر من 1.5 مليون فندق و 450 شركة طيران
+        - generic [ref=e25]:
+          - tablist [ref=e28]:
+            - tab [selected] [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+              - text: طيران
+            - tab [ref=e32] [cursor=pointer]:
+              - img [ref=e33]
+              - text: الإقامة
+            - tab [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+              - text: أنشطة
+          - tabpanel [ref=e47]:
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - generic [ref=e52]:
+                  - button [ref=e53] [cursor=pointer]:
+                    - paragraph [ref=e57]: ذهاب فقط
+                  - button [ref=e58] [cursor=pointer]:
+                    - paragraph [ref=e62]: رحلة ذهاب وعودة
+                  - button [ref=e63] [cursor=pointer]:
+                    - paragraph [ref=e67]: وجهات متعددة
+                - generic [ref=e68]:
+                  - generic [ref=e70] [cursor=pointer]:
+                    - checkbox [ref=e72]
+                    - generic [ref=e77]: رحلات مباشرة
+                  - generic [ref=e79] [cursor=pointer]:
+                    - checkbox [ref=e81]
+                    - generic [ref=e86]: شاملة أمتعة السفر
+              - generic [ref=e88]:
+                - generic [ref=e90]:
+                  - generic [ref=e93]:
+                    - img [ref=e95]
+                    - textbox [ref=e97]:
+                      - /placeholder: محطة المغادرة
+                    - group
+                  - generic [ref=e100]:
+                    - img [ref=e102]
+                    - textbox [ref=e104]:
+                      - /placeholder: محطة الوصول
+                    - group
+                - generic [ref=e107]:
+                  - generic [ref=e109]:
+                    - img [ref=e111]
+                    - textbox [ref=e113]:
+                      - /placeholder: Placeholder
+                      - text: اثنين, 4 مايو
+                    - group
+                  - generic [ref=e115]:
+                    - textbox [ref=e116]: ثلاثاء, 5 مايو
+                    - button [ref=e118] [cursor=pointer]:
+                      - img [ref=e119]
+                    - group
+                - generic [ref=e124]:
+                  - img [ref=e126]
+                  - textbox [ref=e128]: 1 مسافر, السياحية
+                  - group
+                - button [ref=e130] [cursor=pointer]:
+                  - img [ref=e132]
+                  - generic [ref=e134]: ابحث
+      - img [ref=e138]
+    - generic [ref=e140]:
+      - heading [level=3] [ref=e142]: أشهر الفنادق
+      - generic [ref=e147]:
+        - button [ref=e148] [cursor=pointer]:
+          - img [ref=e149]
+        - generic [ref=e152]:
+          - link [ref=e157] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/فندق-رويال-أوركيد-شيراتون-هوتل-آند-تاورز-1082654
+            - generic [ref=e158]:
+              - generic [ref=e160]:
+                - heading [level=3] [ref=e161]: بانكوك
+                - paragraph [ref=e162]: فندق وأبراج رويال أوركيد شيراتون
+              - generic [ref=e164]:
+                - img [ref=e166]
+                - img [ref=e209]
+          - link [ref=e214] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/دبل-تري-باي-هيلتون-إسطنبول-توبكابي-1554997
+            - generic [ref=e215]:
+              - generic [ref=e217]:
+                - heading [level=3] [ref=e218]: إسطنبول
+                - paragraph [ref=e219]: دوبل تري باي هيلتون - توبكابي
+              - generic [ref=e221]:
+                - img [ref=e223]
+                - img [ref=e266]
+          - link [ref=e271] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/منتجع-فور-بوينتس-من-شيراتون-بوكيت-باتونج-بيتش-2160074
+            - generic [ref=e272]:
+              - generic [ref=e274]:
+                - heading [level=3] [ref=e275]: بوكيت
+                - paragraph [ref=e276]: فور بوينتس باي شيراتون بوكيت
+              - generic [ref=e278]:
+                - img [ref=e280]
+                - img [ref=e323]
+          - link [ref=e328] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/رويال-أتلانتس-1888776
+            - generic [ref=e329]:
+              - generic [ref=e331]:
+                - heading [level=3] [ref=e332]: دبي
+                - paragraph [ref=e333]: منتجع أتلانتس ذا رويال
+              - generic [ref=e335]:
+                - img [ref=e337]
+                - img [ref=e380]
+          - link [ref=e385] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/grand-hyatt-barcelona-1435563
+            - generic [ref=e386]:
+              - generic [ref=e388]:
+                - heading [level=3] [ref=e389]: بارشيلونا
+                - paragraph [ref=e390]: غراند حيات
+              - generic [ref=e392]:
+                - img [ref=e394]
+                - img [ref=e437]
+          - link [ref=e442] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/anantara-grand-hotel-krasnapolsky-amsterdam-1034569
+            - generic [ref=e443]:
+              - generic [ref=e445]:
+                - heading [level=3] [ref=e446]: أمستردام
+                - paragraph [ref=e447]: فندق أنانتارا جراند هوتل كراسنابولسكي أمستردام
+              - generic [ref=e449]:
+                - img [ref=e451]
+                - img [ref=e494]
+          - link [ref=e499] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/la-clef-champs-elysees-paris-by-the-crest-collection-1757752
+            - generic [ref=e500]:
+              - generic [ref=e502]:
+                - heading [level=3] [ref=e503]: باريس
+                - paragraph [ref=e504]: لا كليه شنزليزيه باري باي ذا كريست كوليكشن
+              - generic [ref=e506]:
+                - img [ref=e508]
+                - img [ref=e551]
+          - link [ref=e556] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/royal-lancaster-london-1054796
+            - generic [ref=e557]:
+              - generic [ref=e559]:
+                - heading [level=3] [ref=e560]: لندن
+                - paragraph [ref=e561]: رويال لانكستر لندن
+              - generic [ref=e563]:
+                - img [ref=e565]
+                - img [ref=e608]
+          - link [ref=e613] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/hilton-garden-inn-casablanca-sud-2897915
+            - generic [ref=e614]:
+              - generic [ref=e616]:
+                - heading [level=3] [ref=e617]: كازابلانكا
+                - paragraph [ref=e618]: هيلتون جاردن إن كازابلانكا سود
+              - generic [ref=e620]:
+                - img [ref=e622]
+                - img [ref=e665]
+          - link [ref=e670] [cursor=pointer]:
+            - /url: /ar/hotel/details/atg/فندق-رمسيس-هيلتون-1079365
+            - generic [ref=e671]:
+              - generic [ref=e673]:
+                - heading [level=3] [ref=e674]: القاهرة
+                - paragraph [ref=e675]: فندق رمسيس هيلتون
+              - generic [ref=e677]:
+                - img [ref=e679]
+                - img [ref=e722]
+    - generic [ref=e724]:
+      - generic [ref=e725]:
+        - img [ref=e727]
+        - generic [ref=e728]:
+          - heading [level=3] [ref=e730]: اختر من بين أكثر من مليون مكان إقامة مع المسافر!
+          - paragraph [ref=e732]:
+            - text: احجز إقامتك مع
+            - link [ref=e733] [cursor=pointer]:
+              - /url: https://www.almosafer.com/ar/%D8%B3%D8%A7%D9%81%D8%B1
+              - text: المسافر
+            - text: ، واختر إقامتك المفضّلة من بين خيارات الإقامة المتاحة لمزانية محددة أو الفاخرة! قارن الأسعار واختر من بين أكثر من مليون مكان إقامة حول العالم مع المسافر.
+      - generic [ref=e734]:
+        - img [ref=e736]
+        - generic [ref=e737]:
+          - heading [level=3] [ref=e739]: سهولة البحث عن إقامة
+          - paragraph [ref=e741]: يمكنك حجز إقامتك اونلاين مع المسافر كما يحلو لك في مختلف الوجهات حول العالم. قارن بين أسعار أماكن الإقامة، المرافق، أو عدد النجوم، المطاعم وغيرها واختر ما يناسبك منها.
+      - generic [ref=e742]:
+        - img [ref=e744]
+        - generic [ref=e745]:
+          - heading [level=3] [ref=e747]: خياراتنا الحصرية لإقامة بأسعار مميزة
+          - paragraph [ref=e749]: تصفّح وابحث من بين أماكن الإقامة المتاحة لمزانية محددة، قارن الأسعار واحصل على أفضل العروض مع المسافر. اختر مكان إقامتك أونلاين واحجز إقامتك بأفضل الأسعار مع عروضنا الحصرية وأسعارنا المناسبة لمزانيتك.
+      - generic [ref=e750]:
+        - img [ref=e752]
+        - generic [ref=e753]:
+          - heading [level=3] [ref=e755]: احجز إقامتك بكل سهولة مع تطبيق المسافر
+          - paragraph [ref=e757]: حمّل تطبيق المسافر المتوفر مجانًا على متجر جوجل بلاي وآبل و احجز إقامتك بأفضل الأسعار وبلمسة زر واحدة! وبخطوات بسيطة فقط احجز إقامتك أونلاين.
+    - generic [ref=e758]:
+      - generic [ref=e760]:
+        - generic [ref=e762]:
+          - img [ref=e764]
+          - img [ref=e765]
+        - paragraph [ref=e766]: قم بإنشاء حساب معنا لتستمتع بمزايا حصرية
+        - link [ref=e768] [cursor=pointer]:
+          - /url: https://apps.apple.com/app/id928866584
+          - generic [ref=e769]: حمل التطبيق الآن
+        - generic [ref=e770]:
+          - img [ref=e772]
+          - img [ref=e773]
+      - generic [ref=e774]:
+        - heading [level=2] [ref=e776]: بحاجة لمساعدتنا؟
+        - generic [ref=e777]:
+          - button [ref=e778] [cursor=pointer]:
+            - generic [ref=e781]:
+              - generic [ref=e782]:
+                - img [ref=e784]
+                - generic [ref=e787]:
+                  - heading [level=2] [ref=e788]: الواتساب
+                  - heading [level=2] [ref=e789]: +966 55 440 0000
+              - img [ref=e791]
+          - button [ref=e793] [cursor=pointer]:
+            - generic [ref=e796]:
+              - generic [ref=e797]:
+                - img [ref=e799]
+                - generic [ref=e801]:
+                  - heading [level=2] [ref=e802]: اتصل بنا
+                  - heading [level=2] [ref=e803]: "+966112199500"
+              - img [ref=e805]
+      - generic [ref=e807]:
+        - generic [ref=e808]:
+          - generic [ref=e809]: "للشركات:"
+          - link [ref=e810] [cursor=pointer]:
+            - /url: /ar/about-us
+            - generic [ref=e811]: من نحن
+          - link [ref=e812] [cursor=pointer]:
+            - /url: https://corporate.almosafer.com/ar/careers
+            - generic [ref=e813]: وظائف شاغرة
+          - link [ref=e814] [cursor=pointer]:
+            - /url: /ar/business
+            - generic [ref=e815]: المسافر أعمال
+          - link [ref=e816] [cursor=pointer]:
+            - /url: https://corporate.almosafer.com/ar
+            - generic [ref=e817]: عن المسافر
+        - generic [ref=e818]:
+          - generic [ref=e819]: "قانوني:"
+          - link [ref=e820] [cursor=pointer]:
+            - /url: /ar/terms-and-conditions
+            - generic [ref=e821]: الشروط و الأحكام
+          - link [ref=e822] [cursor=pointer]:
+            - /url: /ar/privacy-policy
+            - generic [ref=e823]: سياسة الخصوصية
+        - generic [ref=e824]:
+          - generic [ref=e825]: "الدعم:"
+          - link [ref=e826] [cursor=pointer]:
+            - /url: /ar/contact-us
+            - generic [ref=e827]: اتصل بنا
+          - link [ref=e828] [cursor=pointer]:
+            - /url: /ar/faq
+            - generic [ref=e829]: الأسئلة الشائعة
+        - generic [ref=e830]:
+          - generic [ref=e831]: "الدول:"
+          - link [ref=e832] [cursor=pointer]:
+            - /url: https://www.almosafer.com?ncr=1
+            - generic [ref=e833]: المملكة العربية السعودية
+          - link [ref=e834] [cursor=pointer]:
+            - /url: https://kw.almosafer.com?ncr=1
+            - generic [ref=e835]: الكويت
+          - link [ref=e836] [cursor=pointer]:
+            - /url: https://ae.almosafer.com?ncr=1
+            - generic [ref=e837]: الامارات العربية المتحدة
+          - link [ref=e838] [cursor=pointer]:
+            - /url: https://bh.almosafer.com?ncr=1
+            - generic [ref=e839]: البحرين
+          - link [ref=e840] [cursor=pointer]:
+            - /url: https://om.almosafer.com?ncr=1
+            - generic [ref=e841]: عُمان
+          - link [ref=e842] [cursor=pointer]:
+            - /url: https://qa.almosafer.com?ncr=1
+            - generic [ref=e843]: قطر
+          - link [ref=e844] [cursor=pointer]:
+            - /url: https://global.almosafer.com?ncr=1
+            - generic [ref=e845]: حول العالم
+      - generic [ref=e846]:
+        - link [ref=e847] [cursor=pointer]:
+          - /url: https://www.facebook.com/Almosafertravel
+          - img [ref=e848]
+        - link [ref=e852] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/almosafer
+          - img [ref=e853]
+        - link [ref=e856] [cursor=pointer]:
+          - /url: https://www.instagram.com/almosafertravel_sa
+          - img [ref=e857]
+        - link [ref=e859] [cursor=pointer]:
+          - /url: https://twitter.com/Almosafertravel
+          - img [ref=e860]
+        - link [ref=e863] [cursor=pointer]:
+          - /url: https://www.youtube.com/almosafertravel
+          - img [ref=e864]
+      - paragraph [ref=e868]: جميع الحقوق محفوظة © 2026 المسافر
+      - list [ref=e870]:
+        - listitem [ref=e871]:
+          - text: "رقم ترخيص خدمات السفر و السياحة:"
+          - paragraph [ref=e872]: "73103013"
+        - listitem [ref=e873]:
+          - text: "رقم السجل التجاري:"
+          - paragraph [ref=e874]: "1010363465"
+        - listitem [ref=e875]:
+          - text: "الفئة:"
+          - paragraph [ref=e876]: مقدم خدمات سفر و سياحة عامة
+  - alert [ref=e877]
+  - generic [ref=e880]:
+    - heading "أنت الآن في موقعنا العام حيث يتم إحتساب أسعار الحجوزات بالدولار الأمريكي." [level=3] [ref=e881]
+    - paragraph [ref=e882]: اختر البلد الذي تفضله
+    - generic [ref=e883]:
+      - button "saudi flag السعودية، ⃀" [ref=e884] [cursor=pointer]:
+        - img "saudi flag" [ref=e886]
+        - generic [ref=e888]: السعودية، ⃀
+      - button "saudi flag تابع بالموقع العام، دولار" [ref=e889] [cursor=pointer]:
+        - img "saudi flag" [ref=e891]
+        - generic [ref=e892]: تابع بالموقع العام، دولار
